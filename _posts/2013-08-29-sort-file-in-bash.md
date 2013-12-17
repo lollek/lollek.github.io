@@ -2,8 +2,6 @@
 layout: post
 title: Sort File in Bash
 ---
-<p class="meta">29 August 2013</p>
-
 This is a guide for sorting a given file in bash, which was given to me as a class assignment.
 
 The file looks like this:
