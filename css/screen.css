@@ -36,7 +36,7 @@ p {
 }
 
 a {
-  color: #00a;
+  color: darkolivegreen;
 }
 
 a:hover {
@@ -44,7 +44,7 @@ a:hover {
 }
 
 a:visited {
-  color: #c00;
+  color: darkolivegreen;
 }
 
 table {
@@ -71,7 +71,7 @@ ul.posts {
   }
 
   ul.posts span {
-    color: #333;
+    color: black;
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
   }
