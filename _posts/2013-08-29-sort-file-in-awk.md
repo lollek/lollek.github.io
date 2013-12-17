@@ -29,3 +29,31 @@ Ingrid Lindgren          8  13  13
 Kjell Djurstedt         12  12  12 
 Lennart Andersson        9  10  13 
 Elisabeth Bj&ouml;rklind     15  12  10 
+
+And needs to looks like this:
+SOLVED.TXT
+50 G&ouml;ran Johansson
+48 Josefine Carlson
+45 Magnus Ahlsten
+42 Mats Karlzon
+42 Annica Rundgren
+39 Gustaf Karlsson
+37 Johanna R&ouml;nnberg
+37 Elisabeth Bj&ouml;rklind 
+36 Kjell Djurstedt
+34 Ingrid Lindgren
+33 Marcus Carlsson
+32 Siv Tidblom
+32 Lennart Andersson
+32 Jan-Olof K&auml;rrsg&aring;rd
+31 Oskar Holmqvist
+31 Mikaela Andersson
+31 David Fors
+29 Yngve Johanson
+23 Britt Lidell
+22 Klas H&auml;gglund
+11 Jerker Leo
+
+That is, we need to sum the numbers (a dash is treated like 0), place the score on the right side of the name and sort descending.
+
+
