@@ -8,49 +8,49 @@ The file looks like this:
 {% highlight bash %}
 Mikaela Andersson       14   -  17 
 David Fors               8  12  11 
-Klas H&auml;gglund            -  13   9 
+Klas Hägglund            -  13   9 
 Oskar Holmqvist          9  12  10 
 Gustaf Karlsson         12  14  13 
 Annica Rundgren         17  10  15 
 Marcus Carlsson         12   9  12 
-Johanna R&ouml;nnberg         9  15  13 
+Johanna Rönnberg         9  15  13 
 Josefine Carlson        18  14  16 
 Magnus Ahlsten          13  18  14 
 Jerker Leo               -   -  11 
-Jan-Olof K&auml;rrsg&aring;rd       8  11  13 
+Jan-Olof Kärrsgård       8  11  13 
 Siv Tidblom             11   9  12 
 Mats Karlzon            15  17  10 
-G&ouml;ran Johansson         16  19  15 
+Göran Johansson         16  19  15 
 Britt Lidell             -  14   9 
 Yngve Johanson          10  11   8 
 Ingrid Lindgren          8  13  13 
 Kjell Djurstedt         12  12  12 
 Lennart Andersson        9  10  13 
-Elisabeth Bj&ouml;rklind     15  12  10 
+Elisabeth Björklind     15  12  10 
 {% endhighlight %}
 
 And needs to looks like this:
 {% highlight bash %}
-50 G&ouml;ran Johansson
+50 Göran Johansson
 48 Josefine Carlson
 45 Magnus Ahlsten
 42 Mats Karlzon
 42 Annica Rundgren
 39 Gustaf Karlsson
-37 Johanna R&ouml;nnberg
-37 Elisabeth Bj&ouml;rklind 
+37 Johanna Rönnberg
+37 Elisabeth Björklind 
 36 Kjell Djurstedt
 34 Ingrid Lindgren
 33 Marcus Carlsson
 32 Siv Tidblom
 32 Lennart Andersson
-32 Jan-Olof K&auml;rrsg&aring;rd
+32 Jan-Olof Kärrsgård
 31 Oskar Holmqvist
 31 Mikaela Andersson
 31 David Fors
 29 Yngve Johanson
 23 Britt Lidell
-22 Klas H&auml;gglund
+22 Klas Hägglund
 11 Jerker Leo
 {% endhighlight %}
 
