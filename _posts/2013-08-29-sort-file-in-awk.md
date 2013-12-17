@@ -63,6 +63,10 @@ That is, we need to sum the numbers (a dash is treated like 0), place the score 
 awk '$0=$3+$4+$5FS$1FS$2' resultat.txt
 {% endhighlight %}
 
+<pre class="terminal"><code>
+awk '$0=$3+$4+$5FS$1FS$2' resultat.txt
+</code></pre>
+
 The command work like this:
 <ol>
 <li>Awk will save the first line (Mikaela Andersson 14 - 17) to $0</li>
