@@ -5,7 +5,7 @@ title: Sort File in Bash
 This is a guide for sorting a given file in bash, which was given to me as a class assignment.
 
 The file looks like this:
-<pre class="terminal"><code>
+{% highlight bash %}
 Mikaela Andersson       14   -  17 
 David Fors               8  12  11 
 Klas Hägglund            -  13   9 
@@ -27,7 +27,7 @@ Ingrid Lindgren          8  13  13
 Kjell Djurstedt         12  12  12 
 Lennart Andersson        9  10  13 
 Elisabeth Björklind     15  12  10 
-</code></pre>
+{% endhighlight %}
 
 And needs to looks like this:
 {% highlight bash %}
@@ -54,6 +54,17 @@ And needs to looks like this:
 11 Jerker Leo
 {% endhighlight %}
 
-That is, we need to sum the numbers (a dash is treated like 0), place the score on the right side of the name and sort descending.
+That is, we need to sum the numbers (a dash is treated like 0), place the score on the left side of the name and sort descending. We will do this in three steps.
 
+<h2>Step 1 - Change dash to zero</h2>
+<h2>Step 2 - The magic switcheroo</h2>
+<h2>Step 3 - Sorting</h2>
+{% highlight bash %}
+sed ...|while read ...|sort -r
+{% endhighlight %}
 
+Since we want the lines in order, we'll append |sort -r to the command. 
+<ol>
+<li>The | ("pipe") means that we'll take the output from the command on the left side and give as input to the command on the right side.</li>
+<li>sort will sort the lines in ascending order, since we wants it in descending instead, we will use the -r argument</li>
+</ol>
