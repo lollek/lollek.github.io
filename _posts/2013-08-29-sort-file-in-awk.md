@@ -7,6 +7,7 @@ title: Sort File in Awk
 This is a guide for sorting a given file in awk, which was given to me as a class assignment.
 
 The file looks like this:
+<pre><code>
 RESULTAT.TXT
 Mikaela Andersson       14   -  17 
 David Fors               8  12  11 
@@ -29,8 +30,10 @@ Ingrid Lindgren          8  13  13
 Kjell Djurstedt         12  12  12 
 Lennart Andersson        9  10  13 
 Elisabeth Bj&ouml;rklind     15  12  10 
+</code></pre>
 
 And needs to looks like this:
+<pre><code>
 SOLVED.TXT
 50 G&ouml;ran Johansson
 48 Josefine Carlson
@@ -53,6 +56,7 @@ SOLVED.TXT
 23 Britt Lidell
 22 Klas H&auml;gglund
 11 Jerker Leo
+</code></pre>
 
 That is, we need to sum the numbers (a dash is treated like 0), place the score on the right side of the name and sort descending.
 
