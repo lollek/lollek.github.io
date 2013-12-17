@@ -7,7 +7,7 @@ title: Sort File in Awk
 This is a guide for sorting a given file in awk, which was given to me as a class assignment. Note that I will use gawk (GNU awk), so if you try the code and it doesn't work, try changing awk for gawk.
 
 The file looks like this:
-<pre class="terminal"><code>
+{% highlight bash %}
 Mikaela Andersson       14   -  17 
 David Fors               8  12  11 
 Klas H&auml;gglund            -  13   9 
@@ -29,10 +29,10 @@ Ingrid Lindgren          8  13  13
 Kjell Djurstedt         12  12  12 
 Lennart Andersson        9  10  13 
 Elisabeth Bj&ouml;rklind     15  12  10 
-</code></pre>
+{% endhighlight %}
 
 And needs to looks like this:
-<pre class="terminal"><code>
+{% highlight bash %}
 50 G&ouml;ran Johansson
 48 Josefine Carlson
 45 Magnus Ahlsten
@@ -54,7 +54,7 @@ And needs to looks like this:
 23 Britt Lidell
 22 Klas H&auml;gglund
 11 Jerker Leo
-</code></pre>
+{% endhighlight %}
 
 That is, we need to sum the numbers (a dash is treated like 0), place the score on the right side of the name and sort descending. We will do this in two steps.
 
@@ -62,10 +62,6 @@ That is, we need to sum the numbers (a dash is treated like 0), place the score 
 {% highlight bash %}
 awk '$0=$3+$4+$5FS$1FS$2' resultat.txt
 {% endhighlight %}
-
-<pre class="terminal"><code>
-awk '$0=$3+$4+$5FS$1FS$2' resultat.txt
-</code></pre>
 
 The command work like this:
 <ol>
