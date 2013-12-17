@@ -1,0 +1,31 @@
+---
+layout: post
+title: Sort File in Awk
+---
+<p class="meta">29 August 2013</p>
+
+This is a guide for sorting a given file in awk, which was given to me as a class assignment.
+
+The file looks like this:
+RESULTAT.TXT
+Mikaela Andersson       14   -  17 
+David Fors               8  12  11 
+Klas H&auml;gglund            -  13   9 
+Oskar Holmqvist          9  12  10 
+Gustaf Karlsson         12  14  13 
+Annica Rundgren         17  10  15 
+Marcus Carlsson         12   9  12 
+Johanna R&ouml;nnberg         9  15  13 
+Josefine Carlson        18  14  16 
+Magnus Ahlsten          13  18  14 
+Jerker Leo               -   -  11 
+Jan-Olof K&auml;rrsg&aring;rd       8  11  13 
+Siv Tidblom             11   9  12 
+Mats Karlzon            15  17  10 
+G&ouml;ran Johansson         16  19  15 
+Britt Lidell             -  14   9 
+Yngve Johanson          10  11   8 
+Ingrid Lindgren          8  13  13 
+Kjell Djurstedt         12  12  12 
+Lennart Andersson        9  10  13 
+Elisabeth Bj&ouml;rklind     15  12  10 
