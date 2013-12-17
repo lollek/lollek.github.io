@@ -32,7 +32,7 @@ h1 {
 
 p {
   margin: 1em 0;
-  color: sienna;
+  color: darkgrey;
 }
 
 a {
@@ -116,7 +116,7 @@ ul.posts {
   }
 
   .site .meta {
-    color: #aaa;
+    color: black;
   }
 
   .site .footer {
