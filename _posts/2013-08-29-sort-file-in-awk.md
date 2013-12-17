@@ -59,6 +59,7 @@ And needs to looks like this:
 That is, we need to sum the numbers (a dash is treated like 0), place the score on the right side of the name and sort descending. We will do this in two steps.
 
 <h2>Step 1 - The magic switcheroo</h2>
+<p>
 {% highlight bash %}
 awk '$0=$3+$4+$5FS$1FS$2' resultat.txt
 {% endhighlight %}
@@ -76,8 +77,10 @@ The command work like this:
 <li>Awk prints out $0</li>
 <li>Repeat steps 1-4 for each line in file</li>
 </ol>
+</p>
 
 <h2>Step 2 - Sorting</h2>
+<p>
 {% highlight bash %}
 awk '$0=$3+$4+$5FS$1FS$2' resultat.txt|sort -r
 {% endhighlight %}
@@ -87,4 +90,5 @@ Since we want the lines in order, we'll append |sort -r to the command.
 <li>The | ("pipe") means that we'll take the output from the command on the left side and give as input to the command on the right side.</li>
 <li>sort will sort the lines in ascending order, since we wants it in descending instead, we will use the -r argument</li>
 </ol>
+</p>
 
