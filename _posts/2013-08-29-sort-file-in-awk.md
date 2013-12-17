@@ -7,7 +7,7 @@ title: Sort File in Awk
 This is a guide for sorting a given file in awk, which was given to me as a class assignment.
 
 The file looks like this:
-<pre><code>
+<pre class="terminal"><code>
 RESULTAT.TXT
 Mikaela Andersson       14   -  17 
 David Fors               8  12  11 
@@ -33,7 +33,7 @@ Elisabeth Bj&ouml;rklind     15  12  10
 </code></pre>
 
 And needs to looks like this:
-<pre><code>
+<pre class="terminal"><code>
 SOLVED.TXT
 50 G&ouml;ran Johansson
 48 Josefine Carlson
