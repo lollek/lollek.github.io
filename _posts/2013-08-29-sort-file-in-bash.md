@@ -8,7 +8,6 @@ This is a guide for sorting a given file in bash, which was given to me as a cla
 
 The file looks like this:
 <pre class="terminal"><code>
-RESULTAT.TXT
 Mikaela Andersson       14   -  17 
 David Fors               8  12  11 
 Klas H&auml;gglund            -  13   9 
@@ -33,8 +32,7 @@ Elisabeth Bj&ouml;rklind     15  12  10
 </code></pre>
 
 And needs to looks like this:
-<pre class="terminal"><code>
-SOLVED.TXT
+{% highlight bash %}
 50 G&ouml;ran Johansson
 48 Josefine Carlson
 45 Magnus Ahlsten
@@ -56,7 +54,7 @@ SOLVED.TXT
 23 Britt Lidell
 22 Klas H&auml;gglund
 11 Jerker Leo
-</code></pre>
+{% endhighlight %}
 
 That is, we need to sum the numbers (a dash is treated like 0), place the score on the right side of the name and sort descending.
 
