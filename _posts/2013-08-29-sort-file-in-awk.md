@@ -2,8 +2,6 @@
 layout: post
 title: Sort File in Awk
 ---
-<p class="meta">29 August 2013</p>
-
 This is a guide for sorting a given file in awk, which was given to me as a class assignment. Note that I will use gawk (GNU awk), so if you try the code and it doesn't work, try changing awk for gawk.
 
 The file looks like this:
