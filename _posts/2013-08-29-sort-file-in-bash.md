@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sort File in Awk
+title: Sort File in Bash
 ---
 <p class="meta">29 August 2013</p>
 
