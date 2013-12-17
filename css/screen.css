@@ -58,7 +58,9 @@ table {
 /*****************************************************************************/
 
 #home {
-  background-color: white;
+  background-color: grey;
+  border-radius: 10px;
+  padding-left: 1px;
 }
 
 ul.posts {
