@@ -56,9 +56,12 @@ And needs to looks like this:
 
 That is, we need to sum the numbers (a dash is treated like 0), place the score on the left side of the name and sort descending. We will do this in three steps.
 
-<h2>Step 1 - Change dash to zero</h2>
-<h2>Step 2 - The magic switcheroo</h2>
-<h2>Step 3 - Sorting</h2>
+Step 1 - Change dash to zero
+----------------------------
+Step 2 - The magic switcheroo
+---------------------------------
+Step 3 - Sorting
+----------------
 {% highlight bash %}
 sed ...|while read ...|sort -r
 {% endhighlight %}
