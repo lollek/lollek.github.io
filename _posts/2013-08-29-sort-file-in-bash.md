@@ -64,7 +64,5 @@ sed ...|while read ...|sort -r
 {% endhighlight %}
 
 Since we want the lines in order, we'll append |sort -r to the command. 
-<ol>
-<li>The | ("pipe") means that we'll take the output from the command on the left side and give as input to the command on the right side.</li>
-<li>sort will sort the lines in ascending order, since we wants it in descending instead, we will use the -r argument</li>
-</ol>
+1. The | ("pipe") means that we'll take the output from the command on the left side and give as input to the command on the right side.
+2. sort will sort the lines in ascending order, since we wants it in descending instead, we will use the -r argument
