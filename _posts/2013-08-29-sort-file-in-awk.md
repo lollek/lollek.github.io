@@ -66,8 +66,8 @@ The command work like this:
 1.   Awk will save the first line (Mikaela Andersson 14 - 17) to $0
 2.   Every word in $0 is split into separate variables, e.g. Mikaela will be saved to $1 and Andersson will be saved to $2
 3.   Through our expression we will change $0 to
-  3.1   Sum of the numbers (through $3 + $4 + $5 FS)
-  3.2   First name Last name (through $1 FS $2)
+  3.1.   Sum of the numbers (through $3 + $4 + $5 FS)
+  3.2.   First name Last name (through $1 FS $2)
   Where FS means "space"
 4.   Awk prints out $0
 5.   Repeat steps 1-4 for each line in file
