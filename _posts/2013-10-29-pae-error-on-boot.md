@@ -25,22 +25,22 @@ For some reason, the last Slackware update (14) decided that I wanted a huge smp
 Step 1: Chroot 
 -------------
 Boot up the computer through a rescue disk/usb
-# highlight bash
+{% highlight bash %}
 mount /dev/sda2 /mnt
 for i in dev proc sys; do mount --bind /$i /mnt/$i; done
 chroot /mnt
-# endhighlight
+{% endhighlight %}
 
 Step 2: Make initrd
 -------------------
-# highlight bash
+{% highlight bash %}
 cd /boot
 mkinitrd -c -k 3.2.45 -m ext2 -f ext2 -r /dev/sda2
-# endhighlight
+{% endhighlight %}
 
 Step 3: Add to lilo
 -------------------
-# highlight bash 
+{% highlight bash %}
 echo <<EOF >>/etc/lilo.conf 
 # Linux bootable partition config begins
 image = /boot/vmlinuz-generic-3.2.45
@@ -50,7 +50,7 @@ label = Slacky-3.2.45-initrd
 read-only
 # Linux bootable partition config ends
 EOF
-# endhighlight
+{% endhighlight %}
 
 Step 4: Update lilo and reboot
 -----------------------------
