@@ -10,7 +10,9 @@ Unable to boot - please use a kernel appropriate for your CPU.
 {% endhighlight %}
 
 So what is pae you might ask? According to Wikipedia:
+
 ***Physical Address Extension, an x86 computer processor feature for accessing more than 4 gigabytes of memory***
+
 Since my sad piece of server has no way near 4 GB of RAM, there wasn't any reason for me to use PAE (even if it would have been supported).
 So I booted up the server on a rescue USB and found these kernels (with the bold one being the active one):
 <ul>
