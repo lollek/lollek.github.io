@@ -6,7 +6,6 @@ Today I had some issues reaching my server through SSH, so I decided to restart 
 {% highlight bash %}
 This kernel requires the following features not present on the CPU:
 pae
-
 Unable to boot - please use a kernel appropriate for your CPU.
 {% endhighlight %}
 
