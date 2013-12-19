@@ -58,8 +58,38 @@ That is, we need to sum the numbers (a dash is treated like 0), place the score 
 
 Step 1 - Change dash to zero
 ----------------------------
+{% highlight bash %}
+sed 's/\ -/0/g' resultat.txt
+{% endhighlight %}
+
+Since step 2 won't work if there are dashes in the text, we need to replace them with 0s.
+Sed syntax can be explained like this:
+{% highlight bash %}
+sed 's/ REMOVE THIS / ADD THIS INSTEAD /g' filename
+{% endhighlight %}
+'s/\ -/0g' will look for a space (\ ) followed by a dash (-) and replace it with a zero (0).
+The reason we have a space before the dash is because otherwise, Jan-Olof will be renamed to Jan0Olof.
+
 Step 2 - The magic switcheroo
 ---------------------------------
+{% highlight bash %}
+|while read -a r;do echo $[r[2]+r[3]+r[4]] ${r[0]} ${r[1]};done
+{% endhighlight %}
+
+The command works like this:
+<ol>
+  <li>The | ("pipe") means that we'll take the output from the command on the left side and give as input to the command on the right side.</li>
+  <li>while read -a r will save every word in the line to array r, e.g. Mikaela will be saved to r[0] and Andersson will be saved to r[1]</li>
+  <li>do ...; done will take the command between do and done and execute it on every line</li>
+  <li>echo $[r[2]+r[3]+r[4]] ${r[0]} ${r[1]}
+    <ol>
+    <li>Sums r[2] to r[4] and writes out the result</li>
+    <li>Writes out r[0] and r[1]</li>
+    </ol>
+    </li>
+  <li>Repeat steps 1-4 for every line in file</li>
+</ol>
+
 Step 3 - Sorting
 ----------------
 {% highlight bash %}
@@ -67,5 +97,7 @@ sed ...|while read ...|sort -r
 {% endhighlight %}
 
 Since we want the lines in order, we'll append |sort -r to the command. 
-1.   The | ("pipe") means that we'll take the output from the command on the left side and give as input to the command on the right side.
-2.   sort will sort the lines in ascending order, since we wants it in descending instead, we will use the -r argument
+<ol>
+  <li>The | ("pipe") means that we'll take the output from the command on the left side and give as input to the command on the right side.</li>
+  <li>sort will sort the lines in ascending order, since we wants it in descending instead, we will use the -r argument</li>
+</ol>

@@ -63,14 +63,18 @@ awk '$0=$3+$4+$5FS$1FS$2' resultat.txt
 {% endhighlight %}
 
 The command work like this:
-1.   Awk will save the first line (Mikaela Andersson 14 - 17) to $0
-2.   Every word in $0 is split into separate variables, e.g. Mikaela will be saved to $1 and Andersson will be saved to $2
-3.   Through our expression we will change $0 to
-  3.1.   Sum of the numbers (through $3 + $4 + $5 FS)
-  3.2.   First name Last name (through $1 FS $2)
-  Where FS means "space"
-4.   Awk prints out $0
-5.   Repeat steps 1-4 for each line in file
+<ol>
+  <li>Awk will save the first line (Mikaela Andersson 14 - 17) to $0</li>
+  <li>Every word in $0 is split into separate variables, e.g. Mikaela will be saved to $1 and Andersson will be saved to $2</li>
+  <li>Through our expression we will change $0 to
+    <ol>
+    <li>Sum of the numbers (through $3 + $4 + $5 FS)</li>
+    <li>First name Last name (through $1 FS $2)</li>
+    </ol>
+    Where FS means "space"</li>
+  <li>Awk prints out $0</li>
+  <li>Repeat steps 1-4 for each line in file</li>
+</ol>
 
 Step 2 - Sorting
 ----------------
@@ -79,5 +83,7 @@ awk '$0=$3+$4+$5FS$1FS$2' resultat.txt|sort -r
 {% endhighlight %}
 
 Since we want the lines in order, we'll append |sort -r to the command. 
-1.   The | ("pipe") means that we'll take the output from the command on the left side and give as input to the command on the right side.
-2.   sort will sort the lines in ascending order, since we wants it in descending instead, we will use the -r argument
+<ol>
+  <li>The | ("pipe") means that we'll take the output from the command on the left side and give as input to the command on the right side.</li>
+  <li>sort will sort the lines in ascending order, since we wants it in descending instead, we will use the -r argument</li>
+</ol>
