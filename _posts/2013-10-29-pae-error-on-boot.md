@@ -19,7 +19,7 @@ So I booted up the server on a rescue USB and found these kernels (with the bold
   <li>generic-3.2.45</li>
   <li>generic-smp-3.2.45-smp</li>
   <li>huge-3.2.45</li>
-  <li>*huge-smp-3.2.45-smp*</li>
+  <li><b>huge-smp-3.2.45-smp</b></li>
 </ul>
 For some reason, the last Slackware update (14) decided that I wanted a huge smp kernel. Since it happened once it will probably happen again, so I'm writing a quick guide to the needful fix.
 
