@@ -54,9 +54,9 @@ EOF
 
 Step 4: Update lilo and reboot
 -----------------------------
-# highlight bash
+{% highlight bash %}
 lilo
 exit
 umount /mnt{/dev,/proc,/sys,}
 reboot
-# endhighlight 
+{% endhighlight %}
