@@ -15,12 +15,10 @@ So what is pae you might ask? According to Wikipedia:
 
 Since my sad piece of server has no way near 4 GB of RAM, there wasn't any reason for me to use PAE (even if it would have been supported).
 So I booted up the server on a rescue USB and found these kernels (with the bold one being the active one):
-<ul>
-  <li>generic-3.2.45</li>
-  <li>generic-smp-3.2.45-smp</li>
-  <li>huge-3.2.45</li>
-  <li>*huge-smp-3.2.45-smp*</li>
-</ul>
+-    generic-3.2.45<
+-    generic-smp-3.2.45-smp
+-    huge-3.2.45
+-    *huge-smp-3.2.45-smp*
 For some reason, the last Slackware update (14) decided that I wanted a huge smp kernel. Since it happened once it will probably happen again, so I'm writing a quick guide to the needful fix.
 
 Step 1: Chroot 
