@@ -3,12 +3,12 @@ layout: post
 title: PAE Error on boot
 ---
 Today I had some issues reaching my server through SSH, so I decided to restart it. In the end, it turned out that the reason I couldn't connect was because of my ISP, but I received a nice little problem during the reboot.
-# highlight bash
+{% highlight bash %}
 This kernel requires the following features not present on the CPU:
 pae
 
 Unable to boot - please use a kernel appropriate for your CPU.
-# endhighlight
+{% endhighlight %}
 
 So what is pae you might ask? According to Wikipedia:
 ***Physical Address Extension, an x86 computer processor feature for accessing more than 4 gigabytes of memory***
