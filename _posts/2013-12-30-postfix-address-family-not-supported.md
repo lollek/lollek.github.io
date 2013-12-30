@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Postfix: Address Family Not Supported
+title: Postfix - Address Family Not Supported
 ---
 
 Issue during postfix startup
