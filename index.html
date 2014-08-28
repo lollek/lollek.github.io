@@ -4,20 +4,15 @@ title: lollek's notes to self
 ---
 
 <div id="home">
-  <h1>Blog Posts</h1>
+  <h1>Entries</h1>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 
-  <h1>Other Happenings</h1>
-  <ul class="posts">
-    <li><span>01 Jan 1970</span> &raquo; <a href="">Example link</a></li>
-  </ul>
-
   <h1>Links</h1>
   <ul class="posts">
-    <li><a href="https://github.com/lollek/">Github:</a> Code Repository.</li>
+    <li><a href="https://github.com/lollek/">Github Code Repository</a></li>
   </ul>
 </div>

@@ -2,9 +2,7 @@
 layout: post
 title: Installing Spotify on Linux
 ---
-How to install spotify in linux without needing to use wine.
-Has been tested on debian, probably works on ubuntu as well.
-Obviously you need to run these as root or add "sudo " before every command
+***NB - These instructions are old and probably don't work anymore***
 
 Step 1: Add spotify-sources to apt-repo
 ------
