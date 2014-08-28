@@ -1,6 +1,0 @@
-[submodule "data/crazykamo-js"]
-	path = data/crazykamo-js
-	url = git://github.com/lollek/crazykamo-js.git
-[submodule "data/sokoban-js"]
-	path = data/sokoban-js
-	url = git://github.com/lollek/sokoban.js.git
