@@ -54,7 +54,7 @@
 .highlight .sc { color: #d14 } /* Literal.String.Char */
 .highlight .sd { color: #d14 } /* Literal.String.Doc */
 .highlight .s2 { color: #55AA55 } /* Literal.String.Double */
-.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .se { color: #FF5555 } /* Literal.String.Escape */
 .highlight .sh { color: #d14 } /* Literal.String.Heredoc */
 .highlight .si { color: #d14 } /* Literal.String.Interpol */
 .highlight .sx { color: #d14 } /* Literal.String.Other */
