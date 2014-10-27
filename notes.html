@@ -1,14 +1,23 @@
 ---
 layout: default
-title: Index
+title: Notes
 ---
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">Lollek</a>
-    </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="/notes.html">Notes</a></li>
+      <li class="dropdown">
+        <div class="navbar-header">
+          <a class="navbar-brand dropdown-toggle" data-toggle="dropdown" href="#">
+            Lollek
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/">Front Page</a></li>
+            <li><a href="/notes.html">Notes</a></li>
+          </ul>
+        </div>
+        <li class="active"><a href="">{{ page.title }}</a></li>
+      </li>
     </ul>
   </div>
 </div>
