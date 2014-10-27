@@ -5,16 +5,7 @@ layout: default
       <div class="container">
         <ul class="nav navbar-nav">
           <li class="dropdown">
-            <div class="navbar-header">
-              <a class="navbar-brand dropdown-toggle" data-toggle="dropdown" href="#">
-                Lollek
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="/">Front Page</a></li>
-                <li><a href="/notes.html">Notes</a></li>
-              </ul>
-            </div>
+            {% include dropdown.html %}
             <li><a href="/notes.html">Notes</a></li>
             <li class="active"><a href="">{{ page.title }}</a></li>
           </li>

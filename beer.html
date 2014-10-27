@@ -1,0 +1,586 @@
+---
+layout: default
+title: Beerlist
+---
+<script src="/data/sorttable.js"></script>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        {% include dropdown.html %}
+        <li class="active"><a href="">{{ page.title }}</a></li>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container" role="main">
+  <h1>Beer</h1>
+  <div id="beer">
+    <table class="table table-hover sortable">
+      <tr>
+        <th>Name</th>
+        <th>Brewery</th>
+        <th>Percentage</th>
+        <th>Country</th>
+        <th>Type</th>
+        <th>S-Score</th>
+        <th>O-Score</th>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>Carlsberg</td>
+        <td> </td>
+        <td>Danmark</td>
+        <td>Lager</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>Heineken</td>
+        <td> </td>
+        <td>Holland</td>
+        <td>Lager</td>
+        <td>4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>India Pale Ale</td>
+        <td>Goose Island</td>
+        <td>5.9</td>
+        <td>USA</td>
+        <td>IPA</td>
+        <td>5</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Double dog</td>
+        <td>Flying Dog</td>
+        <td>11.5</td>
+        <td>USA</td>
+        <td>Double IPA</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>Falcon</td>
+        <td>5.2</td>
+        <td>Sverige</td>
+        <td>Lager</td>
+        <td>4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>IPA</td>
+        <td>St. Erik</td>
+        <td>5.3</td>
+        <td>Sverige</td>
+        <td>IPA</td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>APA</td>
+        <td>St. Erik</td>
+        <td>5</td>
+        <td>Sverige</td>
+        <td>APA</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Pale Ale</td>
+        <td>St. Erik</td>
+        <td>4.5</td>
+        <td>Sverige</td>
+        <td>Pale Ale</td>
+        <td>4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Triple</td>
+        <td>Brakspear</td>
+        <td>7.5</td>
+        <td>Storbritannien</td>
+        <td>Strong Ale</td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>Red Stripe</td>
+        <td> </td>
+        <td>Sverige</td>
+        <td>Lager</td>
+        <td>4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>Gotlands Bryggeri</td>
+        <td> </td>
+        <td>Sverige</td>
+        <td>IPA</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>Gotlands Bryggeri</td>
+        <td> </td>
+        <td>Sverige</td>
+        <td>Pale Ale</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td>Norrlands Guld</td>
+        <td> </td>
+        <td>Sverige</td>
+        <td>Lager</td>
+        <td>3</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Irish Stout</td>
+        <td>Murphy's</td>
+        <td>4</td>
+        <td>Irland</td>
+        <td>Stout</td>
+        <td>4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>Newcastle</td>
+        <td>
+        </td>
+        <td>Storbritannien</td>
+        <td>Ale</td>
+        <td>3</td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>Wisby Stout</td>
+        <td>Gotlands Bryggeri</td>
+        <td>
+        </td>
+        <td>Sverige</td>
+        <td>Stout</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>Mariestad</td>
+        <td>5.3</td>
+        <td>Sverige</td>
+        <td>Lager</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Banana Bread Beer</td>
+        <td>Wells</td>
+        <td>5.2</td>
+        <td>Storbritannien</td>
+        <td>Fruit</td>
+        <td>3</td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>Wrasslers XXXX Stout</td>
+        <td>Porterhouse Brewing Co.</td>
+        <td>5</td>
+        <td>Irland</td>
+        <td>Stout</td>
+        <td>1</td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>5am Saint</td>
+        <td>BrewDog</td>
+        <td>5</td>
+        <td>Irland</td>
+        <td>Amber Ale</td>
+        <td>5</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Jaipur IPA</td>
+        <td>Thornbridge Brewery</td>
+        <td>5.9</td>
+        <td>Storbritannien</td>
+        <td>IPA</td>
+        <td>4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>McGrath's 4</td>
+        <td>Clanconnel Brewing Company</td>
+        <td>4.3</td>
+        <td>Irland</td>
+        <td>Stout</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Galway Hooker</td>
+        <td>Galway Hooker Brewery</td>
+        <td>4.4</td>
+        <td>Irland</td>
+        <td>APA</td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>Brooklyn</td>
+        <td>6.9</td>
+        <td>USA</td>
+        <td>IPA</td>
+        <td>4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>London Porter</td>
+        <td>Fuller's</td>
+        <td>5.4</td>
+        <td>Storbritannien</td>
+        <td>Porter</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>London Pride</td>
+        <td>Fuller's</td>
+        <td>4.7</td>
+        <td>Storbritannien</td>
+        <td>Pale Ale</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Red Seal</td>
+        <td>North Coast Brewing Co.</td>
+        <td>5.5</td>
+        <td>USA</td>
+        <td>Amber Ale</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>India Pale Ale</td>
+        <td>Fuller's</td>
+        <td>4.8</td>
+        <td>Storbritannien</td>
+        <td>IPA</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Guinness</td>
+        <td>Guinness Ltd.</td>
+        <td>4.2</td>
+        <td>Irland</td>
+        <td>Stout</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Sour Mash Brew</td>
+        <td>Jeremiah Weed.</td>
+        <td>4</td>
+        <td>USA</td>
+        <td>
+        </td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>Brooklyn</td>
+        <td>
+        </td>
+        <td>USA</td>
+        <td>Lager</td>
+        <td>2</td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>Svaneke Choko Stout</td>
+        <td>Svaneke Bryghuse</td>
+        <td>5.7</td>
+        <td>Danmark</td>
+        <td>Stout</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Brutal Bulldog</td>
+        <td>Gotlands Bryggeri</td>
+        <td>8.4</td>
+        <td>Sverige</td>
+        <td>Double IPA</td>
+        <td>5</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Sleepy Bulldog</td>
+        <td>Gotlands Bryggeri</td>
+        <td>4.8</td>
+        <td>Sverige</td>
+        <td>APA</td>
+        <td>
+        </td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Sitting Bulldog</td>
+        <td>Gotlands Bryggeri</td>
+        <td>6.4</td>
+        <td>Sverige</td>
+        <td>IPA</td>
+        <td>
+        </td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Orval</td>
+        <td>Brasserie d'Orval</td>
+        <td>6.2</td>
+        <td>Belgien</td>
+        <td>Trappist</td>
+        <td>4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>ESB</td>
+        <td>Fuller's</td>
+        <td>5.9</td>
+        <td>Storbritannien</td>
+        <td>Bitter</td>
+        <td>4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>East Coast Pale Ale</td>
+        <td>Sigtuna</td>
+        <td>5</td>
+        <td>Sverige</td>
+        <td>Pale Ale</td>
+        <td>5</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Maximus</td>
+        <td>Lagunitas</td>
+        <td>8.2</td>
+        <td>USA</td>
+        <td>IPA</td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Black Cab</td>
+        <td>Fuller's</td>
+        <td>4.5</td>
+        <td>Storbritannien</td>
+        <td>Stout</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Tripel Karmeliet</td>
+        <td>Bouwerij Bosteels</td>
+        <td>8.4</td>
+        <td>Belgien</td>
+        <td>Triple</td>
+        <td>2</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>En el bosque</td>
+        <td>Omnipollo</td>
+        <td>7</td>
+        <td>Sverige</td>
+        <td>Amber Ale</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Skands Elmegade IPA</td>
+        <td>Bryggeriet Skands</td>
+        <td>6.3</td>
+        <td>Norge</td>
+        <td>IPA</td>
+        <td>4</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>Nögne Ö</td>
+        <td>
+        </td>
+        <td>Norge</td>
+        <td>IPA</td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Poppels American Red Ale</td>
+        <td>Poppels Bryggeri</td>
+        <td>5.4</td>
+        <td>Sverige</td>
+        <td>APA</td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>Oceanbryggeriet</td>
+        <td>5.4</td>
+        <td>Sverige</td>
+        <td>IPA</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Adnams Innovation</td>
+        <td>
+        </td>
+        <td>6.7</td>
+        <td>Storbritannien</td>
+        <td>IPA</td>
+        <td>4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Nelson</td>
+        <td>
+        </td>
+        <td>4.6</td>
+        <td>Danmark</td>
+        <td>Pale Ale</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Ul fur</td>
+        <td>
+        </td>
+        <td>5.9</td>
+        <td>Island</td>
+        <td>IPA</td>
+        <td>4</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Göta kanal bryggd</td>
+        <td>Millingstorp Gårdsbryggeri AB</td>
+        <td>5</td>
+        <td>Sverige</td>
+        <td>Lager</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Nya världens IPA</td>
+        <td>Poppels</td>
+        <td>6.5</td>
+        <td>Sverige</td>
+        <td>Lager</td>
+        <td>1</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Sorachi aced</td>
+        <td>Ugly Duck</td>
+        <td>
+        </td>
+        <td>Danmark</td>
+        <td>Pale Ale</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Holy Cow</td>
+        <td>Dugges</td>
+        <td>7.3</td>
+        <td>Sverige</td>
+        <td>IPA</td>
+        <td>3</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Nebuchadnezzar</td>
+        <td>Omnipollo</td>
+        <td>8.5</td>
+        <td>Sverige</td>
+        <td>IPA</td>
+        <td>4</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Philthy Phil</td>
+        <td>
+        </td>
+        <td>5.4</td>
+        <td>USA</td>
+        <td>APA</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Hopblack!</td>
+        <td>Dugges</td>
+        <td>7</td>
+        <td>Sverige</td>
+        <td>Black IPA</td>
+        <td>
+        </td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Islander IPA</td>
+        <td>Coronado Brewing Company</td>
+        <td>7</td>
+        <td>USA</td>
+        <td>IPA</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Titan IPA</td>
+        <td>Great Divide Brewing Company</td>
+        <td>7.1</td>
+        <td>USA</td>
+        <td>IPA</td>
+        <td>5</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Lil'B</td>
+        <td>Evil Twin Brewing</td>
+        <td>11.5</td>
+        <td>USA</td>
+        <td>Imperial Porter</td>
+        <td>2</td>
+        <td>4</td>
+      </tr>
+    </table>
+  </div>
+</div>
