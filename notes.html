@@ -1,0 +1,29 @@
+---
+layout: default
+title: Index
+---
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Lollek</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/notes.html">Notes</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Notes</h1>
+    <div class="list-group">
+      {% for post in site.posts %}
+      <a class="list-group-item" href="{{ post.url }}">
+        <span class="badge">{{ post.date | date_to_string }}</span>
+        &raquo;
+        {{ post.title }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
