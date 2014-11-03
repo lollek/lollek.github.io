@@ -28,12 +28,12 @@ If you get questionmarks instead of phone name when trying to run your app, you
 can fix it with the following code:
 {% highlight bash %}
 #! /usr/bin/env bash
-path=/opt/android-studio  # Path where Android Studio is installed
+path="/opt/android-studio"  # Path where Android Studio is installed
 set -e
 
-$path/sdk/platform-tools/adb kill-server
-sudo $path/sdk/platform-tools/adb start-server
-$path/sdk/platform-tools/adb devices
+"$path/sdk/platform-tools/adb" kill-server
+sudo "$path/sdk/platform-tools/adb" start-server
+"$path/sdk/platform-tools/adb" devices
 {% endhighlight %}
 If it doesn't work the first time, try a few more times
 
