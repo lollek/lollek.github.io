@@ -23,4 +23,17 @@ API v19 works fine though
 sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
 {% endhighlight %}
 
+# Questionmarks instead of phone name
+If you get questionmarks instead of phone name when trying to run your app, you
+can fix it with the following code:
+{% highlight bash %}
+#! /usr/bin/env bash
+path=/opt/android-studio  # Path where Android Studio is installed
+set -e
+
+$path/sdk/platform-tools/adb kill-server
+sudo $path/sdk/platform-tools/adb start-server
+$path/sdk/platform-tools/adb devices
+{% endhighlight %}
+If it doesn't work the first time, try a few more times
 
