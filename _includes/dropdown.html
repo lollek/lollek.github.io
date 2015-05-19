@@ -1,11 +1,18 @@
 <div class="navbar-header">
   <a class="navbar-brand dropdown-toggle" data-toggle="dropdown" href="#">
-    lollek
+    /
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="/">Front page</a></li>
-    <li><a href="/notes.html">Notes</a></li>
+    <li>
+      <a href="/notes.html">Notes <i class="caret"></i></a>
+      <ul class="dropdown-menu sub-menu scroll-menu">
+        {% for post in site.posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
     <li><a href="/beer.html">Beerlist</a></li>
     <li><a href="/wishlist.html">Wishlist</a></li>
   </ul>
