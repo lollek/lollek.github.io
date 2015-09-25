@@ -2,42 +2,30 @@
 layout: post
 title: Installing Spotify on Linux
 ---
-***NB - These instructions are old and probably don't work anymore***
 
-Step 1: Add spotify-sources to apt-repo
-------
+{% include panel_start.html header="Installing Spotify on Linux" %}
+These instructions are old and probably don't work anymore
+
 {% highlight bash %}
+# Step 1: Add spotify-sources to apt-repo
 echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list
-{% endhighlight %}
 
-Step 2: Add key
-------
-{% highlight bash %}
+# Step 2: Add key
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
-{% endhighlight %}
 
-Step 3: Fetch updates
-------
-{% highlight bash %}
+# Step 3: Fetch updates
 apt-get update
-{% endhighlight %}
 
-Step 4: Add this stupid old dependency
-------
-This might not be needed anymore / on other distros. Just do it if the next step doesn't work
-{% highlight bash %}
+# Step 4: Add this stupid old dependency
+# This might not be needed anymore / on other distros. Just do it if the next step doesn't work
 wget snapshot.debian.org/archive/debian/20110406T213352Z/pool/main/o/openssl098/libssl0.9.8_0.9.8o-6_amd64.deb
 dpkg -i libssl0.9.8_0.9.8o-6_amd64.deb
-{% endhighlight %}
 
-Step 5: Install spotify
-------
-{% highlight bash %}
+# Step 5: Install spotify
 apt-get install spotify-client
-{% endhighlight %}
 
-Step 6: Run spotify!
-------
-{% highlight bash %}
+# Step 6: Run spotify!
 spotify
-{% endhighlight %}
+{% endhighlight bash %}
+
+{% include panel_end.html %}

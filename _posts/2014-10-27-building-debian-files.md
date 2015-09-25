@@ -21,7 +21,7 @@ title: Building Debian files
   <div class="panel-heading">
     <h1 class="panel-title">Example building <a
     href="https://packages.debian.org/sid/sudo">sudo-1.8.11p1-2</a></h1>
-  </div
+  </div>
   <div class="panel-body">
     <pre>
 # Download the source files

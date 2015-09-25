@@ -2,7 +2,11 @@
 layout: post
 title: PAE Error on boot
 ---
-***NB - If you found this page through Google, do NOT follow these instructions***
+
+{% include panel_start.html header="PAE Error on Boot" %}
+
+<b>If you found this page through Google, it would be stupid to follow these
+instructions to the letter</b>
 
 {% highlight bash %}
 This kernel requires the following features not present on the CPU:
@@ -10,24 +14,20 @@ pae
 Unable to boot - please use a kernel appropriate for your CPU.
 {% endhighlight %}
 
-Step 1: Chroot
--------------
-Boot up the computer through a rescue disk/usb
+<b>Step 1: Chroot</b>
 {% highlight bash %}
 mount /dev/sda2 /mnt
 for i in dev proc sys; do mount --bind /$i /mnt/$i; done
 chroot /mnt
 {% endhighlight %}
 
-Step 2: Make initrd
--------------------
+<b>Step 2: Make initrd</b>
 {% highlight bash %}
 cd /boot
 mkinitrd -c -k 3.2.45 -m ext2 -f ext2 -r /dev/sda2
 {% endhighlight %}
 
-Step 3: Add to lilo
--------------------
+<b>Step 3: Add to lilo</b>
 {% highlight bash %}
 echo >>/etc/lilo.conf <<EOF
 # Linux bootable partition config begins
@@ -40,11 +40,12 @@ read-only
 EOF
 {% endhighlight %}
 
-Step 4: Update lilo and reboot
------------------------------
+<b>Step 4: Update lilo and reboot</b>
 {% highlight bash %}
 lilo
 exit
 umount /mnt/{dev,proc,sys,}
 reboot
 {% endhighlight %}
+
+{% include panel_end.html %}
