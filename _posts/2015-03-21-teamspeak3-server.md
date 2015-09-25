@@ -3,7 +3,8 @@ layout: post
 title: Teamspeak3 Server
 ---
 
-## Setting up
+{% include panel_start.html header="Setting up" %}
+{% capture data %}
 1. Download tarball from www.teamspeak.com
 2. Untar to /home/teamspeak
 3. Add user/group teamspeak
@@ -18,8 +19,10 @@ sudo su - teamspeak
 sudo systemctl start teamspeak.service
 sudo systemctl enable teamspeak.service
 </pre>
+{% endcapture %}{{ data | markdownify }}
+{% include panel_end.html %}
 
-## /etc/systemd/system/teamspeak.service
+{% include panel_start.html header="/etc/systemd/system/teamspeak.service" %}
 <pre>
 [Unit]
 Description=Teamspeak server
@@ -35,3 +38,4 @@ ExecStart=/home/teamspeak/ts3server_startscript.sh start
 [Install]
 WantedBy=multi-user.target
 </pre>
+{% include panel_end.html %}

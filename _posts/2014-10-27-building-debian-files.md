@@ -3,27 +3,14 @@ layout: post
 title: Building Debian files
 ---
 
+{% include panel_start.html header="Links" %}
+{% capture data %}
+[Debian Link](https://www.debian.org/doc/manuals/maint-guide/build.en.html)
+{% endcapture %}{{ data | markdownify }}
+{% include panel_end.html %}
 
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h1 class="panel-title">Links</h1>
-  </div>
-  <div class="panel-body">
-    <div class="list-group">
-      <a class="list-group-item"
-      href="https://www.debian.org/doc/manuals/maint-guide/build.en.html">Debian
-      Link</a>
-    </div>
-  </div>
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h1 class="panel-title">Example building <a
-    href="https://packages.debian.org/sid/sudo">sudo-1.8.11p1-2</a></h1>
-  </div>
-  <div class="panel-body">
-    <pre>
+{% include panel_start.html header="Example building sudo-1.8.11p1-2" %}
+{% highlight bash %}
 # Download the source files
 curl -O http://ftp.de.debian.org/debian/pool/main/s/sudo/sudo_1.8.11p1-2.dsc
 curl -O http://ftp.de.debian.org/debian/pool/main/s/sudo/sudo_1.8.11p1.orig.tar.gz
@@ -41,6 +28,5 @@ cd sudo-1.8.11p1
 
 # Build
 dpkg-buildpackage -us -uc
-    </pre>
-  </div>
-</div>
+{% endhighlight %}
+{% include panel_end.html %}
