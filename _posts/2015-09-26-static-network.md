@@ -3,7 +3,7 @@ layout: post
 title: Configure static network
 ---
 
-{% include panel_start.html header="Install network interfaces on gw" %}
+{% include panel_start.html header="Install network interfaces" %}
 {% capture data %}
 ## Description:
 The first step is to establish basic network connectivity for your router/gateway.
