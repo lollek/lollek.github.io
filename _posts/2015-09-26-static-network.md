@@ -1,0 +1,75 @@
+---
+layout: post
+title: Configure static network
+---
+
+{% include panel_start.html header="Install network interfaces on gw" %}
+{% capture data %}
+## Description:
+The first step is to establish basic network connectivity for your router/gateway.
+This will allow you to connect to the installation server on the distribution network,
+from which you can install the routing software needed in later steps.
+Your router needs three network interfaces:
+{% endcapture %}{{ data | markdownify}}
+
+{% capture data %}
+- the loopback interface (lo; which is used for network connections within the gateway)
+- the interface connected to the distribution network (eth1)
+- the interface connected to your network (eth0).
+
+Each interface needs an address, netmask and broadcast address.
+It is important that you specify the correct netmask and broadcast address!
+
+D4-router.lab-2 expected configuration:
+
+```
+lo   - loopback
+
+eth0 - internal network
+  Network:    130.236.179.88/29
+  IP-Address: 130.236.179.89
+  Netmask:    255.255.255.248
+  Broadcast:  130.236.179.95
+
+eth1 - external network
+  Network:    130.236.178.0/26
+  IP-Address: 130.236.178.33
+  Netmask:    255.255.255.192
+  Broadcast:  130.236.178.63
+  Gateway:    130.236.178.1
+```
+
+## Implementation:
+
+1. Login to D4-router.lab-2 as root
+2. Copy /etc/network/interfaces to /etc/network/interfaces.change.0002
+3. Open /etc/network/interfaces in vi and add the following contents:
+
+```
+auto lo eth0 eth1
+
+iface lo inet loopback
+
+iface eth0 inet static
+  address 130.236.179.89
+  netmask 255.255.255.248
+  broadcast 130.236.179.95
+
+iface eth1 inet static
+  address 130.236.178.33
+  netmask 255.255.255.192
+  broadcast 130.236.178.63
+  gateway 130.236.178.1
+```
+
+Save file and run `ifup lo eth0 eth1`
+
+## Verification:
+- Should be able to ping 130.236.178.1 from D4-router.lab-2
+- Restart router
+- Should be able to ping 130.236.178.1 from D4-router.lab-2
+
+## Backout:
+  None needed
+{% endcapture %}{{ data | markdownify}}
+{% include panel_end.html %}
