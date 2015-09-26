@@ -4,6 +4,7 @@ title: Android Studio
 ---
 
 {% include panel_start.html header="Installation" %}
+
 {% capture data %}
 1. Download [android studio](https://developer.android.com/sdk/installing/studio.html)
 2. Untar it to /opt/android-studio
@@ -12,9 +13,7 @@ title: Android Studio
 5. Untar it to /opt/oracle-java
 6. (Ubuntu) Symlink /opt/oracle-java to /usr/lib/jvm/default-java
 7. (Ubuntu) Symlink /opt/oracle-java/bin/java to /usr/bin/java
-{% endcapture %}{{ data | markdownify }}
 
-{% capture data %}
 ## If you have 64-bit
 {% endcapture %}{{ data | markdownify }}
 {% highlight bash %}

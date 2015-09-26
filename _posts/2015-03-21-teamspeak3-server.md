@@ -23,7 +23,8 @@ sudo systemctl enable teamspeak.service
 {% include panel_end.html %}
 
 {% include panel_start.html header="/etc/systemd/system/teamspeak.service" %}
-<pre>
+{% capture data %}
+```
 [Unit]
 Description=Teamspeak server
 After=network.target
@@ -37,5 +38,6 @@ ExecStart=/home/teamspeak/ts3server_startscript.sh start
 
 [Install]
 WantedBy=multi-user.target
-</pre>
+```
+{% endcapture %}{{ data | markdownify}}
 {% include panel_end.html %}
