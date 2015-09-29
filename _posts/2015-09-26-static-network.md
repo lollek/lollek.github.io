@@ -73,3 +73,23 @@ Save file and run `ifup lo eth0 eth1`
   None needed
 {% endcapture %}{{ data | markdownify}}
 {% include panel_end.html %}
+
+{% include panel_start.html header="Install network interfaces" %}
+{% capture data %}
+## Connect wlan0 to essid with dhcp at boot
+Get wpa-psk by running `wpa_passphrase MyNetwork MyPassphrase`.
+/etc/network/interfaces should be chmod 0600 if you put the wpa-psk there
+
+```
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo wlan0
+iface lo inet loopback
+
+iface wlan0 inet dhcp
+  wpa-ssid MyNetwork
+  wpa-psk a2d024861ef90117c47083c9252d1e9c107c7cc6ab938cd08349c9192d444d2f
+```
+{% endcapture %}{{ data | markdownify}}
+{% include panel_end.html %}
