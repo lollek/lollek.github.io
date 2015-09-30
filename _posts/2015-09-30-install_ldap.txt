@@ -1,0 +1,66 @@
+---
+layout: post
+title: Install and configure LDAP on server
+---
+
+{% include panel_start.html header="Install and configure LDAP on server" %}
+
+{% capture data %}
+## Description:
+Configure LDAP to the domain d4.sysinst.ida.liu.se
+
+## Implementation:
+1. Login to server as root
+2. Install the packages slapd, ldap-utils and migrationtools
+3. Set /etc/ldap/ldap.conf so contain the following: <pre>
+    #
+    # LDAP Defaults
+    #
+
+    # See ldap.conf(5) for details
+    # This file should be world readable but not world writable.
+
+    BASE    dc=d4,dc=sysinst,dc=ida,dc=liu,dc=se
+    URI     ldapi:///
+  </pre>
+4. In /etc/migrationtools/migrate_common.ph, locate and set the following: <pre>
+    $DEFAULT_MAIL_DOMAIN = "d4.sysinst.ida.liu.se";
+    $DEFAULT_BASE = "dc=d4,dc=sysinst,dc=ida,dc=liu,dc=se";
+  </pre>
+5. cd /usr/share/migrationtools
+6. ./migrate_all_online.sh
+7. Install package libnss-ldapd through aptitude, use all services
+8. Edit /etc/nsswitch.conf, change all "compat" to "files"
+9. In /etc/pam.d/common-session, add line to end: <pre>
+    session required        pam_mkhomedir.so skel=/etc/skel umask=0022
+  </pre>
+
+## Verification:
+1. Create /root/olle.ldif <pre>
+    root@server:~# cat user.ldif
+    dn: uid=olle,ou=People,dc=d4,dc=sysinst,dc=ida,dc=liu,dc=se
+    objectClass: top
+    objectClass: account
+    objectClass: posixAccount
+    objectClass: shadowAccount
+    cn: olle
+    uid: olle
+    uidNumber: 10000
+    gidNumber: 100
+    homeDirectory: /home/olle
+    loginShell: /bin/bash
+    gecos: olle
+    userPassword: {crypt}x
+    shadowLastChange: 0
+    shadowMax: 99999
+    shadowWarning: 0
+  </pre>
+
+2. `ldapadd -W -D "cn=admin,dc=d4,dc=sysinst,dc=ida,dc=liu,dc=se" -f olle.ldif`
+3. `ldappasswd -s mypassword -W -D
+  "cn=admin,dc=d4,dc=sysinst,dc=ida,dc=liu,dc=se"
+  "uid=olle,ou=People,dc=d4,dc=sysinst,dc=ida,dc=liu,dc=se"`
+
+4. Running `getent passwd` should now return olle as a user with uid 10000
+{% endcapture %}{{ data | markdownify}}
+{% include panel_end.html %}

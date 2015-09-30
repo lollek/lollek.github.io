@@ -74,10 +74,9 @@ Save file and run `ifup lo eth0 eth1`
 {% endcapture %}{{ data | markdownify}}
 {% include panel_end.html %}
 
-{% include panel_start.html header="Install network interfaces" %}
+{% include panel_start.html header="Connect wlan0 to essid with dhcp at boot" %}
 {% capture data %}
-## Connect wlan0 to essid with dhcp at boot
-Get wpa-psk by running `wpa_passphrase MyNetwork MyPassphrase`.
+Get wpa-psk by running `wpa_passphrase MyNetwork MyPassphrase`.  
 /etc/network/interfaces should be chmod 0600 if you put the wpa-psk there
 
 ```
