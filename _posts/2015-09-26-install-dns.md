@@ -3,7 +3,7 @@ layout: post
 title: Install and Configure DNS
 ---
 
-{% include panel_start.html header="Install and configure dns on server" %}
+{% include panel_start.html header=page.title %}
 
 {% capture data %}
 ## Description:

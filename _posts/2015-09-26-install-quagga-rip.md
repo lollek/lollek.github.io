@@ -3,7 +3,7 @@ layout: post
 title: Configure Quagga with RIP
 ---
 
-{% include panel_start.html header="Set up RIP routing" %}
+{% include panel_start.html header=page.title %}
 
 {% capture data %}
 ## Description:

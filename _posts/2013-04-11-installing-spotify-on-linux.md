@@ -3,10 +3,12 @@ layout: post
 title: Installing Spotify on Linux
 ---
 
-{% include panel_start.html header="Installing Spotify on Linux" %}
+{% include panel_start.html header=page.title %}
+
+{% capture data %}
 These instructions are old and probably don't work anymore
 
-{% highlight bash %}
+```
 # Step 1: Add spotify-sources to apt-repo
 echo "deb http://repository.spotify.com stable non-free" >> /etc/apt/sources.list
 
@@ -26,6 +28,7 @@ apt-get install spotify-client
 
 # Step 6: Run spotify!
 spotify
-{% endhighlight bash %}
+```
 
+{% endcapture %}{{ data | markdownify}}
 {% include panel_end.html %}

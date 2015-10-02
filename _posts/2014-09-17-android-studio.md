@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Android Studio
+title: Android Studio Installation
 ---
 
-{% include panel_start.html header="Installation" %}
+{% include panel_start.html header=page.title %}
 
 {% capture data %}
 1. Download [android studio](https://developer.android.com/sdk/installing/studio.html)
@@ -20,20 +20,4 @@ title: Android Studio
 # On ubuntu
 sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
 {% endhighlight %}
-{% include panel_end.html %}
-
-{% include panel_start.html header="Questionmarks instead of phone name" %}
-If you get questionmarks instead of phone name when trying to run your app, you
-can fix it with the following code:
-{% highlight bash %}
-#! /usr/bin/env bash
-path="/opt/android-studio"  # Path where Android Studio is installed
-set -e
-
-"$path/sdk/platform-tools/adb" kill-server
-sudo "$path/sdk/platform-tools/adb" start-server
-"$path/sdk/platform-tools/adb" devices
-{% endhighlight %}
-If it doesn't work the first time, try a few more times
-
 {% include panel_end.html %}

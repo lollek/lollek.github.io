@@ -3,12 +3,11 @@ layout: post
 title: PAE Error on boot
 ---
 
-{% include panel_start.html header="PAE Error on Boot" %}
-{% capture data %}
-***If you found this page through Google, it would be stupid to follow these instructions to the letter***
-{% endcapture %}{{ data | markdownify}}
+{% include panel_start.html header=page.title %}
 
 {% capture data %}
+***If you found this page through Google, it would be stupid to follow these instructions to the letter***
+
 ```
 This kernel requires the following features not present on the CPU:
 pae
