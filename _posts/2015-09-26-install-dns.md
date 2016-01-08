@@ -95,6 +95,20 @@ It should have the following normal zone:
     include "/etc/bind/bind.keys";
 </pre>
 10. Run `server bind reload`
+11. Send an email to your provider and ask them to add the following to their DNS: <pre>
+    d4.sysinst.ida.liu.se.            IN  NS      server.d4.sysinst.ida.liu.se.
+    server.d4.sysinst.ida.liu.se.     IN  A       130.236.179.90
+
+    88-29.179.236.130.in-addr.arpa.   IN  NS      server.d4.sysinst.ida.liu.se.
+    88.179.236.130.in-addr.arpa.      IN  CNAME   88.88-29.179.236.130.in-addr.arpa.
+    89.179.236.130.in-addr.arpa.      IN  CNAME   89.88-29.179.236.130.in-addr.arpa.
+    90.179.236.130.in-addr.arpa.      IN  CNAME   90.88-29.179.236.130.in-addr.arpa.
+    91.179.236.130.in-addr.arpa.      IN  CNAME   91.88-29.179.236.130.in-addr.arpa.
+    92.179.236.130.in-addr.arpa.      IN  CNAME   92.88-29.179.236.130.in-addr.arpa.
+    93.179.236.130.in-addr.arpa.      IN  CNAME   93.88-29.179.236.130.in-addr.arpa.
+    94.179.236.130.in-addr.arpa.      IN  CNAME   94.88-29.179.236.130.in-addr.arpa.
+    95.179.236.130.in-addr.arpa.      IN  CNAME   95.88-29.179.236.130.in-addr.arpa.
+</pre>
 
 ## Verification:
 - Run `named-checkzone d4.sysinst.ida.liu.se /etc/bind/db.d4.sysinst.ida.liu.se` and verify there is an OK
