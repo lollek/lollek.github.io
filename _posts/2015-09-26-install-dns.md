@@ -39,7 +39,7 @@ It should have the following normal zone:
       file "/etc/bind/db.d4.sysinst.ida.liu.se";
     };
 
-    zone "db.88-29.179.236.130.in-addr.arpa" {
+    zone "88-29.179.236.130.in-addr.arpa" {
       type master;
       file "/etc/bind/db.88-29.179.236.130.in-addr.arpa";
     };
