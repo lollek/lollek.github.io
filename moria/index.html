@@ -1,0 +1,29 @@
+---
+layout: default
+title: Moria
+---
+<div class="container" role="main">
+{% capture data %}
+
+# Guide to Moria Adventuring (or How to Slay Your Balrog)
+
+The information on this page comes from Beej's moria page, 30 minutes of UMoria,
+investigating the source code, and simply playing the game.  
+
+If there's something you want to know that I don't mention, it's likely
+mentioned in one of the links.
+
+## Links
+- [Beej's Moria Page](http://beej.us/moria/)
+- [30 minutes of UMoria (walkthrough)](https://www.youtube.com/user/30minutesofUMoria/videos?sort=da&view=0&flow=grid)
+- [Debian moria package](https://packages.debian.org/stable/moria)
+
+## Table of Contents
+- [The Moria Spoilers 1.2 (Wall of Text) ](/moria/spoilers1.2.txt)
+- [General Tips](/moria/general.html)
+- [Farming with a wand of clone monster](/moria/wocm.html)
+- [Winning Moria with a Mage](/moria/winning_mage.html)
+
+{% endcapture %}{{ data | markdownify }}
+{% include panel_end.html %}
+</div>

@@ -1,0 +1,3385 @@
+
+                 ----------------------------------------------
+-----------------|  Fourth Bryan Productions proudly presents |---------------
+                 ----------------------------------------------
+
+                      ------------------------------------
+                      |       The Moria Spoilers         |
+______________________| Revision  1.20,  Sept.  11, 1994 |____________________
+                      |  Copyright 1994, Mike Marcelais  |
+                      |       All Rights  Reserved       |
+                      ------------------------------------
+
+Copyright Mike Marcelais, 1993, 1994.  All rights reserved.
+
+This document (hereafter referred to as the "public" version of the Moria
+Spoiler File, or just "the spoilers") is copyrighted material and is *not* in
+the public domain.  Permission is hereby granted to you (the user) to 
+distribute copies of this document, subject to the following conditions:
+
+1)  The spoilers may be electronically distributed only in unmodified form.
+    Any such distribution must contian the complete document, including the 
+    title page, copyright notices, and this section.
+
+2)  The spoilers may be distributed in other than electronic form, 
+    (specifically, in the form of a printout) only as a direct dump of the 
+    complete file.  However, the addition of multiple fonts, line drawings, 
+    graphics, margins, column formats, etc is allowed as long as the complete 
+    document is provided.
+
+3)  No fee may be charged for the copying or distribution of the spoilers 
+    other than compensation which shall match the cost of materials for that
+    distribution (i.e., you cannot charge for the time/labor), not to exceed
+    $5 US.  (Examples:  If you were to print the spoilers out for a friend 
+    and the paper cost you $0.25, you could ask your friend for $0.25 - not a 
+    penny more.)
+
+4)  The spoilers may not be distributed free in conjunction with any other 
+    product without the written consent of the author.  The only exception is 
+    that this file may be included in the distribution for any version of 
+    Moria for which this document would apply.
+
+This document has been compiled from various sources (including play, usenet 
+E-mail and news groups, long term experience, source code, and general heresy and 
+heresay).  Information in this file has been verified as well as possible.  
+However, information in this document is not guaranteed to be correct, is 
+subject to change without notice, and does not represent a commitment on the 
+part of the author.
+
+
+                          -----------------------------
+--------------------------| Generic Table of Contents |-----------------------
+                          -----------------------------
+
+Standard Disclaimers, etc.
+In the Beginning
+   Introduction
+   Revision History
+   Credits
+   Using the Spoilers
+General Stuff
+   Moria Versions
+   Frequently Asked Questions
+Character
+   Attributes
+   Races
+   Classes
+   Experience
+The Dungeon
+   The City
+   Stores
+   Haggling
+   The Underground
+   Traps
+Combat
+   Monster Descriptions
+   Monster Attacks
+   Hit probability
+   Damage calculation
+   Bashing
+   AC calculation
+The Items
+   Amulets
+   Armor
+   Armor Artifacts
+   Diggers
+   Food
+   Gems
+   Potions
+   Rings
+   Scrolls
+   Staves
+   Wands
+   Weapons
+   Weapon Artifacts
+Spells
+   Spell system
+   Mana
+   Failure
+   Mage Spells
+   Cleric Spells
+Wizard Mode
+   Entering Wizard Mode
+   Wizard Commands
+   Wizard Items
+
+
+                              --------------------
+------------------------------| In the Beginning |------------------------------
+                              --------------------
+
+Introduction:
+
+Once upon a time, there was a game called moria.  It was a pretty good game,
+and a lot of people really enjoyed playing it.  As time went by, more people
+suggested changes to the game, adding more items, more monsters, and more ways
+to die.  This resulted in a difficult game to win.
+
+As more time went by, news groups were created out of the murk with names like
+rec.games.moria where people could gloat over their victories and provide
+hints and answers to questions that the ignorant masses posed.  However, once
+a question was asked and answered, the piece of advice was lost forever and
+would often be reasked in a matter of weeks.
+
+Within this file is a large collection of lore about the game of Moria.  Some
+of it may not be true, but I have made the best effort possible to verify all
+of the information contained herein.  Much of it has been verified, corrected,
+or added since the start of editing of this document before it was ever posted
+to the network.
+
+Also, we would like to request that any corrections, modifications, 
+suggestions, etc.  be E-mailed directly to mrmarcel@eos.ncsu.edu and not
+posted to the net.  We will attempt to verify any information sent us and then
+we will both add it to the spoiler file (for the next release) and post an
+official correction/addition to rec.games.moria.
+
+Note:  Please do not send E-mail to us asking for a copy of Moria itself (or 
+the source code, etc).  We do not honor these requests, and often just ignore 
+them.
+
+Be warned:  If you use the knowledge contained herein, your game will never be
+the same.  Your horizons will suddenly be expanded, but you may end up
+thinking that the game is less than it once was.  That is the risk you must
+take if you choose to read ths file.
+
+Good luck, and happy adventuring!
+
+------------------------------------------------------------------------------
+Revision History:
+
+In order to keep a decent idea of how the spoiler file is progressing, we have
+set up an official policy on how Revision Numbers will change.  Any minor
+revisions, corrections, or amplifications will advance the revision number
+by .01.  New sections added, or complete re-writes of existing sections will
+advance the revision number of .10.  Any complete rewrite of the entire file
+(just in case - it might actually happen) will advance the revision number to
+the next integer.
+
+------------------------------------------------------------------------------
+Credits:
+
+Well, this should actually be a very large list.  Among others, it should
+include almost everyone who has posted any hints of value to the net within
+about the last decade.  Some people who have made contributions to the cause
+of these spoilers above and beyond the call of duty, however, are listed here:
+
+    Michael Beresis
+    Sharon L. Casteel
+    William Chuang
+    Aaron M. Clements
+    James Frye
+    David Grabiner
+    Maarten Hazewinkel
+    Ben Hodson
+    Jeremy Seip
+    Kevin Souter
+    John Vessey
+    Nicholas C. Weaver
+    io20084@maine.maine.edu
+    petitc@rpi.edu
+
+If any of the rest of you out there know you contributed something to the
+cause, but don't see your name listed here - don't get us wrong.  It's not
+that we're ungrateful!  We probably just nuked your name by mistake!
+
+Note:  All names are listed in alphabetical order by last name, and not by
+order of importance of contribution.
+
+------------------------------------------------------------------------------
+
+Using The Spoilers:
+
+There's really not much to say on this subject, other than a few intuitive
+pointers.  How you use the spoilers is simple:  You read them, and apply the
+knowledge contained within to your game of moria.
+
+The section titles tend to be fairly unique, and are always followed by a
+colon.  This should make it very simple to get to whatever section you want
+quickly.  Just load the file into your editor (or if you're on a unix system,
+even use 'more' for that matter), and use the search function to look for the
+section.  For instance, from within more or vi, use the slash key ("/") and
+what you'd like to search for ("Armor:" for example)>
+
+This technique is also very useful for finding every reference to a particular
+topic.  If you'd like to know about speed in moria, just search for every
+occurance of the word "speed" in the file.
+
+                               -----------------
+-------------------------------| General Stuff |------------------------------
+                               -----------------
+Moria Versions:
+
+There are many versions of moria.  The most current is version 5.5.2  This
+spoiler file is based in the workings of Moria 5.x.  All of the Moria 5.x
+play similarly.
+
+If you are playing version 4.87, then may of the scribblings in this file
+will be incorrect for you, and you can either deal with it or upgrade to
+the 5x version.  See the FAQ questions for more details, or the Versions
+file that comes with moria for a more complete history.
+
+Frequently Asked Questions:
+
+Most of these questions are culled from the FAQ which is posted to
+rec.games.moria twice a month.  Other questions come from questions that 
+experts are tired of answering in the newsgroup or questions that I get asked
+by players in the dorm.  Many more questions that are in the FAQ not
+related to spoilers have been removed.
+
+Most common questions:
+
+Q:  How does speed work?  Do you get faster if you are already "Very Fast" 
+and get another speed item?
+
+A:  Very Fast is the highest speed that can be displayed, but if you are
+fortunate enough to find several speed items, you can get still faster.
+Permanent speed items (rings and boots) are cumulative, and temporary
+speed (potions, spells, and staffs) can add one more point to your
+speed.  Multiple uses of temporary speed are cumulative only in
+duration.
+
+Q:  I'm playing Moria version 5; how does that compare to the current version?
+Is it compatible?
+Moria versions:
+
+A:  Umoria 5.5.2: This is the current version of Umoria.  It will accept
+characters from all Umoria 5.x versions.
+
+Umoria 5.3.1/5.4.0: These are essentially identical to 5.5.0, and
+compatible with it, although 5.5.0 fixes a few bugs, and there have been
+a few minor changes.
+
+Umoria 5.2.2/5.3.0: These are in good condition, and compatible with the
+current version.  One bug: don't rest more than 10,000 turns in place,
+and leave the level if you start seeing lots of "Compacting monsters..."
+messages, or the game may lock up.
+
+Umoria 5.2.1: This is playable, but has no high scores file; you
+probably want to upgrade if possible.
+
+Umoria 5.1.0-5.2.0: These versions can be played, but are somewhat
+buggy.  If you run into an invisible, invincible monster which doesn't
+move or attack, get off the level.  If you can FTP the sources or
+executables, you should upgrade.
+
+The U is often omitted from the names of the following Umoria versions.
+
+Umoria 4.87/PC-Moria 4.87x: This version is based on the old VMS Moria.
+It is relatively bug-free, but it doesn't have the features of the 5.x
+versions, such as monster memory.  The save file format is incompatible
+with 5.x, and several people have failed in attempts to write a
+conversion program.
+
+Umoria 4.85: A moderately buggy version, also based on VMS Moria.
+
+Umoria/PC-Moria 4.83: An extremely buggy version, based on VMS Moria.
+This version is essentially unplayable (see invisible doesn't work,
+stores all close after 32768 turns, etc.)
+
+The following versions are not compatible with Umoria, and Umoria
+spoiler files may not apply to them.  I don't know much about these
+versions.
+
+UB Moria 5.0: Also known as VMS Moria 5.0, this is the current version
+of VMS Moria.  It has more monsters, a Black Market, and other features.
+
+Imoria 4.9: This is apparently a very good game, with new character
+classes and other features, but it hasn't been released outside of UW.
+
+Amiga Moria 3.0: Although this version was originally based on 4.85, it
+has many added monsters, features, and bugs (including items which make
+you virtually invincible).
+
+BOSS: This game changes the setting of Moria, but keeps many of the
+items.  It is based on VMS Moria 5.0.
+
+Q:  How do you kill an ancient multi-hued dragon?
+
+A:  Usually, you don't want to try; one gas breath from a full-strength AMHD
+    does 693 damage, with no resistance.
+
+    If you can get to speed 3 (one permanent speed item, and either another
+    permanent speed item or a haste self spell or staff), you can try this
+    technique.  First create (or find in a maze room) a wall with one open
+    space on all four sides.
+
+        .
+       .#.
+        .
+
+    Stand on one side, with the dragon on the other side.  when the dragon
+    moves adjacent to you,  attack it once, and then hide behind the pillar.
+    The dragon can't see you, so it won't breathe, and will instead chase you
+    to another side.  Now attack once, and hide again, and so on until the
+    dragon is finished.
+
+Q:  How do you kill an emperor lich?
+
+A:  You can kill an emperor lich if you can get to speed 2, which is its
+speed.  A mage or ranger can do this with the spell of haste self;
+anyone else needs a staff of speed, potion of haste self, or permanent
+speed item.  You will also need about 10 cure critical wounds or cure
+serious wounds potions, and some item giving you free action.
+
+You also need some ranged spell attack.  Liches take double damage from
+lightning in 5.x versions, so the spell of lightning bolt or wand of
+lightning balls is a good choice.  Rogues and warriors will need several
+wands, with a total of about 30 charges to guarantee that they can kill
+the lich with them.  A priest or paladin has Orb of Draining, which is
+even better.
+
+Now, try to line up with the lich while you are not adjacent to it,
+either in a room or a corridor.  This gives you a chance to cast your
+spell.  The lich will get one action.  If it cast a spell and you
+resisted, or the spell didn't do anything harmful, you have another
+chance.  If you were confused or blinded, drink a cure wounds potion;
+the lich isn't adjacent to you, so it can't hurt you.  If the lich moved
+and is now adjacent to you, move back.  Try to avoid getting cornered,
+and phase door or portal away if you are.  A priest can make this easier
+by putting down a glyph of warding, but this must be done *before* the
+lich chases you across the glyph.  (Don't stand on the glyph; it isn't
+foolproof.)
+
+If you run low on mana and don't have a wand, teleport out and come back
+later to finish the job.
+
+A priest with glyph of warding can also set up the following
+configuration (the exact length doesn't matter as long as you are within
+spell range):
+
+#L#####
+#^^...@
+#######
+
+The lich cannot cast spells from this position, because it cannot see
+you.  As long as it doesn't break the glyphs, you are safe, and can fire
+Orb of Draining down the corridor; the lich will take some damage each
+time.  If the lich breaks either glyph, run or teleport out, and
+continue the battle elsewhere.
+
+I do not advise trying this technique against an AMHD; it will probably
+break a glyph before the battle is over, and if your teleport spell
+fails, or if you haven't hasted yourself, the AMHD gets a chance to
+breathe.
+If you can get to speed 2, you can engage AMHDs by excavating one
+of the x's, and stepping back into that place when the AMHD breaks
+through. That gives you time to teleport safely.
+
+An emperor lich has 1520 hit points, plus anything additional that it
+gains by draining mana (6 points per mana point drained) and charges (40
+points per charge).  Never let it attack you in melee, because it can
+destroy your wands, healing itself in the process, as well as draining
+your experience and dexterity.
+
+If you can get to speed 3, faster than the lich, it is easy to kill;
+just fight, move back, fight, move back, and so on.  You will still need
+a lot of cure wounds potions, unless you let it chase you around a
+pillar, as in the AMHD technique.
+
+
+Q:  What is the Grape Jelly trick?  Does it work anymore?
+
+A:  The Grape Jelly trick is a spoiler/workaround/trick which is no longer
+necessary in 5.1 and later versions.
+
+In old versions, when any of your stats changed, things like HP and Mana would
+not.  Thus, to get the benifit, you used a grape jelly (or any other level
+drainer, but jellys are the safest) to drain you to a low level and use restore
+life levels to go back up to the increased stats.
+
+In modern versions, items are automatically changed, and when you're drained
+you are restored with exactly the same attribs as you had before.
+
+
+                            -------------
+----------------------------| Character |-------------------------------------
+                            -------------
+
+Attributes:
+
+Moria characters have several attributes that affect how they their character
+can survive in the dungeon and interact with monsters.  Many of these have
+cryptic relationships to their actual function.  Below is a list of all the
+attributes and their contribution to the character.
+The following six attributes, which are the most important, are on a scale
+of 3-18, with an additional 'exceptional' value after 18, designated by
+a slash, like 18/29.  The maximum value of any attribute is 18/100.  A plain
+18 is the same as 18/00.  If a second number is displayed next to the
+attribute (like STR:    18  18/29) the second number is your original
+value before it was drained by a attribute draining creature.
+
+STR:  Character strength.
+
++-------------------------------------------+   Carry capacity is:
+|  STR Range   | +HIT bonus | +Damage bonus |   
++-------------------------------------------+
+|  3           |     -3     |      -2       |   STR * 13.0 + Weight
+|  4           |     -2     |      -1       |
+|  5   - 7     |     -1     |       0       |   Maximum of 300.0 lbs.
+|  8   -15     |      0     |       0       |
+| 16           |     +0     |      +1       |   Weapon limit
+| 17           |     +0     |      +2       |
+| 18   -18/74  |     +1     |      +3       |   STR * 1.5 < Weapon Wt.
+| 18/75-18/90  |     +2     |      +4       |   then hit it str*1.5-wt
+| 18/91-18/99  |     +3     |      +5       |
+| 18/100       |     +4     |      +6       |
++-------------------------------------------+
+
+DEX:  Character Dexterity and Agility:
+
++-------------------------------------------------------+
+|  DEX Range   | +HIT bonus | +AC Bonus | +Disarm Bonus |
++-------------------------------------------------------+
+|  3           |     -3     |    -4     |      -8       |
+|  4           |     -2     |    -3     |      -6       |
+|  5           |     -2     |    -2     |      -4       |
+|  6           |     -1     |    -1     |      -2       |
+|  7           |     -1     |     0     |      -1       |
+|  8   -12     |      0     |     0     |       0       |
+| 13   -15     |      0     |     0     |      +1       |
+| 16           |     +1     |    +1     |      +2       |
+| 17           |     +2     |    +1     |      +2       |
+| 18   -18/49  |     +3     |    +2     |      +4       |
+| 18/50-18/90  |     +4     |    +3     |      +5       |
+| 18/91-18/99  |     +4     |    +4     |      +6       |
+| 18/100       |     +5     |    +5     |      +8       |
++-------------------------------------------------------+
+
+The number of attacks/round it determined by the weight of the weapon, the
+STR, and DEX attributes.  S/W = Str divided by the weight of the weapon in
+pounds.  Exceptional strength, is added to the 18.  (18/29 = 47)
+
++--------------------------------------------------------------------------+
+| S/W\DEX | 3-9 | 10-18 | 18/01-18/49 | 18/50-18/89 | 18/89-18/99 | 18/100 |
++--------------------------------------------------------------------------+
+|  0-1.99 |  1  |   1   |      1       |     1      |      1      |   1    |
+|  2-2.99 |  1  |   1   |      1       |     1      |      2      |   2    |
+|  3-3.99 |  1  |   1   |      1       |     2      |      2      |   3    |
+|  4-4.99 |  1  |   1   |      2       |     2      |      3      |   3    |
+|  5-6.99 |  1  |   2   |      2       |     3      |      3      |   4    |
+|  7-8.99 |  1  |   2   |      2       |     3      |      4      |   4    |
+|  9-     |  2  |   2   |      3       |     3      |      4      |   4    |
++--------------------------------------------------------------------------+
+
+INT and WIS:  These determine your spell casting ability.  For Mages, Rangers
+and Rogues, use the INT stat, and for priests and paladins, use the WIS stat.
+
+Also, INT gives you a bonus for using devices, as shown in the table below.
+Note:  This is for the INT stat, no matter what the class is.  See the wand
+and staff section for a complete formula for the chance to use a device
+sucessfully.
+
++----------------------------------------------------------------+
+|   INT/WIS   |  Mana Mult | Fail adjust | Device use | Spell/lv |
++----------------------------------------------------------------+
+|  3   - 7    |      0     |  No spells  |     0      |   None   |
+|  8   -14    |      1     |    - 3%     |     1      |     1    |
+| 15   -17    |      1     |    - 6%     |     2      |     1    |
+| 18   -18/49 |     3/2    |    - 9%     |     3      |     1    |
+| 18/50-18/69 |      2     |    -12%     |     4      |    3/2   |
+| 18/70-18/89 |     5/2    |    -15%     |     5      |    3/2   |
+| 18/90-18/99 |      3     |    -18%     |     6      |     2    |
+| 18/100      |      4     |    -21%     |     7      |    5/2   |
++----------------------------------------------------------------+
+
+CON:  States how healthy the character is.
+
++--------------------------------------------------+
+|    CON      |  HP Bonus  | HP/turn poison damage |
++--------------------------------------------------+
+|  3          |     -4     |         4             |
+|  4          |     -3     |         3             |
+|  5          |     -2     |         3             |
+|  6          |     -1     |         2             |
+|  7   -16    |      0     |         1             |
+| 17          |     +1     |        1/2            |
+| 18   -18/74 |     +2     |        1/2            |
+| 18/75-18/99 |     +3     |        1/2            |
+| 18/100      |     +4     |        1/3            |
++--------------------------------------------------+
+
+CHA:  Charisma.  Describes you looks, personality, likeability.  The
+only thing this effects is the prices in the ship.  Unlike the other stats,
+nothing except a potion of Ugliness can lower your charisma.
+
++------------------------+
+|     CHA     |  % Base  |
++------------------------+
+|  3          |  130%    |
+|  4          |  125%    |
+|  5          |  122%    |
+|  6          |  120%    |
+|  7          |  118%    |
+|  8          |  116%    |
+|  9          |  114%    |
+| 10          |  112%    |
+| 11          |  110%    |
+| 12          |  108%    |
+| 13          |  106%    |
+| 14          |  104%    |
+| 15          |  103%    |
+| 16          |  102%    |
+| 17          |  101%    |
+| 18          |  100%    |
+| 18/01-18/49 |   98%    |
+| 18/50-18/69 |   96%    |
+| 18/70-18/89 |   94%    |
+| 18/90-18/99 |   92%    |
+| 18/100      |   90%    |
++------------------------+
+
+Races:
+
+There are 8 races in standard moria.  All but humans get modifiers to their
+attributes and many are limited in what classes they can become.
+
+Classes is a bitmap of WMPRRP  (Warrior, Mage, Priest, Rogue, Ranger, Paladin)
+
++----------------------------------------------------------------------+
+| Race     | STR | INT | WIS | DEX | CON | CHR | Classes | Exp Penalty |
++----------------------------------------------------------------------+
+| Human    |  0  |  0  |  0  |  0  |  0  |  0  | WMPRRP  |    0%       |
+| Half-Elf | -1  | +1  |  0  | +1  | -1  | +1  | WMPRRP  |   10%       |
+| Elf      | -1  | +2  | +1  | +1  | -2  | +1  | WMPRR   |   20%       |
+| Halfling | -2  | +2  | +1  | +3  | +1  | +1  | WM R    |   10%       |
+| Gnome    | -1  | +2  |  0  | +2  | +1  | -2  | WMPR    |   25%       |
+| Dwarf    | +2  | -3  | +1  | -2  | +2  | -3  | W P     |   20%       |
+| Half-Orc | +2  | -1  | +0  | +0  | +1  | -4  | W PR    |   10%       |
+| Half-Trl | +4  | -4  | -2  | -4  | +3  | -6  | W P     |   20%       |
++----------------------------------------------------------------------+
+
++------------------------------------------------------------------------+
+| Race     | Disarm | Search | Stealth | Precept | Fight | Bows | Device | 
++------------------------------------------------------------------------+
+| Human    |   0    |    0   |    0    |    0    |   0   |   0  |    0   |
+| Half-Elf |   2    |    6   |    1    |   -1    |  -1   |   5  |    3   |
+| Elf      |   5    |    8   |    1    |   -2    |  -5   |  15  |    6   |
+| Halfling |  15    |   12   |    4    |   -5    |  -10  |  20  |   18   |
+| Gnome    |  10    |    6   |    3    |   -3    |  -8   |  12  |   12   |
+| Dwarf    |   2    |    7   |   -1    |    0    |  15   |   0  |    9   |
+| Half-Orc |  -3    |    0   |   -1    |    3    |  12   |  -5  |   -3   |
+| Half-Trl |  -5    |   -1   |   -2    |    5    |  20   | -10  |   -8   |
++------------------------------------------------------------------------+
+Note:  Lower perception is better.  Saving throw ability is the same as
+Device use.
+
+
++------------------------------------------------------------------------+
+| Race     |   Age   | Height (M) | Weight (M) | Height (F) | Weight (F) |
++------------------------------------------------------------------------+
+| Human    | 14+1d6  |    72+1d6  |  180+1d25  |   66+1d4   |  150+1d20  |
+| Half-Elf | 24+1d16 |    66+1d6  |  130+1d15  |   62+1d6   |  100+1d10  |
+| Elf      | 75+1d75 |    60+1d4  |  100+1d6   |   54+1d4   |   80+1d6   |
+| Halfling | 21+1d12 |    36+1d3  |   60+1d3   |   33+1d3   |   50+1d3   |
+| Gnome    | 50+1d40 |    42+1d3  |   90+1d6   |   39+1d3   |   50+1d3   |
+| Dwarf    | 35+1d15 |    48+1d3  |  150+1d10  |   46+1d3   |  120+1d10  |
+| Half-Orc | 11+1d4  |    67      |  150+1d5   |   63       |  120+1d5   |
+| Half-Trl | 20+1d10 |    96+1d10 |  255+1d50  |   84+1d8   |  225+1d40  |
++------------------------------------------------------------------------+
+
++---------------------------------+
+| Race     | Infravision | Hitdie |
++---------------------------------+
+| Human    |      0'     |  10    |
+| Half-Elf |     20'     |   9    |
+| Elf      |     30'     |   8    |
+| Halfling |     40'     |   6    |
+| Gnome    |     40'     |   7    |
+| Dwarf    |     50'     |   9    |
+| Half-Orc |     30'     |  10    |
+| Half-Trl |     30'     |  12    |
++---------------------------------+
+
+
+Classes:
+
+There are six classes in Moria.  The Warrior, Mage, Priest, Rogue, Ranger, and
+Paladin.  All of these classes get modifiers on their stats at the beginning
+and develop skills at a different rate per level.  All but the warrior also
+gets spells.  These spells are described in the Spells section at the end of
+this file.
+
++--------------------------------------------------------------------------+
+| Class   | STR | INT | WIS | DEX | CON | CHA | Spells | Exp Pen. | HitDie |
++--------------------------------------------------------------------------+
+| Warrior | +5  | -2  | -2  | +2  | +2  | -1  | NONE   |    0%    |  9     |
+| Mage    | -5  | +3  | +0  | +1  | -2  | +1  | MAGE   |   30%    |  0     |
+| Priest  | -3  | -3  | +3  | -1  | +0  | +2  | PRIEST |   20%    |  2     |
+| Rogue   | +2  | +1  | -2  | +3  | +1  | -1  | MAGE   |    0%    |  6     |
+| Ranger  | +2  | +2  | +0  | +1  | +1  | +1  | MAGE   |   40%    |  4     |
+| Paladin | +3  | -3  | +1  | +0  | +2  | +2  | PRIEST |   35%    |  6     |
++--------------------------------------------------------------------------+
+
++---------------------------------------------------------------------+
+| Class   | Disarm | Search | Stealth | Percept | Fight | Bows | Save |
++---------------------------------------------------------------------+
+| Warrior |   25   |   14   |   1     |   38    |  70   |  55  |  18  |
+| Mage    |   30   |   16   |   2     |   20    |  34   |  20  |  36  |
+| Priest  |   25   |   16   |   2     |   32    |  48   |  35  |  30  |
+| Rogue   |   45   |   32   |   5     |   16    |  60   |  66  |  30  |
+| Ranger  |   30   |   24   |   3     |   24    |  56   |  72  |  30  |
+| Paladin |   20   |   12   |   1     |   38    |  68   |  40  |  24  |
++---------------------------------------------------------------------+
+
+Each level, the fighting, bows, device use, disarm, and saves go up.  This
+chart describes the increase per level of the above numbers
+
++-------------------------------------------------+
+| Class   | Fight | Bows | Device | Disarm | Save | 
++-------------------------------------------------+
+| Warrior |  4    |   4  |   2    |   2    |  3   |
+| Mage    |  2    |   2  |   4    |   3    |  3   |
+| Priest  |  2    |   2  |   4    |   3    |  3   |
+| Rogue   |  3    |   4  |   3    |   4    |  3   |
+| Ranger  |  3    |   4  |   3    |   3    |  3   |
+| Paladin |  3    |   3  |   3    |   2    |  3   |
++-------------------------------------------------+
+
+Experience:
+
+All characters receive experience during the game.  Experience
+determines your level, which determines hit points, mana points,
+spells, abilities, etc.  The amount of experience required to 
+advance a level is a base value (shown below) plus a penalty
+for race and class.
+
+Base Experience
+
++----------------------------------------------------------+
+| Lv |  Exp to Adv  | Lv |  Exp to Adv  | Lv |  Exp to Adv |
++----------------------------------------------------------+
+|  1 |     10       | 14 |   1,400      | 27 |     35,000  |
+|  2 |     25       | 15 |   1,800      | 28 |     50,000  |
+|  3 |     45       | 16 |   2,300      | 29 |     75,000  |
+|  4 |     70       | 17 |   2,900      | 30 |    100,000  |
+|  5 |    100       | 18 |   3,600      | 31 |    150,000  |
+|  6 |    140       | 19 |   4,400      | 32 |    200,000  |
+|  7 |    200       | 20 |   5,400      | 33 |    300,000  |
+|  8 |    280       | 21 |   6,800      | 34 |    400,000  |
+|  9 |    380       | 22 |   8,400      | 35 |    500,000  |
+| 10 |    500       | 23 |  10,200      | 36 |    750,000  |
+| 11 |    650       | 24 |  12,500      | 37 |  1,500,000  |
+| 12 |    850       | 25 |  17,500      | 38 |  2,500,000  |
+| 13 |  1,100       | 26 |  25,000      | 39 |  5,000,000  |
++----------------------------------------------------------+
+
+Maximum level is 40 and maximum experience is 9,999,999
+
+There are penalties to experience to help balance out the classes and
+races.  These are listed above and are used to figure out your actual
+experience required.
+
+For example:  For a 10'th level Gnomish Mage to achieve 11'th level
+needs:
+           500 *  1.25 * 1.30 = 812.5
+         (base) (gnome) (mage)
+
+Note:  Even for the worst case (Gnomish Ranger) it is still possible
+to achieve the 40th level.  (5,000,000*1.25*1.40=8,750,000 experience)
+(Note:  A Gnomish Ranger can't exist, this was just a worst cast scenario)
+
+The program internally keeps experience out to the second decimal place
+even though it only displays the integer portion on the screen.
+
+There are many ways to gain experience.  This list shows a few.
+
+1.  Defeating monsters
+2.  Disarming traps
+3.  Picking locks
+4.  Using a scroll, potion, staff, wand, or rod for the first time
+      and discovering what it did.
+5.  Casting a spell successfully for the first time.
+6.  Drinking a potion of gain experience
+
+Identifying objects will give (item level + char level/2) /char level 
+experience points.
+
+Each experience level has a title which is displayed under your name
+and class.  Below is a listing of all the titles for each level and
+class.
+
+   Warrior      Mage         Priest       Rogue        Ranger       Paladin
+ 1 Rookie       Novice       Believer     Vagabond     Runner(1st)  Gallant
+ 2 Private      Apprentice   Acolyte(1st) Footpad      Runner(2nd)  Keeper(1st)
+ 3 Soldier      Trickster-1  Acolyte(2nd) Cutpurse     Runner(3rd)  Keeper(2nd)
+ 4 Mercenary    Trickster-2  Acolyte(3rd) Robber       Strider(1st) Keeper(3rd)
+ 5 Veteran(1st) Trickster-3  Adept(1st)   Burglar      Strider(2nd) Keeper(4th)
+ 6 Veteran(2nd) Cabalist-1   Adept(2nd)   Filcher      Strider(3rd) Keeper(5th)
+ 7 Veteran(3rd) Cabalist-2   Adept(3rd)   Sharper      Scout(1st)   Keeper(6th)
+ 8 Warrior(1st) Cabalist-3   Priest(1st)  Magsman      Scout(2nd)   Keeper(7th)
+ 9 Warrior(2nd) Visionist    Priest(2nd)  Common Rogue Scout(3rd)   Keeper(8th)
+10 Warrior(3rd) Phantasmist  Priest(3rd)  Rogue(1st)   Scout(4th)   Keeper(9th)
+11 Warrior(4th) Shadowist    Priest(4th)  Rogue(2nd)   Scout(5th)   Protector-1
+12 Swordsman-1  Spellbinder  Priest(5th)  Rogue(3rd)   Courser(1st) Protector-2
+13 Swordsman-2  Illusionist  Priest(6th)  Rogue(4th)   Courser(2nd) Protector-3
+14 Swordsman-3  Evoker(1st)  Priest(7th)  Rogue(5th)   Courser(3rd) Protector-4
+15 Hero         Evoker(2nd)  Priest(8th)  Rogue(6th)   Courser(4th) Protector-5
+16 Swashbuckler Evoker(3rd)  Priest(9th)  Rogue(7th)   Courser(5th) Protector-6
+17 Myrmidon     Evoker(4th)  Curate(1st)  Rogue(8th)   Tracker(1st) Protector-7
+18 Champion-1   Conjurer     Curate(2nd)  Rogue(9th)   Tracker(2nd) Protector-8
+19 Champion-2   Theurgist    Curate(3rd)  Master Rogue Tracker(3rd) Defender-1
+20 Champion-3   Thaumaturge  Curate(4th)  Expert Rogue Tracker(4th) Defender-2
+21 Superhero    Magician     Curate(5th)  Senior Rogue Tracker(5th) Defender-3
+22 Knight       Enchanter    Curate(6th)  Chief Rogue  Tracker(6th) Defender-4
+23 Superior Knt Warlock      Curate(7th)  Prime Rogue  Tracker(7th) Defender-5
+24 Gallant Knt  Sorcerer     Curate(8th)  Low Thief    Tracker(8th) Defender-6
+25 Knt Errant   Necromancer  Curate(9th)  Thief(1st)   Tracker(9th) Defender-7
+26 Guardian Knt Mage(1st)    Canon(1st)   Thief(2nd)   Guide(1st)   Defender-8
+27 Baron        Mage(2nd)    Canon(2nd)   Thief(3rd)   Guide(2nd)   Warder(1st)
+28 Duke         Mage(3rd)    Canon(3rd)   Thief(4th)   Guide(3rd)   Warder(2nd)
+29 Lord(1st)    Mage(4th)    Canon(4th)   Thief(5th)   Guide(4th)   Warder(3rd)
+30 Lord(2nd)    Mage(5th)    Canon(5th)   Thief(6th)   Guide(5th)   Warder(4th)
+31 Lord(3rd)    Wizard(1st)  Low Lama     Thief(7th)   Guide(6th)   Warder(5th)
+32 Lord(4th)    Wizard(2nd)  Lama-1       Thief(8th)   Guide(7th)   Warder(6th)
+33 Lord(5th)    Wizard(3rd)  Lama-2       Thief(9th)   Guide(8th)   Warder(7th)
+34 Lord(6th)    Wizard(4th)  Lama-3       High Thief   Guide(9th)   Warder(8th)
+35 Lord(7th)    Wizard(5th)  High Lama    Master Thief Pathfinder-1 Warder(9th)
+36 Lord(8th)    Wizard(6th)  Great Lama   Executioner  Pathfinder-2 Guardian
+37 Lord(9th)    Wizard(7th)  Patriarch    Low Assassin Pathfinder-3 Chevalier
+38 Lord Gallant Wizard(8th)  High Priest  Assassin     Ranger       Justiciar
+39 Lord Keeper  Wizard(9th)  Great Priest High AssassinHigh Ranger  Paladin
+40 Lord Noble   Wizard Lord  Noble Priest Guildmaster  Ranger Lord  High Lord
+
+                                ---------------
+--------------------------------| The Dungeon |-------------------------------
+                                ---------------
+
+The City:
+
+The city is a special part of the game of moria.  You start the game here.  
+Unlike other levels of the dungeon, the town is only one screen big and it has
+stores that will buy and sell items you find in the store.  There are monsters
+on this level, but since it is assumed that you grew up in an environment like
+this, you will get zero experience points for killing town creatures.
+
+Stores:
+
+There are six kinds of stores on the town level:
+
+   General stores:  sell food, water, cloaks, picks, light sources, and spikes
+   Weapon shop:  sells weapons
+   Armor shop: sells armor
+   Temple:  Sells potion, scrolls, prayer books, and some bashing weapons
+   Alchemists shop:  Sells potions, scrolls
+   Magic shop:  Sells magic books, wands, staffs, rings, amulets
+
+Each store can have a different shopkeeper that will determine base prices, 
+haggling difficulty, and overall pleasantness.
+
++----------------------------------------------------------------------------+
+| Shop Keeper             | Max$ | First | Final | Haggle % | Race | Insults |
++-----------General Store----------------------------------------------------+
+| Erick the Honest        |  250 |  175  |  108  |    4     |  Hu  |    12   |
+| Andy the Friendly       |  200 |  170  |  108  |    5     |  Hl  |    15   |
+| Lyar-el the Comley      |  300 |  165  |  107  |    6     |  El  |    18   |
++------------------Armory----------------------------------------------------+
+| Mauglin the Grumpy      |32000 |  200  |  112  |    4     |  Dw  |     5   |
+| Darg-Low the Grim       |10000 |  190  |  111  |    4     |  Hu  |     9   |
+| Mauglim the Horrible    | 3000 |  200  |  113  |    5     |  HO  |     9   |
++-------------Weaponsmith----------------------------------------------------+
+| Arndal Best-Slayer      |10000 |  185  |  110  |    5     |  HE  |     8   |
+| Oglign Dragon-Slayer    |32000 |  195  |  112  |    4     |  Dw  |     8   |
+| Ithyl-Mak the Beastly   | 3000 |  210  |  115  |    6     |  HT  |     8   |
++------------------Temple----------------------------------------------------+
+| Hardblow the Humble     | 3500 |  175  |  109  |    6     |  Hu  |    15   |
+| Gunnar the Paladin      | 5000 |  185  |  110  |    5     |  Hu  |    23   |
+| Delilah the Pure        |25000 |  180  |  107  |    6     |  HE  |    20   |
++---------------Alchemist----------------------------------------------------+
+| Ga-nat the Greedy       |12000 |  220  |  115  |    4     |  Gn  |     9   |
+| Muaser the Chemist      |10000 |  190  |  111  |    5     |  HE  |     8   |
+| Wizzle the Chaotic      |10000 |  190  |  110  |    6     |  Hl  |     8   |
++--------------Magic Shop----------------------------------------------------+
+| Valeria Starshine       |32000 |  175  |  110  |    5     |  El  |    11   |
+| Gopher the Great!       |20000 |  215  |  113  |    6     |  Gn  |    10   |
+| Inglorian the Mage      |32000 |  200  |  110  |    7     |  Hu  |    10   |
++----------------------------------------------------------------------------+
+
+Max$:    Amount of gold they can buy items for.  Hence, you can't sell a 3000
+         gp cloak to most general stores, because they can't afford it.
+First:   Percent Markup of the base price used in the first offer.
+Final:   Percent Markup of the base price used in their Final Offer.
+Hagggle%:What percent you must increase your offer by and not insult keeper.
+Race:    What race the shopkeeper is:
+             Hu  Human    Hl  Halfling
+             El  Elf      HE  Half-Elf
+             Gn  Gnome    HO  Half-Orc
+             Dw  Dwarf    HT  Half-Troll
+Insult:  The number of times you can insult the shopkeeper before he kicks you
+         out of his store.
+
+Haggling:
+
+Haggling is one of the most irritating skills in the game, according to most
+people.  There are been methods of eliminating haggling, or making it an option
+in the game.  Here is a detailed method of how to haggle and get the best price
+on an item.
+
+Final offer price
+
+             Base cost of item
+           * Final offer markup
+           * Race adjustment
+           * CHA adjustment
+          --- Final offer price
+
+The initial offer price is the same, except substitute the First instead of 
+Final in the second line.
+
+If the item is unidentified, the price is determined by the table below.  Using
+the real price would allow players to identify the relative value of items by
+offering to sell them.
+
++---------------------------+
+| Unidentified Item | Price |
++---------------------------+
+| Weapon or Armor   |  Base |
+| Diggers           |  Base |
+| Food              |     1 |
+| Potion            |    20 |
+| Scrolls           |    20 |
+| Amulet            |    45 |
+| Ring              |    45 |
+| Wand              |    50 |
+| Staff             |    70 |
++---------------------------+
+
+If a wand or staff whose type is known, but not the number of charges, the base
+price for the wand/staff is used.
+
+If a non-cursed type of ring or amulet is known, but not the bonus, then the
+price is still the base price of the ring/amulet
+
+Ration type foods are always identified.  Only molds and mushrooms are above.
+
+Race adjustment is how well members of two races get along.  The table below
+is the percent markup based on the race of the player and the shopkeeper.
+
++----------------Shopkeeper Race-------------------------------------------+
+| Player  | Human | H-Elf | Elf | H-ling | Gnome | Dwarf | H-Orc | H-Troll |
++--------------------------------------------------------------------------+
+| Human   |  100  |  105  | 105 |   110  |  113  |  115  |  120  |   125   |
+| Half-Elf|  110  |  100  | 100 |   105  |  110  |  120  |  125  |   130   |
+| Elf     |  110  |  105  | 100 |   105  |  110  |  120  |  125  |   130   |
+| Halfling|  115  |  110  | 105 |    95  |  105  |  110  |  115  |   130   |
+| Gnome   |  115  |  115  | 110 |   105  |   95  |  110  |  115  |   130   |
+| Dwarf   |  115  |  120  | 120 |   110  |  110  |   95  |  125  |   135   |
+| Half-Orc|  115  |  120  | 125 |   115  |  115  |  130  |  110  |   115   |
+| Half-Trl|  110  |  115  | 115 |   110  |  110  |  130  |  110  |   110   |
++--------------------------------------------------------------------------+
+
+When offering a price, if you didn't increase (decrease for selling) you offer 
+by the Haggle% of the shopkeeper, he is insulted.  If you have insulted him
+the number of times in the Insult column, he closes his store for 1000 turns.
+If you increase it by more than 3*Haggle%, then instead of the shopkeeper 
+matching your change, he'll just use 3*Haggle%.  Thus you have just given the
+shopkeeper some free money.
+
+If the number of good haggles - 3* bad haggles - 5 is greater than zero and
+it's square is greater than the price/50, haggling is not necessary for that
+item.
+
+The Underground:
+
+Each level of the underground is filled with rooms,  monsters, and treasure.
+These levels are much bigger than the town level, typically 66 high and 198
+characters wide.  When you pass through a stair, the old level is destroyed
+and a new one created.  There will not be a staircase for you to return to the
+old level, after going through a staircase.  You will have to find one on the
+level.
+
+Traps:
+
+There are many traps to be found in the dungeons.  Some of these traps are
+just natural occurances, but others are set by monsters to try and kill the
+adventurer.
+
++-----------------------------------------------------------------------------+
+| Trap Desc      | Exp | Description                                          |
++-----------------------------------------------------------------------------+
+| open pit       |   1 | Fall for 2d6 damage.  Visible trap                   |
+| arrow trap     |   3 | Arrow doing 1d8 damage                               |
+| covered pit    |   2 | Fall for 2d6 damage.                                 |
+| trap door      |   5 | Fall for 2d8 damage.  Go down one level              |
+| gas trap       |   3 | Fall asleep for 1d10+4 turns.                        |
+| loose rock     |   0 | Hidden object under a rock.  Not really a trap       |
+| dart trap      |   5 | Lowers Strength by 1                                 |
+| strange rune   |   5 | Teleport trap                                        |
+| loose rock     |   5 | Falling rock hits for 2d6 damage.  Leaves rubble     |
+| gas trap       |  10 | Corrodes a piece of armor                            |
+| strange rune   |   5 | Summon 1d3+2 monsters                                |
+| blackened spot |  10 | Fire trap doing 4d6 damage                           |
+| corroded rock  |  10 | Acid trap doing 4d6 damage                           |
+| gas trap       |   5 | Posion gas going 2d6 damage + poisoned               |
+| gas trap       |   5 | Blinded for 1d50+50 turns                            |
+| gas trap       |   5 | Confused for 1d15+15 turns                           |
+| dart trap      |   5 | Slowed for 1d20+10 turns                             |
+| dart trap      |   5 | Lowers Constitution by 1                             |
+| a strange rune |   0 | Glyph of warding, rune of protection.  Harmless      |
++-----------------------------------------------------------------------------+
+
+                                   ----------
+-----------------------------------| Combat |---------------------------------
+                                   ----------
+Monster Descriptions (Get ready!)
+
++------------------------------------------------------------------------------+
+| Breathe/Resist Fire--------------------------------------------------------+ |
+| Breathe/Resist Frost------------------------------------------------------+| |
+| Breathe/Resist Acid------------------------------------------------------+|| |
+| Breathe/Resist Gas------------------------------------------------------+||| |
+| Breathe/Resist Lightning-----------------------------------------------+|||| |
+| Drain Mana------------------------------------------------------------+||||| |
+| Slow Person----------------------------------------------------------+|||||| |
+| Summon Undead-------------------------------------------------------+||||||| |
+| Summon Monsters----------------------------------------------------+|||||||| |
+| Cause Fear--------------------------------------------------------+||||||||| |
+| Cause Confusion--------------------------------------------------+|||||||||| |
+| Cause Blindness-------------------------------------------------+||||||||||| |
+| Hold Person----------------------------------------------------+|||||||||||| |
+| Cause Serious Wounds------------------------------------------+||||||||||||| |
+| Cause Light Wounds-------------------------------------------+|||||||||||||| |
+| Teleport to monster-----------------------------------------+||||||||||||||| |
+| Teleport Long----------------------------------------------+|||||||||||||||| |
+| Teleport Short--------------------------------------------+||||||||||||||||| |
+| Casting amount (1 time in x)----------------------------+ |||||||||||||||||| |
++-------------------------------------------------------+ | |||||||||||||||||| |
+| Win-the-Game Creatures------------------------------+ | | |||||||||||||||||| |
+| 4d2 objects/gold-----------------------------------+| | | |||||||||||||||||| |
+| 2d2 objects/gold----------------------------------+|| | | |||||||||||||||||| |
+| 1d2 objects/gold---------------------------------+||| | | |||||||||||||||||| |
+| 90% time has treasure---------------------------+|||| | | |||||||||||||||||| |
+| 60% time has treasure--------------------------+||||| | | |||||||||||||||||| |
+| Carries gold----------------------------------+|||||| | | |||||||||||||||||| |
+| Carries objects------------------------------+||||||| | | |||||||||||||||||| |
+| Carries small objects-----------------------+|||||||| | | |||||||||||||||||| |
+| Multiply Monster---------------------------+||||||||| | | |||||||||||||||||| |
+| Pickup objects----------------------------+|||||||||| | | |||||||||||||||||| |
+| Move through creatures-------------------+||||||||||| | | |||||||||||||||||| |
+| Move through walls----------------------+|||||||||||| | | |||||||||||||||||| |
+| Move through door----------------------+||||||||||||| | | |||||||||||||||||| |
+| Invisible-----------------------------+|||||||||||||| | | |||||||||||||||||| |
+| 75% random movement------------------+||||||||||||||| | | |||||||||||||||||| |
+| 40% random movement-----------------+|||||||||||||||| | | |||||||||||||||||| |
+| 20% random movement----------------+||||||||||||||||| | | |||||||||||||||||| |
+| No physical movement--------------+|||||||||||||||||| | | |||||||||||||||||| |
+| Move and attack normal ----------+||||||||||||||||||| | | |||||||||||||||||| |
+| Move only to attack  -----------+|||||||||||||||||||| | | |||||||||||||||||| |
++-------------------------------+ ||||||||||||||||||||| | | |||||||||||||||||| |
+| Monster                |  Exp | vvvvvvvvvvvvvvvvvvvvv | v vvvvvvvvvvvvvvvvvv |
++------------------------------------------------------------------------------+
+|Filthy Street Urchin    |    0 |  x x   x  x           | 0                    |
+|Blubbering Idiot        |    0 |  x x   x  x           | 0                    |
+|Pitiful-Looking Beggar  |    0 |  x x   x  x           | 0                    |
+|Mangy-Looking Leper     |    0 |  x x   x  x           | 0                    |
+|Squint-Eyed Rogue       |    0 |  x     x  x  xxx      | 0                    |
+|Singing, Happy Drunk    |    0 |    xxx x  x   xx      | 0                    |
+|Mean-Looking Mercenary  |    0 |  x x   x  x  xx x     | 0                    |
+|Battle-Scarred Veteran  |    0 |  x x   x  x  xx x     | 0                    |
+|Grey Mushroom patch     |    1 | x                     | 0                    |
+|Giant Yellow Centipede  |    2 |  x                    | 0                    |
+|Giant White Centipede   |    2 |  x x                  | 0                    |
+|White Icky-Thing        |    2 |  x  x                 | 0                    |
+|Clear Icky-Thing        |    1 |  x  x x               | 0                    |
+|Giant White Mouse       |    1 |  x x       x          | 0                    |
+|Large Brown Snake       |    3 |  x x                  | 0                    |
+|Large White Snake       |    2 |  x  x                 | 0                    |
+|Kobold                  |    5 |  x     x    xxxx      | 0                    |
+|White Worm mass         |    2 |  x   x     x          | 0                    |
+|Floating Eye            |    1 | x                     |13             x      |
+|Shrieker Mushroom patch |    1 | x                     | 0                    |
+|Blubbering Icky-Thing   |    8 |  x  x    xx xxx x     | 0                    |
+|Metallic Green Centipede|    3 |  x  x                 | 0                    |
+|Novice Warrior          |    6 |  x     x     xxx      | 0                    |
+|Novice Rogue            |    6 |  x     x  x  xxx      | 0                    |
+|Novice Priest           |    7 |  x     x     xxx      |12    x    x          |
+|Novice Mage             |    7 |  x     x     xxx      |12 x  x   x           |
+|Yellow Mushroom patch   |    2 | x                     | 0                    |
+|White Jelly             |   10 | x                     | 0                    |
+|Giant Green Frog        |    6 |  x x                  | 0                    |
+|Giant Black Ant         |    8 |  x x                  | 0                    |
+|White Harpy             |    5 |  x  x                 | 0                    |
+|Blue Yeek               |    4 |  x     x     xxx      | 0                    |
+|Green Worm mass         |    3 |  x   x     x          | 0                    |
+|Large Black Snake       |    9 |  x x                  | 0                    |
+|Poltergeist             |    6 |  x xxxx x x xxxxx     |15 x                  |
+|Metallic Blue Centipede |    7 |  x  x                 | 0                    |
+|Giant White Louse       |    1 |  x   x     x          | 0                    |
+|Black Naga              |   20 |  x x      x  xxx      | 0                    |
+|Spotted Mushroom patch  |    3 | x                     | 0                    |
+|Yellow Jelly            |   12 | x                     |15             x      |
+|Scruffy-Looking Hobbit  |    4 |  x     x  x xxxx      | 0                    |
+|Huge Brown Bat          |    4 |  x   x                | 0                    |
+|Giant White Ant         |    7 |  x                    | 0                    |
+|Yellow Mold             |    9 | x                     | 0                    |
+|Metallic Red Centipede  |   12 |  x x                  | 0                    |
+|Yellow Worm mass        |    4 |  x   x     x          | 0                    |
+|Large Green Snake       |   10 |  x x                  | 0                    |
+|Radiation Eye           |    6 | x                     |11             x      |
+|Drooling Harpy          |    7 |  x  x                 | 0                    |
+|Silver Mouse            |    1 |  x x       x          | 0                    |
+|Black Mushroom patch    |    8 | x                     | 0                    |
+|Blue Jelly              |   14 | x                     | 0                 x  |
+|Creeping Copper Coins   |    9 |  x            x  x    | 0                    |
+|Giant White Rat         |    1 |  x x       x          | 0                    |
+|Giant Black Centipede   |   11 |  x x                  | 0                    |
+|Giant Blue Centipede    |   10 |  x                    | 0                    |
+|Blue Worm mass          |    5 |  x   x     x          | 0                 x  |
+|Large Grey Snake        |   14 |  x x                  | 0                    |
+|Jackal                  |    8 |  x  x                 | 0                    |
+|Green Naga              |   30 |  x x      x  xxx      | 0                x   |
+|Green Glutton Ghost     |   15 |  x  xxx x x xxxxx     |15 xx                 |
+|White Mushroom patch    |    5 | x                     | 0                    |
+|Green Jelly             |   18 | x                     | 0                x   |
+|Skeleton Kobold         |   12 |  x     x              | 0                    |
+|Silver Jelly            |   15 | x                     | 0                    |
+|Giant Black Frog        |   12 |  x x                  | 0                    |
+|Grey Icky-Thing         |   10 |  x  x                 | 0                    |
+|Disenchanter Eye        |   20 | x                     | 9             x      |
+|Black Yeek              |    8 |  x     x     xxx      | 0                    |
+|Red Worm mass           |    6 |  x   x     x          | 0                  x |
+|Giant House Fly         |   10 |  x   x                | 0                    |
+|Copperhead Snake        |   15 |  x  x                 | 0                    |
+|Rot Jelly               |   15 | x                     | 0                    |
+|Purple Mushroom patch   |   12 | x                     | 0                    |
+|Brown Mold              |   20 | x                     | 0                    |
+|Giant Brown Bat         |   10 |  x xx                 | 0                    |
+|Creeping Silver Coins   |   18 |  x            xx x    | 0                    |
+|Orc                     |   16 |  x     x     xx x     | 0                    |
+|Grey Harpy              |   14 |  x  x                 | 0                    |
+|Blue Icky-Thing         |   12 |  x  x                 | 0                 x  |
+|Rattlesnake             |   20 |  x  x                 | 0                    |
+|Bloodshot Eye           |   15 | x                     | 7             x      |
+|Red Naga                |   40 |  x x      x  xxx      | 0                    |
+|Red Jelly               |   26 | x                     | 0                    |
+|Giant Red Frog          |   16 |  x x                  | 0                    |
+|Green Icky-Thing        |   18 |  x  x                 | 0                    |
+|Zombie Kobold           |   14 |  x     x              | 0                    |
+|Lost Soul               |   18 |  x xx x x x xxxxx     |15  x          x      |
+|Greedy Little Gnome     |   13 |  x     x  x xxx x     | 0                    |
+|Giant Green Fly         |   15 |  x   x                | 0                    |
+|Brown Yeek              |   11 |  x     x     xxx      | 0                    |
+|Green Mold              |   28 | x                     | 0                    |
+|Skeleton Orc            |   26 |  x     x              | 0                    |
+|Seedy Looking Human     |   22 |  x     x     xx  x    | 0                    |
+|Red Icky-Thing          |   22 |  x  x                 | 0                x   |
+|Bandit                  |   26 |  x     x  x  xx  x    | 0                    |
+|Yeti                    |   30 |  x     x              | 0                 x  |
+|Bloodshot Icky-Thing    |   24 |  x  x                 |11             x      |
+|Giant Grey Rat          |    2 |  x x       x          | 0                    |
+|Black Harpy             |   19 |  x x                  | 0                    |
+|Giant Black Bat         |   16 |  x  x                 | 0                    |
+|Clear Yeek              |   14 |  x    xx     xxx      | 0                    |
+|Orc Shaman              |   30 |  x     x     xx x     | 5    x       x       |
+|Giant Red Ant           |   22 |  x                    | 0                    |
+|King Cobra              |   28 |  x  x                 | 0                    |
+|Clear Mushroom patch    |    1 | x     x    x          | 0                    |
+|Giant White Tick        |   27 |  x x                  | 0                    |
+|Hairy Mold              |   32 | x                     | 0                    |
+|Disenchanter Mold       |   40 | x                     |11             x      |
+|Giant Red Centipede     |   24 |  x                    | 0                    |
+|Creeping Gold Coins     |   32 |  x            x xx    | 0                    |
+|Giant Fruit Fly         |    4 |  x   x     x          | 0                    |
+|Brigand                 |   35 |  x     x  x  xx  x    | 0                    |
+|Orc Zombie              |   30 |  x     x              | 0                    |
+|Orc Warrior             |   34 |  x     x     xx x     | 0                    |
+|Vorpal Bunny            |    2 |  x x       x          | 0                    |
+|Nasty Little Gnome      |   32 |  x     x    xxx  x    | 5 xx x     x         |
+|Hobgoblin               |   38 |  x     x     xxxx     | 0                    |
+|Black Mamba             |   40 |  x  x                 | 0                    |
+|Grape Jelly             |   60 | x                     |11             x      |
+|Master Yeek             |   28 |  x     x     xxx      | 8 x          x       |
+|Priest                  |   36 |  x     x     xx  x    | 5    x x             |
+|Giant Clear Ant         |   24 |  x    x               | 0                    |
+|Air Spirit              |   40 |  x   xxx              | 0                    |
+|Skeleton Human          |   38 |  x     x              | 0                    |
+|Human Zombie            |   34 |  x     x              | 0                    |
+|Moaning Spirit          |   44 |  x x  x x x  xxxx     |15  x          x      |
+|Swordsman               |   40 |  x     x     xx  x    | 0                    |
+|Killer Brown Beetle     |   38 |  x x                  | 0                    |
+|Ogre                    |   42 |  x     x     xxx      | 0                    |
+|Giant Red Speckled Frog |   32 |  x x                  | 0                    |
+|Magic User              |   35 |  x     x     xx  x    | 3 x     x  x         |
+|Black Orc               |   40 |  x     x     xx x     | 0                    |
+|Giant Long-Eared Bat    |   20 |  x  x                 | 0                    |
+|Giant Gnat              |    1 |  x   x     x          | 0                    |
+|Killer Green Beetle     |   46 |  x x                  | 0                    |
+|Giant Flea              |    1 |  x   x     x          | 0                    |
+|Giant White Dragon Fly  |   54 |  x  x                 |10                 x  |
+|Hill Giant              |   52 |  x     x     xxx      | 0                    |
+|Skeleton Hobgoblin      |   46 |  x     x              | 0                    |
+|Flesh Golem             |   48 |  x                    | 0                    |
+|White Dragon Bat        |   40 |  x  x                 | 4                 x  |
+|Giant Black Louse       |    1 |  x  x      x          | 0                    |
+|Guardian Naga           |   60 |  x x      x  xxx x    | 0                    |
+|Giant Grey Bat          |   22 |  x  x                 | 0                    |
+|Giant Clear Centipede   |   30 |  x    x               | 0                    |
+|Giant Yellow Tick       |   48 |  x x                  | 0                    |
+|Giant Ebony Ant         |    3 |  x         x          | 0                    |
+|Frost Giant             |   54 |  x     x     xxx      | 0                 x  |
+|Clay Golem              |   50 |  x                    | 0                    |
+|Huge White Bat          |    3 |  x  x      x          | 0                    |
+|Giant Tan Bat           |   18 |  x  x                 | 0                    |
+|Violet Mold             |   50 | x                     | 9             x      |
+|Umber Hulk              |   75 |  x     x              | 0                    |
+|Gelatinous Cube         |   36 |  x x     xx xxxxx x   | 0                x   |
+|Giant Black Rat         |    3 |  x x       x          | 0                    |
+|Giant Green Dragon Fly  |   58 |  x  x                 |10               x    |
+|Fire Giant              |   62 |  x     x     xxx      | 0                  x |
+|Green Dragon Bat        |   44 |  x  x                 | 4               x    |
+|Quasit                  |   48 |  x x  xx    xx   x    |10 xxxx    x          |
+|Troll                   |   64 |  x     x     xxxx     | 0                    |
+|Water Spirit            |   58 |  x x                  | 0                    |
+|Giant Brown Scorpion    |   62 |  x x                  | 0                    |
+|Earth Spirit            |   64 |  x x   xx x           | 0                    |
+|Fire Spirit             |   66 |  x x                  | 0                  x |
+|Uruk-Hai Orc            |   68 |  x     x     xx x     | 0                    |
+|Stone Giant             |   80 |  x     x     xxx      | 0                    |
+|Stone Golem             |  100 |  x                    | 0                    |
+|Grey Ooze               |   40 |  x   x   xx xxxx      | 0                 x  |
+|Disenchanter Ooze       |   50 |  x   x   xx xxxx      | 0                    |
+|Giant Spotted Rat       |    3 |  x x       x          | 0                    |
+|Mummified Kobold        |   46 |  x     x    xxx x     | 0                    |
+|Killer Black Beetle     |   75 |  x x                  | 0                    |
+|Red Mold                |   64 | x                     | 0                  x |
+|Quylthulg               |  200 |   x   x               | 7 x        x         |
+|Giant Red Bat           |   40 |  x  x                 | 0                    |
+|Giant Black Dragon Fly  |   58 |  x  x                 | 9                x   |
+|Cloud Giant             |  125 |  x     x     xxx      | 0              x     |
+|Black Dragon Bat        |   50 |  x  x                 | 4                x   |
+|Blue Dragon Bat         |   54 |  x  x                 | 4              x     |
+|Mummified Orc           |   56 |  x     x     xx x     | 0                    |
+|Killer Boring Beetle    |   70 |  x x                  | 0                    |
+|Killer Stag Beetle      |   80 |  x x                  | 0                    |
+|Black Mold              |   68 | x                     | 0                    |
+|Iron Golem              |  160 |  x                    | 0                    |
+|Giant Yellow Scorpion   |   60 |  x x                  | 0                    |
+|Green Ooze              |    6 |  x  x  x xxxxxxx      | 0                x   |
+|Black Ooze              |    7 |  x  x  x xxxxxxx      |11             x      |
+|Warrior                 |   60 |  x     x     xx  x    | 0                    |
+|Red Dragon Bat          |   60 |  x  x                 | 4                  x |
+|Killer Blue Beetle      |   85 |  x x                  | 0                    |
+|Giant Silver Ant        |   45 |  x x                  | 0                x   |
+|Crimson Mold            |   65 | x                     | 0                    |
+|Forest Wight            |  140 |  x x   x     xxxx     |15         x          |
+|Berzerker               |   65 |  x     x     xx  x    | 0                    |
+|Mummified Human         |   70 |  x     x     xx x     | 0                    |
+|Banshee                 |   60 |  x xx x x x  xxxx     |15  x          x      |
+|Giant Troll             |   85 |  x     x     xxxx     | 0                    |
+|Giant Brown Tick        |   70 |  x x                  | 0                    |
+|Killer Red Beetle       |   85 |  x x                  | 0                    |
+|Wooden Mold             |  100 | x                     | 0                    |
+|Giant Blue Dragon Fly   |   75 |  x  x                 | 9              x     |
+|Giant Grey Ant Lion     |   90 |  x x     x            | 0                    |
+|Disenchanter Bat        |   75 |  x  x                 | 0                    |
+|Giant Fire Tick         |   90 |  x x                  | 0                  x |
+|White Wraith            |  165 |  x x   x     xxxx     |12         x          |
+|Giant Black Scorpion    |   85 |  x x                  | 0                    |
+|Clear Ooze              |   12 |  x x  x  xx xxxx      | 0                    |
+|Killer Fire Beetle      |   95 |  x x                  | 0                  x |
+|Vampire                 |  175 |  x     x     xxx x    | 9      x  x          |
+|Giant Red Dragon Fly    |   75 |  x  x                 | 8                  x |
+|Shimmering Mold         |  180 | x                     | 0              x     |
+|Black Knight            |  140 |  x     x     xx  x    |15     x              |
+|Mage                    |  150 |  x     x     xx  x    | 3 xxx   xx x         |
+|Ice Troll               |  160 |  x     x     xxxx     | 0                 x  |
+|Giant Purple Worm       |  400 |  x x                  | 0                x   |
+|Young Blue Dragon       |  300 |  x x         xxxxx    |11         x    x     |
+|Young White Dragon      |  275 |  x x         xxxxx    |11         x       x  |
+|Young Green Dragon      |  290 |  x x         xxxxx    |11         x     x    |
+|Giant Fire Bat          |   85 |  x  x                 | 0                  x |
+|Giant Glowing Rat       |    4 |  x x       x          | 0              x     |
+|Skeleton Troll          |  225 |  x     x              | 0                    |
+|Giant Lightning Bat     |   80 |  x  x                 | 0              x     |
+|Giant Static Ant        |   80 |  x x                  | 0              x     |
+|Grave Wight             |  325 |  x x   x     xxxx     |10     x   x          |
+|Killer Slicer Beetle    |  200 |  x x                  | 0                    |
+|Giant White Ant Lion    |  175 |  x x     x            | 0                 x  |
+|Ghost                   |  350 |  x x  x x x  xxx x    |15  x          x      |
+|Giant Black Ant Lion    |  170 |  x x     x            | 0                x   |
+|Death Watch Beetle      |  190 |  x x                  | 0                    |
+|Ogre Mage               |  250 |  x     x     xx x     | 5 x x xx   x x       |
+|Two-Headed Troll        |  275 |  x     x     xxxx     | 0                    |
+|Invisible Stalker       |  200 |  x   xxx              | 0                    |
+|Giant Hunter Ant        |  150 |  x                    | 0                    |
+|Ninja                   |  300 |  x     x     xx  x    | 0                    |
+|Barrow Wight            |  375 |  x x   x     xxxx     | 8     xx  x          |
+|Skeleton 2-Headed Troll |  325 |  x     x              | 0                    |
+|Water Elemental         |  325 |  x x     x            | 0                    |
+|Fire Elemental          |  350 |  x x     x            | 0                  x |
+|Lich                    |  750 |  x     x     xxxxx    | 5 xxx xxxxx  xx      |
+|Master Vampire          |  700 |  x     x     xxx x    | 7     xx  x          |
+|Spirit Troll            |  425 |  x    x x x  xxx x    | 0                    |
+|Giant Red Scorpion      |  275 |  x x                  | 0                    |
+|Earth Elemental         |  375 |  x x   xxxx           | 0                    |
+|Young Black Dragon      |  600 |  x x         xxxxx    |11         x      x   |
+|Young Red Dragon        |  650 |  x x         xxxxx    |10         x        x |
+|Necromancer             |  600 |  x     x     xx  x    | 3  xx xxx x x        |
+|Mummified Troll         |  400 |  x     x     xxxx     | 0                    |
+|Giant Red Ant Lion      |  350 |  x x     x            | 0                  x |
+|Mature White Dragon     | 1000 |  x x         xxxx x   |10         x       x  |
+|Xorn                    |  650 |  x     xx x           | 0                    |
+|Giant Mottled Ant Lion  |  350 |  x x     x            | 0                    |
+|Grey Wraith             |  700 |  x x   x     xxxx     | 8     xx  x          |
+|Young Multi-Hued Dragon | 1250 |  x x         xxxx  x  | 5         x    xxxxx |
+|Mature Blue Dragon      | 1200 |  x x         xxxx x   | 9         x    x     |
+|Mature Green Dragon     | 1100 |  x x         xxxx x   |10         x     x    |
+|Iridescent Beetle       |  850 |  x x                  | 0                    |
+|King Vampire            | 1000 |  x     x     xxx x    | 7     xx  x          |
+|King Lich               | 1400 |  x     x     xxxxx    | 3 xxx xxxxx  xx      |
+|Mature Red Dragon       | 1400 |  x x         xxxx x   | 8        xx        x |
+|Mature Black Dragon     | 1350 |  x x         xxxx x   | 9         x      x   |
+|Mature Multi-Hued Dragon| 1650 |  x x         xxxx xx  | 5      x xx    xxxxx |
+|Ancient White Dragon    | 1500 |  x           xxxx  x  | 9      x xx       x  |
+|Emperor Wight           | 1600 |  x x   x     xx xx    | 6     xx  x          |
+|Black Wraith            | 1700 |  x x   x     xxxxx    | 7     xx  x          |
+|Nether Wraith           | 2100 |  x x  xxx    xxxxx    | 6 x   xx  x x        |
+|Sorcerer                | 2150 |  x     x     xxxxx    | 3 xxx xxxxxxxx       |
+|Ancient Blue Dragon     | 2500 |  x           xxxx  x  | 8      x xx    x     |
+|Ancient Green Dragon    | 2400 |  x           xxxx  x  | 9      x xx     x    |
+|Ancient Black Dragon    | 2500 |  x           xxxx  x  | 7      x xx      x   |
+|Crystal Ooze            |    8 |  x x  xx xxxxxxx      | 0                 x  |
+|Disenchanter Worm       |   30 |  x   x     x          | 0                    |
+|Rotting Quylthulg       | 1000 |   x   x               | 4 x         x        |
+|Ancient Red Dragon      | 2750 |  x           xxxx xx  | 6      xxxx        x |
+|Death Quasit            | 1000 |  x x  xx     x   x    |10 xxxx    x          |
+|Emperor Lich            |10000 |  x     x     xxxx x   | 2 xxx xxxxx  xx      |
+|Ancient MultiHued Dragon|12000 |  x           xxxxxxx  | 5      xxxx  x xxxxx |
+|Evil Iggy               |18000 |  x    xx  x  xxxxxxx  | 3 x   xxx x xxx      |
+|Balrog                  |55000 |  x    xxxxx  xxxxxxxx | 3   x xxx   xxx    x |
++-----------------------------------------------------------------------------+
+
++-----------------------------------------------------------------------------+
+| Monster                 | Spd |                  Attacks                    |
++-----------------------------------------------------------------------------+
+| Filthy Street Urchin    |  1  | ATCK  0d 0 STL$  0d 0                       |
+| Blubbering Idiot        |  1  | ATCK  0d 0                                  |
+| Pitiful-Looking Beggar  |  1  | ATCK  0d 0                                  |
+| Mangy-Looking Leper     |  1  | ATCK  0d 0                                  |
+| Squint-Eyed Rogue       |  1  | ATCK  1d 6 STLO  0d 0                       |
+| Singing, Happy Drunk    |  1  | ATCK  0d 0                                  |
+| Mean-Looking Mercenary  |  1  | ATCK  1d10                                  |
+| Battle-Scarred Veteran  |  1  | ATCK  2d 6                                  |
+| Grey Mushroom patch     |  1  | CONF  1d 4                                  |
+| Giant Yellow Centipede  |  1  | ATCK  1d 3 ATCK  1d 3                       |
+| Giant White Centipede   |  1  | ATCK  1d 2 ATCK  1d 2                       |
+| White Icky-Thing        |  1  | ATCK  1d 2                                  |
+| Clear Icky-Thing        |  1  | ATCK  1d 2                                  |
+| Giant White Mouse       |  1  | ATCK  1d 2                                  |
+| Large Brown Snake       |  0  | ATCK  1d 3 ATCK  1d 4                       |
+| Large White Snake       |  1  | ATCK  1d 1                                  |
+| Kobold                  |  1  | ATCK  1d 6                                  |
+| White Worm mass         |  0  | POIS  1d 2                                  |
+| Floating Eye            |  1  | PARA  0d 0                                  |
+| Shrieker Mushroom patch |  1  | AGGR  0d 0                                  |
+| Blubbering Icky-Thing   |  1  | POIS  1d 4 FOD-  0d 0                       |
+| Metallic Green Centipede|  2  | ATCK  1d 1                                  |
+| Novice Warrior          |  1  | ATCK  1d 7                                  |
+| Novice Rogue            |  1  | ATCK  1d 6 STL$  0d 0                       |
+| Novice Priest           |  1  | ATCK  1d 5                                  |
+| Novice Mage             |  1  | ATCK  1d 4                                  |
+| Yellow Mushroom patch   |  1  | FEAR  1d 6                                  |
+| White Jelly             |  2  | POIS  1d 2                                  |
+| Giant Green Frog        |  1  | ATCK  1d 3                                  |
+| Giant Black Ant         |  1  | ATCK  1d 4                                  |
+| White Harpy             |  1  | ATCK  1d 1 ATCK  1d 1 ATCK  1d 2            |
+| Blue Yeek               |  1  | ATCK  1d 5                                  |
+| Green Worm mass         |  0  | CORR  1d 3                                  |
+| Large Black Snake       |  0  | ATCK  1d 4 ATCK  1d 6                       |
+| Poltergeist             |  3  | FEAR  1d 1                                  |
+| Metallic Blue Centipede |  2  | ATCK  1d 2                                  |
+| Giant White Louse       |  2  | ATCK  1d 1                                  |
+| Black Naga              |  1  | ATCK  1d 8                                  |
+| Spotted Mushroom patch  |  1  | POIS  2d 4                                  |
+| Yellow Jelly            |  2  | POIS  1d 3                                  |
+| Scruffy-Looking Hobbit  |  1  | ATCK  1d 4 STL$  0d 0                       |
+| Huge Brown Bat          |  3  | ATCK  1d 2                                  |
+| Giant White Ant         |  1  | ATCK  1d 4                                  |
+| Yellow Mold             |  1  | ATCK  1d 4                                  |
+| Metallic Red Centipede  |  2  | ATCK  1d 2                                  |
+| Yellow Worm mass        |  0  | DEX-  1d 3                                  |
+| Large Green Snake       |  0  | ATCK  1d 4 ATCK  1d 6                       |
+| Radiation Eye           |  1  | STR-  1d 6                                  |
+| Drooling Harpy          |  1  | ATCK  1d 1 ATCK  1d 1 ATCK  1d 2 ATCK  0d 0 |
+| Silver Mouse            |  1  | LIT-  1d 1                                  |
+| Black Mushroom patch    |  1  | ATCK  1d 3                                  |
+| Blue Jelly              |  1  | COLD  1d 6                                  |
+| Creeping Copper Coins   |  0  | ATCK  1d 4 POIS  2d 4                       |
+| Giant White Rat         |  1  | POIS  1d 3                                  |
+| Giant Black Centipede   |  1  | ATCK  1d 2 ATCK  1d 2                       |
+| Giant Blue Centipede    |  1  | ATCK  1d 3 ATCK  1d 4                       |
+| Blue Worm mass          |  0  | COLD  1d 4                                  |
+| Large Grey Snake        |  0  | ATCK  1d 5 ATCK  1d 8                       |
+| Jackal                  |  1  | ATCK  1d 6                                  |
+| Green Naga              |  1  | ATCK  1d 8 ACID  2d 6                       |
+| Green Glutton Ghost     |  3  | FOD-  1d 1                                  |
+| White Mushroom patch    |  1  | PARA  2d 4                                  |
+| Green Jelly             |  2  | CORR  1d 2                                  |
+| Skeleton Kobold         |  1  | ATCK  1d 6                                  |
+| Silver Jelly            |  1  | LIT-  1d 3                                  |
+| Giant Black Frog        |  1  | ATCK  1d 6                                  |
+| Grey Icky-Thing         |  1  | ATCK  1d 5                                  |
+| Disenchanter Eye        |  0  | DENC  0d 0                                  |
+| Black Yeek              |  1  | ATCK  1d 5                                  |
+| Red Worm mass           |  0  | FIRE  1d 6                                  |
+| Giant House Fly         |  3  | ATCK  1d 2                                  |
+| Copperhead Snake        |  1  | POIS  2d 4                                  |
+| Rot Jelly               |  1  | FOD-  2d 3                                  |
+| Purple Mushroom patch   |  2  | CON-  1d 2                                  |
+| Brown Mold              |  1  | CONF  1d 4                                  |
+| Giant Brown Bat         |  3  | ATCK  1d 3                                  |
+| Creeping Silver Coins   |  0  | ATCK  1d 6 POIS  2d 6                       |
+| Orc                     |  1  | ATCK  1d 8                                  |
+| Grey Harpy              |  2  | ATCK  1d 2 ATCK  1d 2 ATCK  1d 2            |
+| Blue Icky-Thing         |  1  | COLD  2d 3                                  |
+| Rattlesnake             |  1  | POIS  2d 5                                  |
+| Bloodshot Eye           |  1  | BLND  2d 6                                  |
+| Red Naga                |  1  | ATCK  1d10 STR-  1d 4                       |
+| Red Jelly               |  1  | STR-  1d 5                                  |
+| Giant Red Frog          |  1  | STR-  2d 4                                  |
+| Green Icky-Thing        |  1  | CORR  2d 5                                  |
+| Zombie Kobold           |  1  | ATCK  1d 2 ATCK  1d 2                       |
+| Lost Soul               |  1  | ATCK  2d 2 WIS-  0d 0                       |
+| Greedy Little Gnome     |  1  | ATCK  1d 7 STLO  0d 0                       |
+| Giant Green Fly         |  2  | ATCK  1d 4                                  |
+| Brown Yeek              |  1  | ATCK  1d 6                                  |
+| Green Mold              |  1  | FEAR  1d 4                                  |
+| Skeleton Orc            |  1  | ATCK  2d 5                                  |
+| Seedy Looking Human     |  1  | ATCK  3d 4                                  |
+| Red Icky-Thing          |  2  | ATCK  1d 3 ACID  1d 5                       |
+| Bandit                  |  1  | ATCK  2d 4 STL$  0d 0                       |
+| Yeti                    |  1  | ATCK  1d 3 ATCK  1d 3 ATCK  1d 4            |
+| Bloodshot Icky-Thing    |  1  | ATCK  1d 4 CORR  2d 4                       |
+| Giant Grey Rat          |  1  | POIS  1d 4                                  |
+| Black Harpy             |  2  | ATCK  1d 2 ATCK  1d 2 ATCK  1d 3            |
+| Giant Black Bat         |  3  | ATCK  1d 6                                  |
+| Clear Yeek              |  1  | ATCK  1d 5                                  |
+| Orc Shaman              |  1  | ATCK  1d 6                                  |
+| Giant Red Ant           |  1  | ATCK  1d 4 STR-  1d 4                       |
+| King Cobra              |  1  | BLND  1d 2 POIS  3d 4                       |
+| Clear Mushroom patch    |  2  | ATCK  1d 1                                  |
+| Giant White Tick        |  0  | POIS  2d 6                                  |
+| Hairy Mold              |  1  | POIS  1d 3                                  |
+| Disenchanter Mold       |  1  | DENC  1d 6                                  |
+| Giant Red Centipede     |  2  | ATCK  1d 2 POIS  1d 2                       |
+| Creeping Gold Coins     |  0  | ATCK  2d 5 POIS  3d 5                       |
+| Giant Fruit Fly         |  2  | ATCK  1d 2                                  |
+| Brigand                 |  1  | ATCK  2d 4 STLO  0d 0                       |
+| Orc Zombie              |  1  | ATCK  1d 4 ATCK  1d 4                       |
+| Orc Warrior             |  1  | ATCK  2d 6                                  |
+| Vorpal Bunny            |  2  | ATCK  1d 5                                  |
+| Nasty Little Gnome      |  1  | ATCK  1d 5                                  |
+| Hobgoblin               |  1  | ATCK  1d10                                  |
+| Black Mamba             |  2  | POIS  4d 4                                  |
+| Grape Jelly             |  1  | EXP-  5d 8                                  |
+| Master Yeek             |  1  | ATCK  1d 8                                  |
+| Priest                  |  1  | ATCK  2d 3                                  |
+| Giant Clear Ant         |  1  | ATCK  1d 4                                  |
+| Air Spirit              |  3  | ATCK  1d 3                                  |
+| Skeleton Human          |  1  | ATCK  1d 8                                  |
+| Human Zombie            |  1  | ATCK  1d 4 ATCK  1d 4                       |
+| Moaning Spirit          |  1  | FEAR  0d 0 DEX-  1d 8                       |
+| Swordsman               |  1  | ATCK  3d 5                                  |
+| Killer Brown Beetle     |  1  | ATCK  3d 4                                  |
+| Ogre                    |  1  | ATCK  2d 8                                  |
+| Giant Red Speckled Frog |  1  | ATCK  3d 4                                  |
+| Magic User              |  1  | ATCK  2d 2                                  |
+| Black Orc               |  1  | ATCK  3d 4                                  |
+| Giant Long-Eared Bat    |  3  | ATCK  1d 4 ATCK  1d 2 ATCK  1d 2            |
+| Giant Gnat              |  3  | ATCK  1d 1                                  |
+| Killer Green Beetle     |  1  | ATCK  4d 4                                  |
+| Giant Flea              |  2  | ATCK  1d 2                                  |
+| Giant White Dragon Fly  |  1  | COLD  1d 6                                  |
+| Hill Giant              |  1  | ATCK  3d 6                                  |
+| Skeleton Hobgoblin      |  1  | ATCK  2d 5                                  |
+| Flesh Golem             |  1  | ATCK  1d 6 ATCK  1d 6                       |
+| White Dragon Bat        |  3  | COLD  1d 3                                  |
+| Giant Black Louse       |  2  | ATCK  1d 2                                  |
+| Guardian Naga           |  1  | ATCK  2d 8 ATCK  1d 8                       |
+| Giant Grey Bat          |  3  | ATCK  1d 6 ATCK  1d 2 ATCK  1d 2            |
+| Giant Clear Centipede   |  1  | ATCK  2d 4 ATCK  2d 4                       |
+| Giant Yellow Tick       |  0  | POIS  3d 9                                  |
+| Giant Ebony Ant         |  1  | ATCK  2d 3                                  |
+| Frost Giant             |  1  | COLD  3d 6                                  |
+| Clay Golem              |  1  | ATCK  1d 8 ATCK  1d 8                       |
+| Huge White Bat          |  2  | ATCK  1d 6                                  |
+| Giant Tan Bat           |  2  | FEAR  1d 2 ATCK  1d 1 ATCK  1d 1            |
+| Violet Mold             |  1  | PARA  1d 2                                  |
+| Umber Hulk              |  1  | CONF  0d 0 ATCK  1d 6 ATCK  1d 6 ATCK  2d 6 |
+| Gelatinous Cube         |  0  | ACID  1d10                                  |
+| Giant Black Rat         |  1  | POIS  1d 5                                  |
+| Giant Green Dragon Fly  |  1  | POIS  1d 6                                  |
+| Fire Giant              |  1  | FIRE  3d 7                                  |
+| Green Dragon Bat        |  3  | POIS  1d 3                                  |
+| Quasit                  |  1  | DEX-  1d 6 ATCK  1d 3 ATCK  1d 3            |
+| Troll                   |  1  | ATCK  1d 4 ATCK  1d 4 ATCK  1d 6            |
+| Water Spirit            |  2  | ATCK  2d 4                                  |
+| Giant Brown Scorpion    |  1  | ATCK  2d 4 STR-  1d 7                       |
+| Earth Spirit            |  1  | ATCK  1d 8 ATCK  1d 8                       |
+| Fire Spirit             |  2  | FIRE  2d 6                                  |
+| Uruk-Hai Orc            |  1  | ATCK  3d 5                                  |
+| Stone Giant             |  1  | ATCK  3d 8                                  |
+| Stone Golem             |  0  | ATCK  1d10 ATCK  1d10                       |
+| Grey Ooze               |  1  | COLD  2d 6                                  |
+| Disenchanter Ooze       |  1  | DENC  0d 0                                  |
+| Giant Spotted Rat       |  1  | POIS  1d 5                                  |
+| Mummified Kobold        |  1  | ATCK  1d 6 ATCK  1d 6                       |
+| Killer Black Beetle     |  1  | ATCK  4d 5                                  |
+| Red Mold                |  1  | FIRE  4d 4                                  |
+| Quylthulg               |  1  |                                             |
+| Giant Red Bat           |  2  | ATCK  1d 7 ATCK  1d 3 ATCK  1d 3            |
+| Giant Black Dragon Fly  |  1  | BLND  1d 6                                  |
+| Cloud Giant             |  1  | LIGT  3d 8                                  |
+| Black Dragon Bat        |  3  | ACID  1d 3                                  |
+| Blue Dragon Bat         |  3  | LIGT  1d 3                                  |
+| Mummified Orc           |  1  | ATCK  2d 4 ATCK  2d 4                       |
+| Killer Boring Beetle    |  1  | ATCK  4d 5                                  |
+| Killer Stag Beetle      |  1  | ATCK  3d 4 ATCK  1d12                       |
+| Black Mold              |  1  | ATCK  4d 3                                  |
+| Iron Golem              | -1  | ATCK  1d12 ATCK  1d12                       |
+| Giant Yellow Scorpion   |  1  | ATCK  1d 8 POIS  2d 5                       |
+| Green Ooze              |  0  | ACID  2d 3                                  |
+| Black Ooze              | -1  | CORR  2d 6                                  |
+| Warrior                 |  1  | ATCK  3d 5                                  |
+| Red Dragon Bat          |  3  | FIRE  1d 3                                  |
+| Killer Blue Beetle      |  1  | ATCK  4d 5                                  |
+| Giant Silver Ant        |  1  | ACID  4d 4                                  |
+| Crimson Mold            |  1  | ATCK  1d 3 FEAR  0d 0                       |
+| Forest Wight            |  1  | ATCK  1d 6 ATCK  1d 6 EXP- 12d 8            |
+| Berzerker               |  1  | ATCK  1d 8 ATCK  1d 8                       |
+| Mummified Human         |  1  | ATCK  2d 4 ATCK  2d 4                       |
+| Banshee                 |  2  | FEAR  0d 0 EXP- 14d 8                       |
+| Giant Troll             |  1  | ATCK  1d 6 ATCK  1d 6 ATCK  3d 4            |
+| Giant Brown Tick        |  0  | POIS  1d10 BLND  1d 1                       |
+| Killer Red Beetle       |  1  | STR-  4d 4                                  |
+| Wooden Mold             |  1  | POIS  2d 6                                  |
+| Giant Blue Dragon Fly   |  1  | ATCK  1d 6                                  |
+| Giant Grey Ant Lion     |  1  | ATCK  2d12                                  |
+| Disenchanter Bat        |  3  | DENC  0d 0                                  |
+| Giant Fire Tick         |  1  | FIRE  3d 7                                  |
+| White Wraith            |  1  | ATCK  1d 6 ATCK  1d 6 EXP- 15d 8            |
+| Giant Black Scorpion    |  1  | ATCK  1d10 POIS  2d 5                       |
+| Clear Ooze              |  1  | CONF  1d 8                                  |
+| Killer Fire Beetle      |  1  | ATCK  3d 4 FIRE  4d 5                       |
+| Vampire                 |  1  | ATCK  1d 6 ATCK  1d 6 EXP- 18d 8            |
+| Giant Red Dragon Fly    |  1  | FEAR  1d 6                                  |
+| Shimmering Mold         |  1  | LIGT  5d 4                                  |
+| Black Knight            |  1  | ATCK  5d 5                                  |
+| Mage                    |  1  | ATCK  2d 5                                  |
+| Ice Troll               |  1  | ATCK  1d 5 ATCK  1d 5 COLD  3d 6            |
+| Giant Purple Worm       |  1  | ATCK  1d 8 ACID  2d 8 POIS  1d 8            |
+| Young Blue Dragon       |  1  | ATCK  1d 4 ATCK  1d 4 ATCK  1d 6            |
+| Young White Dragon      |  1  | ATCK  1d 4 ATCK  1d 4 ATCK  1d 6            |
+| Young Green Dragon      |  1  | ATCK  1d 4 ATCK  1d 4 ATCK  1d 6            |
+| Giant Fire Bat          |  2  | FIRE  3d 6 ATCK  1d 4 ATCK  1d 4            |
+| Giant Glowing Rat       |  1  | LIGT  2d 6                                  |
+| Skeleton Troll          |  1  | ATCK  1d 6 ATCK  1d 6 ATCK  3d 4            |
+| Giant Lightning Bat     |  2  | LIGT  3d 8 ATCK  1d 5 ATCK  1d 5            |
+| Giant Static Ant        |  1  | LIGT  5d 5                                  |
+| Grave Wight             |  1  | ATCK  1d 7 ATCK  1d 7 EXP- 20d 8            |
+| Killer Slicer Beetle    |  1  | ATCK  5d 8                                  |
+| Giant White Ant Lion    |  1  | COLD  3d10                                  |
+| Ghost                   |  2  | FEAR  0d 0 EXP- 22d 8 INT-  1d10            |
+| Giant Black Ant Lion    |  1  | ATCK  2d12 ACID  3d 6                       |
+| Death Watch Beetle      |  1  | ATCK  5d 4 ATCK  5d 6                       |
+| Ogre Mage               |  1  | ATCK  3d 6                                  |
+| Two-Headed Troll        |  1  | ATCK  1d 8 ATCK  1d 8 ATCK  1d 6 ATCK  1d 6 |
+| Invisible Stalker       |  3  | ATCK  1d 6                                  |
+| Giant Hunter Ant        |  1  | ATCK  4d 8                                  |
+| Ninja                   |  1  | POIS  3d 4 STR-  3d 4                       |
+| Barrow Wight            |  1  | ATCK  1d 8 ATCK  1d 8 EXP- 26d 8            |
+| Skeleton 2-Headed Troll |  1  | ATCK  1d 9 ATCK  1d 9 ATCK  1d 5 ATCK  1d 5 |
+| Water Elemental         |  1  | ATCK  1d10 ATCK  1d10                       |
+| Fire Elemental          |  0  | FIRE  4d 6                                  |
+| Lich                    |  1  | DEX-  2d 8 EXP- 30d 8 CHG-  0d 0            |
+| Master Vampire          |  1  | ATCK  1d 6 ATCK  1d 6 EXP- 32d 8            |
+| Spirit Troll            |  1  | ATCK  1d 5 ATCK  1d 5 ATCK  1d 6 WIS-  0d 0 |
+| Giant Red Scorpion      |  2  | ATCK  1d 6 POIS  1d 4                       |
+| Earth Elemental         |  0  | ATCK  4d 6 ATCK  4d 6                       |
+| Young Black Dragon      |  1  | ATCK  1d 5 ATCK  1d 5 ATCK  1d 6            |
+| Young Red Dragon        |  1  | ATCK  1d 8 ATCK  1d 8 ATCK  2d 8            |
+| Necromancer             |  1  | ATCK  2d 6                                  |
+| Mummified Troll         |  1  | ATCK  2d 6 ATCK  2d 6                       |
+| Giant Red Ant Lion      |  1  | FIRE  3d12                                  |
+| Mature White Dragon     |  1  | ATCK  1d 8 ATCK  1d 8 ATCK  2d 8            |
+| Xorn                    |  1  | ATCK  1d 6 ATCK  1d 6 ATCK  1d 6            |
+| Giant Mottled Ant Lion  |  2  | ATCK  2d10                                  |
+| Grey Wraith             |  1  | ATCK  1d10 ATCK  1d10 EXP- 34d 8            |
+| Young Multi-Hued Dragon |  1  | ATCK  1d 9 ATCK  1d 9 ATCK  2d10            |
+| Mature Blue Dragon      |  1  | ATCK  1d 8 ATCK  1d 8 ATCK  2d10            |
+| Mature Green Dragon     |  1  | ATCK  1d 4 ATCK  1d 4 ATCK  1d 6            |
+| Iridescent Beetle       |  1  | ATCK  4d 6 ATCK  1d12 PARA  0d 0            |
+| King Vampire            |  1  | ATCK  1d 6 ATCK  1d 6 EXP- 38d 8            |
+| King Lich               |  1  | DEX-  2d10 EXP- 36d 8 CHG-  0d 0            |
+| Mature Red Dragon       |  1  | ATCK  1d10 ATCK  1d10 ATCK  2d12            |
+| Mature Black Dragon     |  1  | ATCK  1d 8 ATCK  1d 8 ATCK  2d10            |
+| Mature Multi-Hued Dragon|  1  | ATCK  1d10 ATCK  1d10 ATCK  2d12            |
+| Ancient White Dragon    |  2  | ATCK  1d 8 ATCK  1d 8 ATCK  2d 8            |
+| Emperor Wight           |  2  | ATCK  1d12 ATCK  1d12 EXP- 42d 8            |
+| Black Wraith            |  1  | ATCK  1d12 ATCK  1d12 EXP- 44d 8            |
+| Nether Wraith           |  1  | ATCK  1d12 ATCK  1d12 EXP- 52d 8            |
+| Sorcerer                |  2  | ATCK  2d 8                                  |
+| Ancient Blue Dragon     |  2  | ATCK  1d 9 ATCK  1d 9 ATCK  2d12            |
+| Ancient Green Dragon    |  2  | ATCK  1d 8 ATCK  1d 8 ATCK  2d10            |
+| Ancient Black Dragon    |  2  | ATCK  1d 9 ATCK  1d 9 ATCK  2d10            |
+| Crystal Ooze            | -1  | COLD  4d 4                                  |
+| Disenchanter Worm       |  0  | DENC  1d 4                                  |
+| Rotting Quylthulg       |  2  |                                             |
+| Ancient Red Dragon      |  2  | ATCK  1d10 ATCK  1d10 ATCK  2d14            |
+| Death Quasit            |  3  | DEX-  3d 6 ATCK  3d 3 ATCK  3d 3            |
+| Emperor Lich            |  2  | DEX-  2d12 EXP- 46d 8 CHG-  0d 0            |
+| Ancient MultiHued Dragon|  2  | ATCK  1d12 ATCK  1d12 ATCK  3d12            |
+| Evil Iggy               |  2  | STR-  4d 6 STLO  0d 0                       |
+| Balrog                  |  3  | FIRE 10d12 ATCK  8d12 CHG-  0d 0            |
++-----------------------------------------------------------------------------+
+
++----------------------------------------------------------------------------+
+| Intravision--------------------------------------------------------------+ |
+| Cannot be Slept---------------------------------------------------------+| |
+| Vulnerable to rock remover---------------------------------------------+|| |
+| Vulnerable to light---------------------------------------------------+||| |
+| Vulnerable to Acid---------------------------------------------------+|||| |
+| Vulnerable to Poison------------------------------------------------+||||| |
+| Vulnerable to Fire-------------------------------------------------+|||||| |
+| Vulnerable to Frost-----------------------------------------------+||||||| |
+| Is Undead--------------------------------------------------------+|||||||| |
+| Is Evil---------------------------------------------------------+||||||||| |
+| Is an Animal---------------------------------------------------+|||||||||| |
+| Is Dragon-----------------------------------------------------+||||||||||| |
++-------------------------------------------------------------+ |||||||||||| |
+| Monster                      |Ch|Lv |  HP   |  AC | Notice  | vvvvvvvvvvvv |
++----------------------------------------------------------------------------+
+| Filthy Street Urchin         | p|  0|  1d 4 |   1 |  40-  4 |   x xx     x |
+| Blubbering Idiot             | p|  0|  1d 2 |   1 |   0-  6 |     xx     x |
+| Pitiful-Looking Beggar       | p|  0|  1d 4 |   1 |  40- 10 |     xx     x |
+| Mangy-Looking Leper          | p|  0|  1d 1 |   1 |  50- 10 |     xx     x |
+| Squint-Eyed Rogue            | p|  0|  2d 8 |   8 |  99- 10 |   x xx     x |
+| Singing, Happy Drunk         | p|  0|  2d 3 |   1 |   0- 10 |     xx     x |
+| Mean-Looking Mercenary       | p|  0|  5d 8 |  20 | 250- 10 |   x xx     x |
+| Battle-Scarred Veteran       | p|  0|  7d 8 |  30 | 250- 10 |     xx     x |
+| Grey Mushroom patch          | ,|  1|  1d 2 |   1 |   0-  2 |      x x  x  |
+| Giant Yellow Centipede       | c|  1|  2d 6 |  12 |  30-  8 |  x           |
+| Giant White Centipede        | c|  1|  3d 5 |  10 |  40-  7 |  x           |
+| White Icky-Thing             | i|  1|  3d 5 |   7 |  10- 12 |      x       |
+| Clear Icky-Thing             | i|  1|  2d 5 |   6 |  10- 12 |      x       |
+| Giant White Mouse            | r|  1|  1d 3 |   4 |  20-  8 |  x  xxx    x |
+| Large Brown Snake            | R|  1|  4d 6 |  35 |  99-  4 |  x  xx x     |
+| Large White Snake            | R|  1|  3d 6 |  30 |  99-  4 |  x  xx x     |
+| Kobold                       | k|  1|  3d 7 |  16 |  10- 20 |     xx     x |
+| White Worm mass              | w|  1|  4d 4 |   1 |  10-  7 |  x  xx xx    |
+| Floating Eye                 | e|  1|  3d 6 |   6 |  10-  2 |         x  x |
+| Shrieker Mushroom patch      | ,|  2|  1d 1 |   1 |   0-  2 |      x x  x  |
+| Blubbering Icky-Thing        | i|  2|  5d 8 |   4 |  10- 14 |      x       |
+| Metallic Green Centipede     | c|  2|  4d 4 |   4 |  10-  5 |  x           |
+| Novice Warrior               | p|  2|  9d 4 |  16 |   5- 20 |     xx     x |
+| Novice Rogue                 | p|  2|  8d 4 |  12 |   5- 20 |   x xx     x |
+| Novice Priest                | p|  2|  7d 4 |  10 |   5- 20 |     xx     x |
+| Novice Mage                  | p|  2|  6d 4 |   6 |   5- 20 |     xx     x |
+| Yellow Mushroom patch        | ,|  2|  1d 1 |   1 |   0-  2 |      x x  x  |
+| White Jelly                  | J|  2|  8d 8 |   1 |  99-  2 |      x xx x  |
+| Giant Green Frog             | f|  2|  2d 8 |   8 |  30- 12 |  x   x x     |
+| Giant Black Ant              | a|  2|  3d 6 |  20 |  80-  8 |  x           |
+| White Harpy                  | h|  2|  2d 5 |  17 |  10- 16 |   x xx     x |
+| Blue Yeek                    | y|  2|  2d 6 |  14 |  10- 18 |     xx     x |
+| Green Worm mass              | w|  2|  6d 4 |   3 |  10-  7 |  x  xx  x    |
+| Large Black Snake            | R|  2|  4d 8 |  38 |  75-  5 |  x  xx x     |
+| Poltergeist                  | G|  3|  2d 5 |  15 |  10-  8 |   xx    x x  |
+| Metallic Blue Centipede      | c|  3|  4d 5 |   6 |  15-  6 |  x           |
+| Giant White Louse            | l|  3|  1d 1 |   5 |  10-  6 |  x  xxxxx    |
+| Black Naga                   | n|  3|  6d 8 |  40 | 120- 16 |   x  xxx   x |
+| Spotted Mushroom patch       | ,|  3|  1d 1 |   1 |   0-  2 |      x x  x  |
+| Yellow Jelly                 | J|  3| 10d 8 |   1 |  99-  2 |      x xx x  |
+| Scruffy-Looking Hobbit       | p|  3|  3d 5 |   8 |  10- 16 |   x xx     x |
+| Huge Brown Bat               | b|  3|  2d 6 |  12 |  40-  8 |  x   xx x  x |
+| Giant White Ant              | a|  3|  3d 6 |  16 |  80-  8 |  x           |
+| Yellow Mold                  | m|  3|  8d 8 |  10 |  99-  2 |      x x  x  |
+| Metallic Red Centipede       | c|  3|  4d 8 |   9 |  20-  8 |  x           |
+| Yellow Worm mass             | w|  3|  4d 8 |   4 |  10-  7 |  x  xx xx    |
+| Large Green Snake            | R|  3|  6d 8 |  40 |  70-  5 |  x  xx x     |
+| Radiation Eye                | e|  3|  3d 6 |   6 |  10-  2 |         x  x |
+| Drooling Harpy               | h|  3|  2d 8 |  22 |  10- 16 |   x xx     x |
+| Silver Mouse                 | r|  4|  1d 1 |   5 |  10-  8 |  x  xxx      |
+| Black Mushroom patch         | ,|  4|  8d 8 |   1 |   0-  2 |      x x  x  |
+| Blue Jelly                   | J|  4| 12d 8 |   1 |  99-  2 |      x xx x  |
+| Creeping Copper Coins        | $|  4|  7d 8 |  24 |  10-  3 |           x  |
+| Giant White Rat              | r|  4|  2d 2 |   7 |  30-  8 |  x  xxx    x |
+| Giant Black Centipede        | c|  4|  5d 8 |  20 |  30-  8 |  x           |
+| Giant Blue Centipede         | c|  4|  4d 8 |  20 |  50-  8 |  x           |
+| Blue Worm mass               | w|  4|  5d 8 |  12 |  10-  7 |  x   x xx    |
+| Large Grey Snake             | R|  4|  6d 8 |  41 |  50-  6 |  x  xx x     |
+| Jackal                       | j|  4|  3d 8 |  16 |  30- 12 |  x  xx     x |
+| Green Naga                   | n|  5|  9d 8 |  40 | 120- 18 |   x  xx    x |
+| Green Glutton Ghost          | G|  5|  3d 6 |  20 |  10- 10 |   xx    x x  |
+| White Mushroom patch         | ,|  5|  1d 1 |   1 |   0-  2 |      x x  x  |
+| Green Jelly                  | J|  5| 22d 8 |   1 |  99-  2 |      x  x x  |
+| Skeleton Kobold              | s|  5|  5d 8 |  26 |  40- 20 |   xx      x  |
+| Silver Jelly                 | J|  5| 20d 8 |  25 |  40-  2 |      x x  x  |
+| Giant Black Frog             | f|  5|  4d 8 |  18 |  40- 12 |  x   x x     |
+| Grey Icky-Thing              | i|  5|  4d 8 |  12 |  15- 14 |      x       |
+| Disenchanter Eye             | e|  5|  7d 8 |  10 |  10-  2 |         x  x |
+| Black Yeek                   | y|  5|  2d 8 |  16 |  10- 18 |     xx     x |
+| Red Worm mass                | w|  5|  5d 8 |  12 |  10-  7 |  x  x  xx  x |
+| Giant House Fly              | F|  5|  3d 8 |  16 |  20- 12 |  x   xx      |
+| Copperhead Snake             | R|  5|  4d 6 |  20 |   1-  6 |  x  xx x     |
+| Rot Jelly                    | J|  5| 20d 8 |  30 |  99-  2 |      x x  x  |
+| Purple Mushroom patch        | ,|  6|  1d 1 |   1 |   0-  2 |      x x  x  |
+| Brown Mold                   | m|  6| 15d 8 |  12 |  99-  2 |      x x  x  |
+| Giant Brown Bat              | b|  6|  3d 8 |  15 |  30- 10 |  x   xx x  x |
+| Creeping Silver Coins        | $|  6| 12d 8 |  30 |  10-  4 |           x  |
+| Orc                          | o|  6|  9d 8 |  32 |  30- 20 |   x xx     x |
+| Grey Harpy                   | h|  6|  3d 8 |  20 |  10- 16 |   x xx     x |
+| Blue Icky-Thing              | i|  6|  4d 8 |  14 |  20- 14 |      x       |
+| Rattlesnake                  | R|  6|  6d 7 |  24 |   1-  6 |  x  xx x     |
+| Bloodshot Eye                | e|  7|  4d 8 |   6 |  10-  2 |         x  x |
+| Red Naga                     | n|  7| 11d 8 |  40 | 120- 20 |   x  xxx   x |
+| Red Jelly                    | J|  7| 26d 8 |   1 |  99-  2 |      x xx x  |
+| Giant Red Frog               | f|  7|  5d 8 |  16 |  50- 12 |  x   x x     |
+| Green Icky-Thing             | i|  7|  5d 8 |  12 |  20- 14 |      x       |
+| Zombie Kobold                | z|  7|  6d 8 |  14 |  30- 20 |   xx x    x  |
+| Lost Soul                    | G|  7|  2d 8 |  10 |  10- 12 |   xx    x x  |
+| Greedy Little Gnome          | p|  7|  3d 8 |  14 |  10- 18 |   x xx     x |
+| Giant Green Fly              | F|  7|  3d 8 |  14 |  20- 12 |  x   xx      |
+| Brown Yeek                   | y|  8|  3d 8 |  18 |  10- 18 |     xx     x |
+| Green Mold                   | m|  8| 21d 8 |  14 |  75-  2 |      x x  x  |
+| Skeleton Orc                 | s|  8| 10d 8 |  36 |  40- 20 |   xx      x  |
+| Seedy Looking Human          | p|  8|  8d 8 |  26 |  20- 20 |   x xx     x |
+| Red Icky-Thing               | i|  8|  4d 8 |  18 |  20- 14 |      x       |
+| Bandit                       | p|  8|  8d 8 |  24 |  10- 20 |   x xx     x |
+| Yeti                         | Y|  9| 11d 8 |  24 |  10- 20 |   x  x     x |
+| Bloodshot Icky-Thing         | i|  9|  7d 8 |  18 |  20- 14 |      x       |
+| Giant Grey Rat               | r|  9|  2d 3 |  12 |  20-  8 |  x  xxx    x |
+| Black Harpy                  | h|  9|  3d 8 |  22 |  10- 16 |   x xx     x |
+| Giant Black Bat              | b|  9|  2d 8 |  18 |  25- 12 |  x   xx x  x |
+| Clear Yeek                   | y|  9|  3d 6 |  24 |  10- 18 |     xx       |
+| Orc Shaman                   | o|  9|  7d 8 |  15 |  20- 20 |   x xx     x |
+| Giant Red Ant                | a|  9|  4d 8 |  34 |  60- 12 |  x           |
+| King Cobra                   | R|  9|  8d 8 |  30 |   1-  8 |  x  xx x     |
+| Clear Mushroom patch         | ,| 10|  1d 1 |   1 |   0-  4 |      x x  x  |
+| Giant White Tick             | t| 10| 15d 8 |  40 |  20- 12 |  x   x       |
+| Hairy Mold                   | m| 10| 15d 8 |  15 |  70-  2 |      x x  x  |
+| Disenchanter Mold            | m| 10| 16d 8 |  20 |  70-  2 |      x x  x  |
+| Giant Red Centipede          | c| 10|  3d 8 |  26 |  50- 12 |  x           |
+| Creeping Gold Coins          | $| 10| 18d 8 |  36 |  10-  5 |           x  |
+| Giant Fruit Fly              | F| 10|  2d 2 |  14 |  10-  8 |  x   xx      |
+| Brigand                      | p| 10|  9d 8 |  32 |  10- 20 |   x xx     x |
+| Orc Zombie                   | z| 11| 11d 8 |  24 |  25- 20 |   xx x    x  |
+| Orc Warrior                  | o| 11| 11d 8 |  36 |  25- 20 |   x xx     x |
+| Vorpal Bunny                 | r| 11|  2d 3 |  10 |  30-  8 |  x  xxx    x |
+| Nasty Little Gnome           | p| 11|  4d 8 |  10 |  10- 18 |   x xx     x |
+| Hobgoblin                    | H| 11| 12d 8 |  38 |  30- 20 |   x xx     x |
+| Black Mamba                  | R| 12| 10d 8 |  32 |   1- 10 |  x  xx x     |
+| Grape Jelly                  | J| 12| 52d 8 |   1 |  99-  2 |      x xx x  |
+| Master Yeek                  | y| 12|  5d 8 |  24 |  10- 18 |     xx     x |
+| Priest                       | p| 12|  7d 8 |  22 |  40- 20 |     xx     x |
+| Giant Clear Ant              | a| 12|  3d 7 |  18 |  60- 12 |  x           |
+| Air Spirit                   | E| 12|  5d 8 |  20 |  20- 12 |           x  |
+| Skeleton Human               | s| 12| 12d 8 |  30 |  30- 20 |   xx      x  |
+| Human Zombie                 | z| 12| 11d 8 |  24 |  20- 20 |   xx x    x  |
+| Moaning Spirit               | G| 12|  4d 8 |  20 |  10- 14 |   xx    x x  |
+| Swordsman                    | p| 12| 11d 8 |  34 |  20- 20 |     xx     x |
+| Killer Brown Beetle          | K| 13| 13d 8 |  40 |  30- 10 |  x           |
+| Ogre                         | o| 13| 13d 8 |  32 |  30- 20 |   x xx     x |
+| Giant Red Speckled Frog      | f| 13|  6d 8 |  20 |  30- 12 |  x   x x     |
+| Magic User                   | p| 13|  7d 8 |  10 |  10- 20 |     xx     x |
+| Black Orc                    | o| 13| 12d 8 |  36 |  20- 20 |   x xx     x |
+| Giant Long-Eared Bat         | b| 13|  5d 8 |  20 |  20- 12 |  x   xx x  x |
+| Giant Gnat                   | F| 13|  1d 2 |   4 |  10-  8 |  x   xx      |
+| Killer Green Beetle          | K| 14| 16d 8 |  45 |  30- 12 |  x           |
+| Giant Flea                   | F| 14|  2d 2 |  25 |  10-  8 |  x   xx      |
+| Giant White Dragon Fly       | F| 14|  5d 8 |  20 |  50- 20 |  x   xx      |
+| Hill Giant                   | P| 14| 16d 8 |  36 |  50- 20 |   x xx     x |
+| Skeleton Hobgoblin           | s| 14| 13d 8 |  34 |  30- 20 |   xx      x  |
+| Flesh Golem                  | g| 14| 12d 8 |  10 |  10- 12 |     xx    x  |
+| White Dragon Bat             | b| 14|  2d 6 |  20 |  50- 12 |  x   xx x    |
+| Giant Black Louse            | l| 14|  1d 1 |   7 |  10-  6 |  x  xxxxx    |
+| Guardian Naga                | n| 15| 24d 8 |  50 | 120- 20 |   x  xxx   x |
+| Giant Grey Bat               | b| 15|  4d 8 |  22 |  15- 12 |  x   xx x  x |
+| Giant Clear Centipede        | c| 15|  5d 8 |  30 |  30- 12 |  x           |
+| Giant Yellow Tick            | t| 15| 20d 8 |  48 |  20- 12 |  x   x       |
+| Giant Ebony Ant              | a| 15|  3d 4 |  24 |  60- 12 |  x           |
+| Frost Giant                  | P| 15| 17d 8 |  38 |  50- 20 |   x  x       |
+| Clay Golem                   | g| 15| 14d 8 |  20 |  10- 12 |          xx  |
+| Huge White Bat               | b| 15|  3d 8 |  12 |  40-  7 |  x   xx x  x |
+| Giant Tan Bat                | b| 15|  3d 8 |  18 |  40- 12 |  x   xx x  x |
+| Violet Mold                  | m| 15| 17d 8 |  15 |  70-  2 |      x x  x  |
+| Umber Hulk                   | U| 16| 20d 8 |  20 |  10- 20 |   x  x  x  x |
+| Gelatinous Cube              | C| 16| 45d 8 |  18 |   1- 12 |      x    x  |
+| Giant Black Rat              | r| 16|  3d 4 |  16 |  20-  8 |  x  xxx    x |
+| Giant Green Dragon Fly       | F| 16|  5d 8 |  20 |  50- 20 |  x  xx       |
+| Fire Giant                   | P| 16| 20d 8 |  40 |  50- 20 |   x x      x |
+| Green Dragon Bat             | b| 16|  2d 7 |  22 |  50- 12 |  x  x   x  x |
+| Quasit                       | q| 16|  5d 8 |  30 |  20- 20 |   x       x  |
+| Troll                        | T| 17| 17d 8 |  40 |  40- 20 |   x  x     x |
+| Water Spirit                 | E| 17|  8d 8 |  28 |  40- 12 |      x    x  |
+| Giant Brown Scorpion         | S| 17| 11d 8 |  44 |  20- 12 |  x           |
+| Earth Spirit                 | E| 17| 13d 8 |  40 |  50- 10 |          xx  |
+| Fire Spirit                  | E| 18| 10d 8 |  30 |  20- 16 |     x     xx |
+| Uruk-Hai Orc                 | o| 18| 14d 8 |  42 |  20- 20 |   x xx     x |
+| Stone Giant                  | P| 18| 22d 8 |  40 |  50- 20 |   x      x x |
+| Stone Golem                  | g| 19| 28d 8 |  75 |  10- 12 |          xx  |
+| Grey Ooze                    | O| 19|  6d 8 |  10 |   1- 15 |      x x  x  |
+| Disenchanter Ooze            | O| 19|  6d 8 |  15 |   1- 15 |     xx x  x  |
+| Giant Spotted Rat            | r| 19|  4d 3 |  20 |  20-  8 |  x  xxx    x |
+| Mummified Kobold             | M| 19| 13d 8 |  24 |  75- 20 |   xx x    x  |
+| Killer Black Beetle          | K| 19| 18d 8 |  46 |  30- 12 |  x           |
+| Red Mold                     | m| 19| 17d 8 |  16 |  70-  2 |     x  x  xx |
+| Quylthulg                    | Q| 20|    32 |   1 |   0- 10 |           x  |
+| Giant Red Bat                | b| 20|  5d 8 |  24 |  20- 12 |  x   xx x  x |
+| Giant Black Dragon Fly       | F| 20|  4d 8 |  22 |  50- 20 |  x  xxx      |
+| Cloud Giant                  | P| 20| 24d 8 |  44 |  50- 20 |   x xx     x |
+| Black Dragon Bat             | b| 21|  2d 8 |  24 |  50- 12 |  x  x x x  x |
+| Blue Dragon Bat              | b| 21|  3d 6 |  26 |  50- 12 |  x  x x    x |
+| Mummified Orc                | M| 21| 14d 8 |  28 |  75- 20 |   xx x    x  |
+| Killer Boring Beetle         | K| 21| 18d 8 |  48 |  30- 12 |  x           |
+| Killer Stag Beetle           | K| 22| 20d 8 |  50 |  30- 12 |  x           |
+| Black Mold                   | m| 22| 15d 8 |  18 |  50-  2 |      x x  x  |
+| Iron Golem                   | g| 22| 80d 8 |  99 |  10- 12 |        x  x  |
+| Giant Yellow Scorpion        | S| 22| 12d 8 |  38 |  20- 12 |  x           |
+| Green Ooze                   | O| 22|  4d 8 |   5 |   1- 15 |     xx    x  |
+| Black Ooze                   | O| 23|  6d 8 |   6 |   1- 10 |     xx    x  |
+| Warrior                      | p| 23| 15d 8 |  40 |  40- 20 |     xx     x |
+| Red Dragon Bat               | b| 23|  3d 8 |  28 |  50- 12 |  x  x x x  x |
+| Killer Blue Beetle           | K| 23| 20d 8 |  50 |  30- 14 |  x           |
+| Giant Silver Ant             | a| 23|  6d 8 |  38 |  60- 10 |  x           |
+| Crimson Mold                 | m| 23| 16d 8 |  18 |  50-  2 |      x x  x  |
+| Forest Wight                 | W| 24| 12d 8 |  30 |  30- 20 |   xx x  x x  |
+| Berzerker                    | p| 24| 15d 8 |  20 |  10- 20 |     xx     x |
+| Mummified Human              | M| 24| 17d 8 |  34 |  60- 20 |   xx x    x  |
+| Banshee                      | G| 24|  6d 8 |  24 |  10- 20 |   xx    x x  |
+| Giant Troll                  | T| 25| 19d 8 |  40 |  50- 20 |   x  x     x |
+| Giant Brown Tick             | t| 25| 18d 8 |  50 |  20- 12 |  x   x       |
+| Killer Red Beetle            | K| 25| 20d 8 |  50 |  30- 14 |  x           |
+| Wooden Mold                  | m| 25| 25d 8 |  50 |  50-  2 |      x x  x  |
+| Giant Blue Dragon Fly        | F| 25|  6d 8 |  24 |  50- 20 |  x  xxx      |
+| Giant Grey Ant Lion          | A| 26| 19d 8 |  40 |  40- 10 |  x  xx       |
+| Disenchanter Bat             | b| 26|  4d 8 |  24 |   1- 14 |  x   xx x  x |
+| Giant Fire Tick              | t| 26| 16d 8 |  54 |  20- 14 |  x  x      x |
+| White Wraith                 | W| 26| 15d 8 |  40 |  10- 20 |   xx x  x x  |
+| Giant Black Scorpion         | S| 26| 13d 8 |  50 |  20- 12 |  x           |
+| Clear Ooze                   | O| 26|  4d 8 |  14 |   1- 10 |     xx x  x  |
+| Killer Fire Beetle           | K| 27| 13d 8 |  45 |  30- 14 |  x  x      x |
+| Vampire                      | V| 27| 20d 8 |  45 |  10- 20 |   xx x  x x  |
+| Giant Red Dragon Fly         | F| 27|  7d 8 |  24 |  50- 20 |  x  x x    x |
+| Shimmering Mold              | m| 27| 32d 8 |  24 |  50-  2 |      x x  x  |
+| Black Knight                 | p| 28| 25d 8 |  60 |  10- 20 |   x xx     x |
+| Mage                         | p| 28| 10d 8 |  30 |  10- 20 |     xx     x |
+| Ice Troll                    | T| 28| 22d 8 |  46 |  50- 20 |   x  x       |
+| Giant Purple Worm            | w| 29| 65d 8 |  65 |  30- 14 |  x  xx     x |
+| Young Blue Dragon            | d| 29| 33d 8 |  50 |  70- 20 | x x        x |
+| Young White Dragon           | d| 29| 32d 8 |  50 |  70- 20 | x x  x       |
+| Young Green Dragon           | d| 29| 32d 8 |  50 |  70- 20 | x x        x |
+| Giant Fire Bat               | b| 29|  5d 8 |  30 |  10- 14 |  x  x x x  x |
+| Giant Glowing Rat            | r| 29|  3d 3 |  24 |  20-  8 |  x  xxx    x |
+| Skeleton Troll               | s| 30|   112 |  55 |  20- 20 |   xx      x  |
+| Giant Lightning Bat          | b| 30|  8d 8 |  34 |  10- 15 |  x    x    x |
+| Giant Static Ant             | a| 30|  8d 8 |  40 |  60- 10 |  x           |
+| Grave Wight                  | W| 30|    96 |  35 |  30- 20 |   xx x  x x  |
+| Killer Slicer Beetle         | K| 30| 22d 8 |  55 |  30- 14 |  x           |
+| Giant White Ant Lion         | A| 30| 20d 8 |  45 |  40- 12 |  x   x       |
+| Ghost                        | G| 31|   104 |  30 |  10- 20 |   xx    x x  |
+| Giant Black Ant Lion         | A| 31| 23d 8 |  45 |  40- 14 |  x  xx       |
+| Death Watch Beetle           | K| 31| 25d 8 |  60 |  30- 16 |  x           |
+| Ogre Mage                    | o| 31|   112 |  42 |  30- 20 |   x xx     x |
+| Two-Headed Troll             | T| 32|   112 |  48 |  50- 20 |   x  x     x |
+| Invisible Stalker            | E| 32| 19d 8 |  46 |  20- 20 |           x  |
+| Giant Hunter Ant             | a| 32| 12d 8 |  40 |   1- 16 |  x           |
+| Ninja                        | p| 32|   120 |  65 |  10- 20 |   x xx     x |
+| Barrow Wight                 | W| 33|   104 |  40 |  10- 20 |   xx x  x x  |
+| Skeleton 2-Headed Troll      | s| 33|   160 |  48 |  20- 20 |   xx      x  |
+| Water Elemental              | E| 33| 25d 8 |  36 |  50- 12 |      x    x  |
+| Fire Elemental               | E| 33| 25d 8 |  40 |  70- 16 |     x     xx |
+| Lich                         | L| 34|   200 |  50 |  60- 20 |   xx    x x  |
+| Master Vampire               | V| 34|   184 |  55 |  10- 20 |   xx x  x x  |
+| Spirit Troll                 | G| 34|   120 |  40 |  10- 20 |   xx    x x  |
+| Giant Red Scorpion           | S| 34| 18d 8 |  50 |  40- 12 |  x           |
+| Earth Elemental              | E| 34| 30d 8 |  60 |  90- 10 |          xx  |
+| Young Black Dragon           | d| 35|   256 |  55 |  50- 20 | x x        x |
+| Young Red Dragon             | d| 35|   288 |  60 |  50- 20 | x x x      x |
+| Necromancer                  | p| 35|   136 |  40 |  10- 20 |     xx     x |
+| Mummified Troll              | M| 35|   144 |  38 |  50- 20 |   xx x    x  |
+| Giant Red Ant Lion           | A| 35| 23d 8 |  48 |  40- 14 |  x  x      x |
+| Mature White Dragon          | d| 35|   384 |  65 |  70- 20 | x x  x       |
+| Xorn                         | X| 36|   160 |  80 |  10- 20 |          x   |
+| Giant Mottled Ant Lion       | A| 36| 24d 8 |  50 |  40- 14 |  x  xx       |
+| Grey Wraith                  | W| 36|   184 |  50 |  10- 20 |   xx x  x x  |
+| Young Multi-Hued Dragon      | d| 36|   320 |  55 |  50- 20 | x x        x |
+| Mature Blue Dragon           | d| 36|   384 |  75 |  70- 20 | x x        x |
+| Mature Green Dragon          | d| 36|   384 |  70 |  70- 20 | x x        x |
+| Iridescent Beetle            | K| 37| 32d 8 |  60 |  30- 16 |  x           |
+| King Vampire                 | V| 37|   304 |  65 |  10- 20 |   xx x  x x  |
+| King Lich                    | L| 37|   416 |  65 |  50- 20 |   xx    x x  |
+| Mature Red Dragon            | d| 37|   480 |  80 |  30- 20 | x x x      x |
+| Mature Black Dragon          | d| 37|   464 |  55 |  30- 20 | x x        x |
+| Mature Multi-Hued Dragon     | d| 38|   640 |  65 |  50- 20 | x x        x |
+| Ancient White Dragon         | D| 38|   704 |  80 |  80- 20 | x x  x       |
+| Emperor Wight                | W| 38|   384 |  40 |  10- 20 |   xx x  x x  |
+| Black Wraith                 | W| 38|   400 |  55 |  10- 20 |   xx x  x x  |
+| Nether Wraith                | W| 39|   464 |  55 |  10- 20 |   xx x  x x  |
+| Sorcerer                     | p| 39|   240 |  50 |  10- 20 |     xx     x |
+| Ancient Blue Dragon          | D| 39|   696 |  90 |  80- 20 | x x        x |
+| Ancient Green Dragon         | D| 39|   720 |  85 |  80- 20 | x x        x |
+| Ancient Black Dragon         | D| 39|   720 |  90 |  70- 20 | x x        x |
+| Crystal Ooze                 | O| 40| 12d 8 |  30 |   1- 10 |      x x  x  |
+| Disenchanter Worm            | w| 40| 10d 8 |   5 |  10-  7 |  x  xx xx    |
+| Rotting Quylthulg            | Q| 40|    96 |   1 |   0- 20 |           x  |
+| Ancient Red Dragon           | D| 40|   840 | 100 |  70- 20 | x x x      x |
+| Death Quasit                 | q| 40| 55d 8 |  80 |   0- 20 |   x       x  |
+| Emperor Lich                 | L| 40|  1520 |  75 |  50- 20 |   xx    x x  |
+| Ancient Multi-Hued Dragon    | D| 40|  2080 | 100 |  70- 20 | x x        x |
+| Evil Iggy                    | p| 50|  2400 |  80 |   0- 30 |   x       x  |
+| Balrog                       | B|100|  3000 | 125 |   0- 40 |   x       x  |
++----------------------------------------------------------------------------+
+
+Notice is the number of turns he will sleep - distance from you when the sleep
+count starts.  For every three points of stealth you have, the sleep time is
+doubled.  Also, if you attack, that wakes the monster up.
+
+The experience given above is for a character the same level as the monster.
+To convert this to a different level:
+
+        (base exp)*(monster level)
+        --------------------------  = real experience
+               (char level)
+
+Hence the Balrog for a 40th level character would be worth:
+
+        55000*100
+        --------- = 137500 experience points
+           40
+
+Monster Attacks:
+
+   ATCK  No special attack, just damage
+   CONF  Confuses character
+   FEAR  Makes character afraid
+   FIRE  Fire based attack.
+   ACID  Acid based attack.
+   COLD  Cold/Frost based attack.
+   LIGT  Lightning based attack.
+   CORR  Corrosion attack
+   BLND  Blinds character
+   PARA  Paralyzes character
+   STL$  Steals money
+   STLO  Steal object
+   POIS  Posions
+   STR-  Reduces strength
+   DEX-  Reduces dexterity
+   CON-  Reduces constitution
+   INT-  Reduces intelligence
+   WIS-  Reduces wisdom
+   EXP-  Drains experience
+   AGGR  Aggravates monsters on that level
+   DENC  Disenchant an item
+   FOD-  Consumes food
+   LIT-  Drains light
+   CHG-  Drains charges
+
+Hit Probability:
+
+       Hit bonus on weapon
+     + Hit bonus on items
+     + Hit bonus for DEX
+     + Hit bonus for STR
+     * 3
+     + Fighting ability (or Bow ability for missiles)
+   ----
+       Total to hit bonus.
+
+A random number between 1 and that hit number must be greater than the
+monster's AC.  In addition, a 1d20 is rolled.  A 1 on this die forces a miss
+and a 20 forces a hit.
+
+Critical hits:
+       Hit bonus on weapon
+     + Hit bonus on items
+     + Hit bonus for DEX
+     + Hit bonus for STR
+     * 5
+     + Fighting ability
+     + Weight of weapon*10
+     - Fighting ability at 0th level.
+   ---
+       Total chance to critical
+
+If a number between 1 and 5000 is less than the critical chance, you have 
+scored a critical hit. 
+
+Damage Calculation:
+
+Assuming you hit, the damage calculation is relatively straight-forward.
+
+        Damage of weapon
+      * EGO Bonus
+      * Critical hit bonus
+      + To Dam Bonus on weapon
+      + To Dam Bonus on items
+      + To Dam Bonus from STR
+     ---
+        Total damage
+
+If you scored a critical hit, the bonus is calculated below:
+ 
+       Weight of weapon
+     * 10
+     + Random number between 1 and 650
+    ---
+       Severity level
+
++-------------------------------+
+| Severity | Multiplier         |
++-------------------------------+
+|    0-399 |  2x+5  (good)      |
+|  400-699 |  3x+10 (excellent) |
+|  700-899 |  4x+15 (superb)    |
+|  900+    |  5x+20 (*GREAT*)   |
++-------------------------------+
+
+Bashing:
+
+The chance of bashing a monster is significantly lower than hitting it
+with a weapon, even your fists.
+
+        Bonus to hit on STR
+      + Weight of shield*5
+      + Weight of player/10
+     ---
+        Chance to hit.
+
+You check to hit as above, but the chance for critical hits uses the weight of
+the shield/4 as the weapon wieght above.  Damage is the calculated the same
+with the damage caused being 1d1 or 1d2 depending on the shield.  Also, an
+additional bonus of character weight/60 +3 is added due to the force of your
+body ramming into whatever you hit.
+
+The usefulness of basing is the chance to stun an oppenant.  This has the
+effect of a paralyze for 1d3 turns.  If 100+2d400 > HP+AverageHP then
+the monster is stunned.  Note:  The Balrog can never be stunned.
+
+If 1d150 > your dexterity (exceptional added to rest, so 18/29=47) then you are
+stunned for 1+1d2 rounds.
+
+AC Calculation:
+
+         Sum of Armor AC
+       + Bonus on AC
+       + Bonus on Items
+       + Bonus from DEX
+       + Bonus from spells (Bless, etc)
+      ---
+         Total AC.
+
+Simple enough, wasn't it...
+
+                                  -------------
+----------------------------------| The Items |---------------------------------
+                                  -------------
+
+Following is a complete description of every item in the game.  Note that 
+it is difficult to identify any of the items without just trying them out.
+
+The Perception skill will allow you to notice magical armor and weapons.  They
+will appear as {magik} and you will get a message about something in your
+pack or something that you're wearing/wielding.
+
+The names (like metalic green potion, and scroll named "xj dsy") are generated
+differently every time, but in the same game of Moria will always represent the
+same object.
+
+Items preceded by an * are always damned.  Any item with a negative enchantment
+is also damned.  Items preceded by a + are never damned and never have
+negative enchatments.
+
+All Chests, Bows, Polearms, Body armor, Staves are considered large.  All
+other weapons and diggers weighing more than 15lbs are large.  All other items
+are small.  Large items will not be dropped by monsters carrying 'small' items
+and will not be found in chests.
+
+When a range of charges or enchantments is given, the distribution in the game
+is in the shape of a bell curve.  Therefore, the vast majority of items will be
+in the middle of this range, and not at the ends.  For example:  An amulet of
+searching has a range from -100 to +50, but both of these will be very rare.  
+Much more common are amulets in the range -50 to +30 with values in the middle
+generated quite often.
+
+Note:  No generated item will have an enchantment of zero except for weapon 
++to hit, +to dam and armor +to AC
+
+
+                                  -----------
+----------------------------------| Amulets |-----------------------------------
+                                  -----------
+
++----------------------------------------------------------+
+| Amulet         | Level | + Range | Base Cost | Cost/Plus |
++----------------------------------------------------------+
+| Searching      |   14  |-100..50 |   250     |     50    |
+|+Slow Digestion |   14  |         |   200     |           |
+|*Teleportation  |   14  |         |     0     |           |
+|+Adornment      |   16  |         |    20     |           |
+| Charisma       |   20  | -20..10 |   250     |    100    |
+| Wisdom         |   20  | -20..10 |   300     |    100    |
+|+Resist Acid    |   24  |         |   250     |           |
+|*DOOM           |   50  |   -5    |     0     |      0    |
+|+the Magi       |   50  |  5..125 |  5000     |     20    |
++----------------------------------------------------------+
+
+Descrptions
+
+Amulet of Searching:  Adds the enchantment to your searching attribute
+Amulet of Slow Digestion:  Reduces food consumption by 1 (see Food)
+Amulet of Teleportation:  Randomly does a long range teleport on the level.
+Amulet of Adornment:  No effect
+Amulet of Charisma:  Raises/lowers charisma by enchantment
+Amulet of Wisom: Raises/lowers wisdom by enchantment
+Amulet of Resist Acid:  Gives you a permanent resistance to acid.
+Amulet of DOOM: Reduces all of your attributes by 5.
+Amulet of the Magi:  Increases searching by bonus, and grants free action
+                     and see invisible
+
+                                   ---------
+-----------------------------------| Armor |------------------------------------
+                                   ---------
+
+Each plus to AC increases the value by 100.
+
++---------------------------------------------------------------+
+| Armor                    | Level | Weight | AC | - Hit | Cost |
++---------------------------------------------------------------+
+| Robe                     |   1   |    2.0 |  2 |   0   |    4 |
+| Soft Leather Armor       |   2   |    8.0 |  4 |   0   |   18 |  
+| Soft Studded Leather     |   3   |    9.0 |  5 |   0   |   35 |
+| Hard Leather Armor       |   5   |   10.0 |  6 |  -1   |   55 |
+| Hard Studded Leather     |   7   |   11.0 |  7 |  -1   |  100 |
+| Woven Cord Armor         |   7   |   15.0 |  6 |  -1   |   45 |
+| Soft Leather Ring Mail   |  10   |   13.0 |  6 |  -1   |  160 |
+| Hard Leather Ring Mail   |  12   |   15.0 |  8 |  -2   |  230 |
+| Leather Scale Mail       |  14   |   14.0 | 11 |  -1   |  330 |
+| Metal Scale Mail         |  24   |   25.0 | 13 |  -2   |  430 |
+| Chain Mail               |  26   |   22.0 | 14 |  -2   |  530 |
+| Rusty Chain Mail         |  26   |   22.0 | 14 |  -5   |    0 |
+| Double Chain Mail        |  28   |   26.0 | 15 |  -2   |  630 |
+| Augmented Chain Mail     |  30   |   27.0 | 16 |  -2   |  675 |
+| Bar Chain Mail           |  34   |   28.0 | 18 |  -2   |  720 |
+| Metal Brigandine Armor   |  36   |   29.0 | 19 |  -3   |  775 |
+| Laminated Armor          |  38   |   30.0 | 20 |  -3   |  825 |
+| Partial Plate Armor      |  42   |   32.0 | 22 |  -3   |  900 |
+| Metal Lamellar Armor     |  44   |   34.0 | 23 |  -3   |  950 |
+| Full Plate Armor         |  48   |   38.0 | 25 |  -3   | 1050 |
+| Ribbed Plate Armor       |  50   |   38.0 | 28 |  -3   | 1200 |
++---------------------------------------------------------------+
+
++-------------------------------------------------------+
+| Helms                    | Level | Weight | AC | Cost |
++-------------------------------------------------------+
+| Soft Leather Cap         |   2   |    1.0 |  1 |    4 |
+| Hard Leather Cap         |   4   |    1.5 |  2 |   12 |
+| Metal Cap                |   7   |    2.0 |  3 |   30 |
+| Iron Helm                |  20   |    7.5 |  5 |   75 |
+| Steel Helm               |  40   |    6.0 |  6 |  200 |
+| Silver Crown             |  44   |    2.0 |  0 |  500 |
+| Golden Crown             |  47   |    3.0 |  0 | 1000 |
+| Jewel-Encrused Crown     |  50   |    4.0 |  0 | 2000 |
++-------------------------------------------------------+
+
++------------------------------------------------------------------+
+| Shields                  | Level | Weight | AC | Cost | Bash Dam |
++------------------------------------------------------------------+
+| Small Leather Shield     |   3   |    5.0 |  2 |   30 |    1     |
+| Medium Leather Shield    |   8   |    7.5 |  3 |   60 |   1d2    |
+| Large Leather Shield     |  15   |   10.0 |  4 |  120 |   1d2    |
+| Small Metal Shield       |  10   |    6.5 |  3 |   50 |   1d2    |
+| Medium Metal Shield      |  20   |    9.0 |  4 |  125 |   1d3    |
+| Large Metal Shield       |  30   |   12.0 |  5 |  200 |   1d3    |
++------------------------------------------------------------------+
+
++-------------------------------------------------------+
+| Gloves                   | Level | Weight | AC | Cost |
++-------------------------------------------------------+
+| Set of Leather Gloves    |   1   |    0.5 |  1 |    3 |
+| Set of Gauntlets         |  12   |    2.5 |  2 |   35 |
++-------------------------------------------------------+
+
++-------------------------------------------------------+
+| Boots                    | Level | Weight | AC | Cost |
++-------------------------------------------------------+
+| Pair Soft Leather Shoes  |   1   |    0.5 |  1 |    4 |
+| Pair Soft Leather Boots  |   4   |    2.0 |  2 |    7 |
+| Pair Hard Leather Boots  |   6   |    4.0 |  3 |   12 |
++-------------------------------------------------------+
+
++-------------------------------------------------------+
+| Cloak                    | Level | Weight | AC | Cost |
++-------------------------------------------------------+
+| Cloak                    |   1   |    1.0 |  1 |    3 |
++-------------------------------------------------------+
+
+Armor Artifacts:
+
+Shields and armor
+(RA)   Resist Acid.  Cost +1000
+       Acid does 1/2 damage if an item is corroded (or resist corrosion)
+                 1/3 damage if you have an item of Resist Acid
+                 1/4 if both.
+(RC)   Resist Cold.  1/3 damage to cold attacks.  Cost +600
+(RF)   Resist Fire.  1/3 damage to fire attacks.  Cost +600
+(RL)   Resist Lightning.  1/3 damage to lightning. Cost +500
+(R)    Resist Acid, Cold, Fire, Lightning.  Cost +2500
+
+Temporary Resist Fire and Cold combined with (RC), (RF), or (R) will
+give 1/9 resistance to fire or cold.
+
+
+Helms
+Intelligence   Increases INT by 1-2 points.  Cost +500*bonus
+Wisdom         Increases WIS by 1-2 points.  Cost +500*bonus
+Infravision    Adds 10-40' to infravision  Cost 25*ft'
+*Stupidity     Lowers INT by 1d5 points.
+*Dullness      Lowers WIS by 1d5 points.
+*Blindness     Blinds the wearer.  (Can be cured by normal means)
+*Timidness     Wearer is always afraid.
+*Weakness      Lowers STR by 1d5 points.
+*Teleportation Randomly teleports the wearer.
+*Ugliness      Lowers CHR by 1d5 points.
+
+
+Crowns (can also be the cursed items above)
+Might        Increases CON, DEX, STR by 1d3, Free Action  Cost +1000+500*bonus
+Lordiness    Increases CHR, WIS by 1d3 points.  Cost +1000+500*bonus
+Magi         Increases INT by 1d3 points, (R),   Cost +3000+500*bonus
+Beauty       Increases CHR by 1d3 points,   Cost +750
+Seeing       See invisbile, 5-20 search bonus.  Cost +1000+100*bonus
+Regeneration Regeneration occurs 1.5 times as fast.  Cost +1500
+
+Gloves
+Free Action  Cannot be paralyzed, slept, charmed, or stunned.  Cost +1000
+Slaying      Bonus To hit, To Dam.  Cost +250*(hit+dam)
+*Clumsiness  Dex lowered by 1-10 points
+*Weakness    Str lowered by 1-10 points
+
+Boots
+Slow Descent Feather falling.  Cost +250
+Speed        Increases speed by 1.  Cost +5000
+Stealth      Increases stealth by 1d3.  Cost +500
+*Slowness    Decreases speed by 1
+*Noise       Aggravate monster
+*Great Mass  Weight*5, -2..45 AC
+
+Cloaks
+Protection   2..40 AC bonus.  Cost +250
+Stealth      1..20 Stealth bonus.  Cost +500
+*Irritation  Aggravate Monster
+*Vulnerab.   AC = -10..-100
+*Enveloping  -2..-40 hit, damage
+
+
+                                 -----------
+---------------------------------| Diggers |-----------------------------------
+                                 -----------
+
+Each plus to digging above the Dig ability increases the price by 100.
+
++-------------------------------------------------------+
+| Diggers        | Dig | Damage | Weight | Level | Cost |
++-------------------------------------------------------+
+| Shovel         |  0  |  1d2   |   6.0  |    0  |   15 |
+| Pick           |  1  |  1d3   |  15.0  |    0  |   50 |
+| Gnomish Shovel |  1  |  1d2   |   5.0  |   20  |  100 |
+| Orcish Pick    |  2  |  1d3   |  18.0  |   20  |  500 |
+| Dwarven Shovel |  2  |  1d3   |  12.0  |   40  |  250 |
+| Dwarven Pick   |  3  |  1d4   |  20.0  |   50  | 1200 |
++-------------------------------------------------------+
+
+Chance to knock down a wall by digging is:
+
+     With a shovel/pick          Without a shovel/pick
+
+        Strength                   Strength
+      + to Dig bonus * 50        + Max damage of weapon
+      + 25                       + To hit bonus
+      - item too heavy penalty   + to damage bonus
+                                 / 2, digging penalty
+                                 - Weapon too heavy penalty
+    --- Digging ability         --- Digging ability
+
+Wall hardnesses:  Granite 1d1200+80, Magma 1d600+10, Quartz 1d400+10
+
+If there is a monster in the wall, it is treated as an attack against that
+monster.  Note:  If you do not have see invisible, the only way to attack
+invisible monsters in walls is to tunnel.
+
+If the hardness < digging ability, then tunnel is completed.
+
+
+                                  --------
+----------------------------------| Food |-------------------------------------
+                                  --------
+
+Note:  rations are always identified
+
+Food consumption per move is:
+
+        2 (base)
+      + speed squared
+      + 3 for regeneration
+      - 1 if resting
+
++-------------------------------------------------------+
+| Food                        | Food Val | Level | Cost |
++-------------------------------------------------------+
+| Pint of Fine Wine           |    400   |   0   |    2 |
+| Pint of Fine Ale            |    500   |   0   |    2 |
+| Hard Biscuit                |    500   |   0   |    1 |
+| Strip of Beef Jerky         |   1750   |   0   |    4 |
+| Ration of Food              |   5000   |   0   |    3 |
+| Pint of fine grade mush     |   1500   |   1   |    1 |
+| Slime Mold                  |   3000   |   1   |    2 |
+| Mushroom of First-Aid       |    500   |   5   |    5 |
+| Mushroom of Cure Confusion  |    500   |   6   |   50 |
+| Piece of Elvish Waybread    |   7500   |   6   |   25 |
+| Mushroom of Posion          |    500   |   7   |    0 |
+| Mushroom of Confusion       |    500   |   7   |    0 |
+| Mushroom of Weakness        |    500   |   7   |    0 |
+| Mushroom of Minor Cures     |    500   |   7   |   20 |
+| Mushroom of Cure Poison     |    500   |   8   |   60 |
+| Mushroom of Blindness       |    500   |   9   |    0 |
+| Mushroom of Paranoia        |    500   |   9   |    0 |
+| Mushroom of Light Cures     |    500   |  10   |   30 |
+| Mushroom of Cure Blindness  |    500   |  10   |   50 |
+| Mushroom of Cure Paranoia   |    500   |  12   |   25 |
+| Mushroom of Hallucination   |    500   |  13   |    0 |
+| Mushroom of Unhealth        |    500   |  15   |   75 |
+| Mold of Poison              |   1200   |  15   |    0 |
+| Mold of Major Cures         |   1200   |  16   |   75 |
+| Mold of Hallucinations      |   1200   |  18   |    0 |
+| Mold of Cure Poison         |   1200   |  19   |   75 |
+| Mushroom of Restore Const.  |    500   |  20   |  350 |
+| Mold of Unhealth            |   1200   |  28   |   25 |
+| Mushroom of Restoration     |    500   |  30   | 1000 |
++-------------------------------------------------------+
+
+Special effects of food
+
+Cure Confusion    Cures confusion
+Elvish Waybread   Cure poison, heal 3d12 damage
+First-Aid         Heals 1d6 damage
+Poison            Poisoned for 1d10+itemlevel
+Confusion         Confused for 1d10+itemlevel
+Weakness          Lowers STR by 1, 1d18 dam
+Minor Cures       Heals 1d12 damage
+Cure Poison       Removes poison
+Blindness         Blinds for 1d250+100+10*itemlev
+Paranoia          Fear for 1d10+itemlevel
+Light Cures       Heals 1d18 damage
+Cure Blindness    Cures Blindness
+Cure Paranoia     Cures Fear
+Hallucination     Hallucination for 1d200+25*itemlev+200
+Unhealth          Lose CON point, 1d18 dam.  If thrown at a monster a hairy 
+                  mold does 10d10 and a mushroom does 10d12 (if hits)
+Restoration       Restores all lost atribute points
+Major Cures       Heals 3d12 damage. 
+
+                                -----------------
+--------------------------------| Gold and Gems |------------------------------
+                                -----------------
+
++---------------------------+
+| Types      | Value | Type |
++---------------------------+
+| Copper     |    3  |   $  |
+| Copper     |    4  |   $  |
+| Copper     |    5  |   $  |
+| Silver     |    6  |   $  |
+| Silver     |    7  |   $  |
+| Silver     |    8  |   $  |
+| Garnets    |    9  |   *  |
+| Garnets    |   10  |   *  |
+| Gold       |   12  |   $  |
+| Gold       |   14  |   $  |
+| Gold       |   16  |   $  |
+| Opals      |   18  |   *  |
+| Sapphires  |   20  |   *  |
+| Gold       |   24  |   $  |
+| Rubies     |   28  |   *  |
+| Diamonds   |   32  |   *  |
+| Emeralds   |   40  |   *  |
+| Mithril    |   80  |   $  |
++---------------------------+
+
+Generated gold piece value will be from value+9 to 9*value+8
+
+
+                                  -----------
+----------------------------------| Potions |----------------------------------
+                                  -----------
+
++--------------------------------------------+
+| Potion               | Level | Cost | Food |
++--------------------------------------------+
+| Blindness            |   0   |    0 |    0 |
+| Confusion            |   0   |    0 |    0 |
+| Salt Water           |   0   |    0 |    0 |
+| Sleep                |   0   |    0 |   50 |
+| Water                |   0   |    0 |  200 |
+| Apple Juice          |   0   |    1 |  250 |
+| Slime Mold Juice     |   0   |    2 |  400 |
+| Cure Light Wounds    |   0   |   15 |   50 |
+| Slowness             |   1   |    0 |    0 |
+| Boldness             |   1   |   10 |    0 |
+| Slow Poison          |   1   |   25 |    0 |
+| Resist Heat          |   1   |   30 |    0 |
+| Resist Cold          |   1   |   30 |    0 |
+| Heroism              |   1   |   35 |    0 |
+| Haste Self           |   1   |   75 |    0 |
+| Poison               |   3   |    0 |    0 |
+| Weakness             |   3   |    0 |    0 |
+| Infra-Vision         |   3   |   20 |    0 |
+| Cure Serious Wounds  |   3   |   40 |  100 |
+| Detect Invisible     |   3   |   50 |    0 |
+| Super Heroism        |   3   |  100 |    0 |
+| Neutralize Poison    |   5   |   75 |    0 |
+| Cure Critical Wounds |   5   |  100 |  100 |
+| Lose Experience      |  10   |    0 |    0 |
+| Healing              |  12   |  200 |  200 |
+| Lose Intelligence    |  25   |    0 |    0 |
+| Lose Wisdom          |  25   |    0 |    0 |
+| Ugliness             |  25   |    0 |    0 |
+| Charisma             |  25   |  300 |    0 |
+| Constitution         |  25   |  300 |   50 |
+| Dexterity            |  25   |  300 |    0 |
+| Intelligence         |  25   |  300 |    0 |
+| Strength             |  25   |  300 |   50 |
+| Wisdom               |  25   |  300 |    0 |
+| Restore Mana         |  25   |  350 |    0 |
+| Invulnerability      |  40   | 1000 |    0 |
+| Restore Charisma     |  40   |  300 |    0 |
+| Restore Constitution |  40   |  300 |    0 |
+| Restore Dexterity    |  40   |  300 |    0 |
+| Restore Intelligence |  40   |  300 |    0 |
+| Restore Strength     |  40   |  300 |    0 |
+| Restore Wisdom       |  40   |  300 |    0 |
+| Restore Life Levels  |  40   |  400 |    0 |
+| Gain Experience      |  50   | 2500 |    0 |
++--------------------------------------------+
+
+Potion effects
+
+Blindness     Blinded 1d100+100 turns
+Confusion     Confused for 1d20+12 turns
+Salt Water    Vomit, go down to 150 food, paralyzed for 4 turns, cures poison
+Sleep         Fall asleep for 1d4+4 turns 
+Water         Nothing
+Apple Juice   Nothing
+Slime Mold J. Cures blindness and confusion
+Cure Light    Heal 2d7 HP, cure blindness
+Slowness      Reduce speed for 1d25+15 turns
+Boldness      Cures Fear
+Slow Poison   Cuts poison time in half
+Resist Heat   (RF) for 1d10+10 turns
+Resist Cold   (RC) for 1d10+10 turns
+Heroism       +10 HP, +12 to fight and bow skill for 1d25+25 turns, immune fear
+Haste Self    +1 speed for 1d25+15 turns
+Poison        Poison for 1d15+10 turns
+Weakness      Lower STR by 1
+Infravision   10' infravision for 1d100+100 turns
+Cure Serious  Heals 4d7 HP, cure blindness, cure confusion
+Detect Invis  Detect invisible for 1d12+12 turns
+Super Heroism +20 HP, +24 to fight and bow skill for 1d25+25 turns
+Neutral. Pos. Cures poison
+Cure Critical Heals 6d7 HP, cure blindness, confusion, poison
+Lose EXP      Drains 20-40% exp
+Healing       Heals 1000 HP, cure blindness, confusion, poison
+Lose Intel.   -1 INT
+Lose Wisdom   -1 WIS
+Ugliness      -1 CHA
+Charisma      +1 CHA
+Gain Con      +1 CON
+Gain Dex      +1 DEX
+Gain Intel    +1 INT
+Gain Strength +1 STR
+Gain Wisdom   +1 WIS
+Restore Mana  Mana reset to max mana
+Invulnerab.   +100 AC, immunity to all physical attacks (including breath)
+              You can still have items burned, lose experience, etc
+Restore *     Restores attribute to maximum value
+              Restore constitution also cures confusion and poison
+Gain exp.     Experience*1.5, max 100,000 added.
+ 
+                                   ---------
+-----------------------------------| Rings |-----------------------------------
+                                   ---------
+
++---------------------------------------------------------+
+| Rings             | Level |  Bonus  | Cost | Cost/bonus |
++---------------------------------------------------------+
+|*Aggravate Monster |    7  |         |    0 |            |
+|*Stupidity         |    7  |    -5   |    0 |       0    |
+|*Teleportation     |    7  |         |    0 |            |
+|*Weakness          |    7  |    -5   |    0 |       0    |
+|+Adornment         |    7  |         |   20 |            |
+| Protection        |    7  | -20..20 |  100 |     100    |
+|+Feather Falling   |    7  |         |  200 |            |
+| Searching         |    7  |-100..100|  250 |      50    |
+|+Slow Digestion    |    7  |         |  200 |            |
+|+Resist Cold       |   14  |         |  250 |            |
+|+Resist Fire       |   14  |         |  250 |            |
+| Increase Damage   |   20  | -20..20 |  100 |     100    |
+| Increase To-Hit   |   20  | -20..20 |  100 |     100    |
+| Constitution      |   30  | -20..10 |  400 |     100    |
+| Dexterity         |   30  | -20..10 |  400 |     100    |
+| Intelligence      |   30  | -20..10 |  400 |     100    |
+| Strength          |   30  | -20..10 |  400 |     100    |
+|+See invisible     |   40  |         |  500 |            |
+|+Sustain Charisma  |   44  |         |  500 |            |
+|+Sustain Intellig. |   44  |         |  600 |            |
+|+Sustain Wisdom    |   44  |         |  600 |            |
+|+Sustain Constitut.|   44  |         |  750 |            |
+|+Sustain Dexterity |   44  |         |  750 |            |
+|+Sustain Strength  |   44  |         |  750 |            |
+|*WOE               |   50  |    -5   |    0 |       0    |
+| Slaying           |   50  | -25..25 | 1000 |     100    |
+|+Lordly Prot (Acid)|   50  |    +5   | 1200 |       0    |
+|+Lordly Prot (Cold)|   50  |    +5   | 1200 |       0    |
+|+Lordly Prot (Fire)|   50  |    +5   | 1200 |       0    |
+| Speed             |   50  |  -3..1  | 3000 |       0    |
++---------------------------------------------------------+ 
+
+Ring effects
+
+Aggravate Monster    No stealth, wakes all monsters on level
+Stupidity            Lowers INT
+Teleportation        Randomly teleports wearer
+Weakness             Lowers STR
+Adornment            Nothing
+Protection           Adds to AC
+Feather Falling      No damage from pits/trap doors
+Searching            Adds to search attribute
+Slow Digestion       Reduces digestion by 1.  (See food.)
+Resist Cold/Fire     (RC)/(RF)
+Increase Damage      Adds to weapon damage as 'item bonus'
+Increase To-Hit      Adds to hit formula as 'item bonus'
+Gain Con/Dex/Int/Str Adds bonus to that attribute
+See Invisible        Invisible monsters are now lit
+Sustain *            That attribute can never be drained.
+WOE                  -3 to AC, -5 to WIS, searching
+Slaying              Bonus to hit and damage, as 'item bonus'
+Lordly protection    +5 to AC, and resistance to Acid, Cold, or Fire
+Speed                Hastens the wearer by the amount.
+
+                                   -----------
+-----------------------------------| Scrolls |-------------------------------- 
+                                   -----------
+
+Note:  You cannot read scrolls while blind or confused.
+
++---------------------------------------+
+| Scroll                 | Level | Cost |
++---------------------------------------+
+| Light                  |    0  |   15 |
+| Object Detection       |    0  |   15 |
+| Treasure Detection     |    0  |   15 |
+| Darkness               |    1  |    0 |
+| Summon Monster         |    1  |    0 |
+| Blessing               |    1  |   15 |
+| Detect Invisible       |    1  |   15 |
+| Phase Door             |    1  |   15 |
+| Identify               |    1  |   50 |
+| Aggravate Monster      |    5  |    0 |
+| Create Food            |    5  |   10 |
+| Monster Confusion      |    5  |   30 |
+| Door/Stair Location    |    5  |   35 |
+| Sleep Monster          |    5  |   35 |
+| Trap Detection         |    5  |   35 |
+| Magic Mapping          |    5  |   40 |
+| Word of Recall         |    5  |  150 |
+| Remove Curse           |    7  |  100 |
+| Teleport               |   10  |   40 |
+| Trap Creation          |   12  |    0 |
+| Holy Chant             |   12  |   40 |
+| Trap/Door Destruction  |   12  |   50 |
+| Door Creation          |   12  |  100 |
+| Enchant Weapon To-Hit  |   12  |  125 |
+| Enchant Weapon To-Dam  |   12  |  125 |
+| Enchant Armor          |   12  |  125 |
+| Summon Undead          |   15  |    0 |
+| Teleport Level         |   20  |   50 |
+| Holy Prayer            |   24  |   80 |
+| Protection from Evil   |   30  |  100 |
+| Genocide               |   35  |  750 |
+| Dispel Undead          |   40  |  200 |
+| Recharging             |   40  |  200 |
+| *Destruction*          |   40  |  750 |
+| Curse Armor            |   50  |    0 |
+| Curse Weapon           |   50  |    0 |
+| *Enchant Armor*        |   50  |  500 |
+| *Enchant Weapon*       |   50  |  500 |
+| Rune of Protection     |   50  |  500 |
+| Mass Genocide          |   50  | 1000 |
++---------------------------------------+
+
+Scroll effects
+
+Light         Lights area
+Obj. Detect   Lights all objects on the screen
+Trea. Detect  Lights all * and $ on the screen
+Darkness      Unlights area
+Summon Monst. Creates 1d8 monsters appropriate for the level 100' deeper
+Blessing      +2 AC, +5 to fight and bow skill for 1d12+6 turns
+Detect Invis. Lights all invisible creatures for 1 turn
+Phase Door    Short range teleport
+Identify      Displays the type and bonuses on an item
+Aggravate     Wakes all monsters on the level.
+Create Food   Pint of fine grade mush created at your feet
+Monster Conf. Next monster you hit will become confused.
+Door/Stair    Lights all doors and stairs on the screen
+Sleep Monster Sleeps all visible monsters
+Trap Detect   Lights all traps on the screen
+Magic Mapping Maps the entire screen
+Word-Recall   Teleports you to the town from the dungeon and to the deepest
+              level you've been in the dungeon from the town.
+Remove Curse  Removes the {damned} attribute from everything you're wearing
+Teleport      Teleports you anywhere on the level
+Trap Creation Creates traps on all eight squares around you.
+              No experience for these traps
+Door Creation Creates 8 doors around you
+Enchant *     Enchants one weapon or armor up to the max damage it can do.
+Summon undead Creates 1d8 undead creatures around you.
+Teleport Lev. Teleports you up 3 to down 2 levels.
+Holy Prayer   +2 AC, +5 to fight and bow skill for 1d24+12 turns
+Protect/Evil  Evil creatures that are lower level than you can't attack. 
+Genocide      Removes all of one letter of monster from the level.
+              The Balrog is immune to this.
+Dispel Undead Does 60 damage to all undead on panel
+Recharging    Adds 1..(60/(lev+2))+1 charges
+*Destruction* Tactical nuke on ground zero.  Kills all monsters (no exp)
+Curse A/W     -2d5 to hit/dam/AC, lose all ego bonus.
+*Enc. Armor*  Adds +2 to one piece of armor
+*Enc. Weapon* +1 to hit, +1 to dam to current weapon
+Rune of Prot. Nothing can attack you.   If 1d3000 < monster level, rune breaks
+Mass Genocide Kills all monsters within 20 squares.  Balrog is immune.
+ 
+                                   ----------
+-----------------------------------| Staves |-----------------------------------
+                                   ----------
+
+Your chance to use a staff correctly relies on the following formula:
+
+      +  Saving throw number (see races/classes)
+      +  INT bonus for devices (See INT table)
+      -  Level of staff
+      -  5
+      +  Device use number (see races/classes)
+      /  2 if confused
+    ---
+         Chance number.
+
+If a random number between 1 and chance < 3 then you fail.
+
+If your chance is < 3 then you have one chance in 3*(4-chance) to succeed.
+
+(All staffs add 5% per charge to the base cost.  If the cost = 0, then the
+stores will not buy/sell that staff.)
++----------------------------------------------+
+| Staff               | Level | Charges | Cost |
++----------------------------------------------+
+| Cure Light Wounds   |    5  |  1d5+6  |  200 |
+| Darkenss            |    5  | 1d10+6  |    0 |
+| Detect Invisible    |    5  | 1d10+12 |  200 |
+| Light               |    5  | 1d20+12 |  250 |
+| Object Location     |    5  | 1d15+6  |  200 |
+| Treasure Location   |    5  | 1d20+12 |  200 |
+| Door/Stair Location |   10  |  1d8+6  |  350 |
+| Haste Monsters      |   10  | 1d10+12 |    0 |
+| Sleep Monsters      |   10  |  1d5+6  |  700 |
+| Slow Monsters       |   10  |  1d5+6  |  800 |
+| Summoning           |   10  |  1d3+1  |    0 |
+| Trap Location       |   10  |  1d5+6  |  350 |
+| Detect Evil         |   20  | 1d10+12 |  350 |
+| Starlight           |   20  |  1d5+6  |  400 |
+| Teleportation       |   20  |  1d4+5  |  800 |
+| Curing              |   25  |  1d3+4  | 1000 |
+| Earthquakes         |   40  |  1d5+3  |  350 |
+| Slowness            |   40  |  1d5+6  |    0 |
+| Speed               |   40  |  1d3+4  | 1000 |
+| Mass Polymorph      |   46  |  1d5+6  |  750 |
+| Remove Curse        |   47  |  1d3+4  |  500 |
+| Dispel Evil         |   49  |  1d3+4  | 1200 |
+| *Destruction*       |   50  |  1d3+1  | 2500 |
++----------------------------------------------+
+
+Staff Effects:
+
+Cure Light Wounds - Heals 1d8 HP.
+Curing - Cures blindness, poison, confusion
+Darkness - unlights the current room.
+*Destruction* - Blind 1d12 turns, kill all monsters on screen, melts cavern.
+Detect Evil - Lights all evil creatures on the screen.
+Detect Invisible - Lights all invisible creatures on screen.
+Dispel Evil - 1d60 HP damage to all visible evil creatures within 20 squares
+Door/Stair Location - Lights all the doors and stairs on the screen.
+Earthquakes - Turns some walls into passageways, and vice versa.
+Haste Monsters - Speeds up all visible monsters within 20 squares.
+Light - Lights the room you are in.
+Mass Polymorph - Polymorphs all monsters within 20 squares randomly.
+Object Location - Lights all objects on the screen.
+Remove Curse - Removes any {damned} items that you're wearing
+Sleep Monsters - Puts all visible monsters within 20 squraes to sleep.
+Slow Monsters - Slows down all visible monsters within 20 squares.
+Slowness - Slows you down for 1d30+15 turns.
+Starlight - Bolt of light all six directions, 2d8 dam to light sensitive mon.
+Speed - Speeds you up for 1d30+15 turns.
+Summoning - Creates 1d4 monsters around you.
+Trap Location - Detect all the traps on the screen.
+Treasure Location - Lights all the $ and * treasure on the screen.
+Teleportation - Teleports user to random location on the level.
+
+                                   ---------
+-----------------------------------| Wands |-----------------------------------
+                                   ---------
+
+Your chance to use a wand correctly relies on the following formula:
+
+      +  Saving throw number (see races/classes)
+      +  INT bonus for devices (See INT table)
+      -  Level of wand
+      -  5
+      +  Device use number (see races/classes)
+      /  2 if confused
+    ---
+         Chance number.
+
+If a random number between 1 and chance < 3 then you fail.
+
+If chance < 3 then you still have 1 chance in 3*(4-chance) to succeed.
+If you are confused, then the wand will zap in a random direction.
+
+(All wands add 5% per charge to the base cost.  If the cost = 0, then the
+stores will not buy/sell that wand.)
+
++------------------------------------------------+
+| Wand                  | Level | Charges | Cost |
++------------------------------------------------+
+| Confuse Monster       |    2  | 1d12+6  |  400 |
+| Haste Monster         |    2  | 1d20+12 |    0 |
+| Heal Monster          |    2  | 1d20+12 |    0 |
+| Light                 |    2  | 1d10+6  |  200 |
+| Magic Missile         |    2  | 1d10+6  |  200 |
+| Slow Monster          |    2  | 1d10+6  |  500 |
+| Wonder                |    2  | 1d12+12 |  250 |
+| Stinking Cloud        |    5  |  1d8+6  |  400 |
+| Sleep Monster         |    7  | 1d10+12 |  500 |
+| Stone-to-Mud          |   12  |  1d4+3  |  300 |
+| Trap/Door Destruction |   12  |  1d8+6  |  500 |
+| Lightning Bolts       |   15  |  1d8+6  |  600 |
+| Clone Monster         |   15  |  1d5+3  |    0 |
+| Disarming             |   20  |  1d5+4  |  500 |
+| Frost Bolts           |   20  |  1d5+6  |  800 |
+| Polymorph             |   20  |  1d8+6  |  400 |
+| Teleport Away         |   20  |  1d5+6  |  350 |
+| Wall Building         |   25  |  1d5+3  |  400 |
+| Fire Bolts            |   30  |  1d8+6  | 1000 |
+| Lightning Balls       |   35  |  1d8+4  | 1200 |
+| Cold Balls            |   40  |  1d6+2  | 1500 |
+| Acid Balls            |   48  |  1d5+2  | 1650 |
+| Drain Life            |   50  |  1d3+3  | 1200 |
+| Fire Balls            |   50  |  1d8+6  | 1800 |
++------------------------------------------------+
+
+Wand Effects:
+
+Acid Ball - 60 HP acid damage in a ball
+Clone Monster - Makes a duplicate of a monster
+Cold Ball - 48 HP cold damage in a ball
+Confuse Monsters - Monster walks/attacks randomly
+Disarming - Removes trap, or trap on chest.
+Drain Life - 75 HP damage to non-undead creatures
+Fire Bolt - 9d8 HP fire damage to a monster
+Fire Ball - 72 HP fire damage in a ball
+Frost Bolt - 6d8 HP cold damage to a monster
+Haste Monster - Speed up monster.
+Heal Monster - Heals 4d6 HP on a monster
+Light - Line of light, does 2d8 damage to light sensitive creatures
+Lightning Ball - 32 HP lightning damage in a ball
+Lightning Bolt - 4d8 HP lightning damage to a monster
+Magic Missile - 2d6 magic damage to monster
+Polymorph - Turns monster into a new random monster.
+Sleep Monster - puts monster to sleep.
+Slow Monster - Slows down monster
+Stinking Cloud - 12 HP poison ball.
+Stone to Mud - Dissolves wall.  Does 100 HP to rock based monsters
+Teleport Away - Teleports monster short distance away.
+Trap/Door Destruction - Removes traps and doors in a line
+Wall Building - Builds walls.  Kills immobile creatures, else 4d8 damage
+                Earth Elementals and Earth Spirits get healed by 4d8 HP. 
+Wonder - Random wand effect.
+
+All balls do full damage to target, 1/2 damage 1 square away, and 1/3 damage
+2 squares away.
+
+                                  -----------
+----------------------------------| Weapons |----------------------------------
+                                  -----------
+
+Each plus to Hit and to Dam increases the cost by 100.
+
++-----------------------------------------------------------------+
+| Melee Weapon                   | Damage | Weight | Level | Cost |
++-----------------------------------------------------------------+
+| Broken Sword                   |  1d1   |   7.5  |    0  |   24 | (-2, -2)
+| Broken Dagger                  |  1d1   |   1.5  |    0  |    0 | (-2, -2)
+| Dagger (Misericorde)           |  1d4   |   1.5  |    0  |   10 |
+| Dagger (Stiletto)              |  1d4   |   1.2  |    0  |   10 |
+| Hands (ie No weapon)           |  1d2   |   0.0  |    0  |    0 | (-2, -2)
+| Wooden Club                    |  1d3   |  10.0  |    0  |   10 |
+| Dagger (Bodkin)                |  1d4   |   2.0  |    1  |   10 |
+| Dagger (Main Gauche)           |  1d5   |   3.0  |    2  |   25 |
+| Cat-o'-Nine Tails              |  1d4   |   4.0  |    3  |   14 |
+| Javelin                        |  1d4   |   3.0  |    4  |   18 |
+| Rapier                         |  1d6   |   4.0  |    4  |   42 |
+| Thrusting Sword (Bilbo)        |  1d6   |   8.0  |    4  |   60 |
+| Sabre                          |  1d7   |   5.0  |    5  |   50 |
+| Small Sword                    |  1d6   |   7.5  |    5  |   48 |
+| Spear                          |  1d6   |   5.0  |    5  |   36 |
+| Thrusting Sword (Baselard)     |  1d7   |  10.0  |    5  |   80 |
+| War Hammer                     |  3d3   |  12.0  |    5  |  225 |
+| Mace                           |  2d4   |  12.0  |    6  |  130 |
+| Backsword                      |  1d9   |   9.5  |    7  |  150 |
+| Cutlass                        |  1d7   |  11.0  |    7  |   85 |
+| Awl-Pike                       |  1d8   |  16.0  |    8  |  200 |
+| Broadsword                     |  2d5   |  15.0  |    9  |  255 |
+| Lance                          |  2d8   |  30.0  |   10  |  230 |
+| Morningstar                    |  2d6   |  15.0  |   10  |  396 |
+| Lucerne Hammer                 |  2d5   |  12.0  |   11  |  376 |
+| Flail                          |  2d6   |  15.0  |   12  |  353 |
+| Longsword                      |  1d10  |  13.0  |   12  |  200 |
+| Battle Axe (European)          |  3d4   |  17.0  |   13  |  334 |
+| Bastard Sword                  |  3d4   |  14.0  |   14  |  350 |
+| Beaked Axe                     |  2d6   |  18.0  |   15  |  408 |
+| Lead-filled Mace               |  3d4   |  18.0  |   15  |  502 |
+| Pike                           |  2d5   |  16.0  |   15  |  358 |
+| Broad Axe                      |  2d6   |  16.0  |   17  |  304 |
+| Fauchard                       |  1d10  |  17.0  |   17  |  326 |
+| Katana                         |  3d4   |  12.0  |   18  |  400 |
+| Ball and Chain                 |  2d4   |  15.0  |   20  |  200 |
+| Glaive                         |  2d6   |  19.0  |   20  |  363 |
+| Halberd                        |  3d4   |  19.0  |   22  |  430 |
+| Battle Axe (Balestarius)       |  2d8   |  18.0  |   30  |  500 |
+| Two-Handed Sword (Claymore)    |  3d6   |  20.0  |   30  |  775 |
+| Foil                           |  1d5   |   3.0  |   35  |    2 |
+| Two-Handed Sword (Espadon)     |  3d6   |  18.0  |   35  |  655 |
+| Executioner's Sword            |  4d5   |  26.0  |   40  |  850 |
+| Two-Handed Great Flail         |  3d6   |  28.0  |   45  |  590 |
+| Two-Handed Sword (Flamberge)   |  4d5   |  24.0  |   45  | 1000 |
+| Two-Handed Sword (No-Dachi)    |  4d4   |  20.0  |   45  |  675 |
+| Two-Handed Sword (Zweihander)  |  4d6   |  28.0  |   50  | 1500 |
++-----------------------------------------------------------------+
+
+Each plus on ammo increases the cost by 5/piece of ammo.
++----------------------------------------------------------------------------+
+| Missile and Ammo           | Type | Damage | Level | Weight | Cost | Range |
++----------------------------------------------------------------------------+
+| Rounded Pebble             | Rock |  1d2   |   0   |   0.1  |    1 |       |
+| Sling                      | Rock |   x1   |   1   |   0.5  |    5 |   20  |
+| Arrow                      |  Bow |  1d4   |   2   |   0.2  |    1 |       |
+| Bolt                       | Xbow |  1d5   |   2   |   0.3  |    2 |       |
+| Iron Shot                  | Rock |  1d3   |   3   |   0.5  |    2 |       |
+| Short Bow                  |  Bow |   x2   |   3   |   3.0  |   50 |   25  |
+| Long Bow                   |  Bow |   x3   |  10   |   4.0  |  120 |   30  |
+| Light Crossbow             | Xbow |   x3   |  15   |  11.0  |  140 |   25  |
+| Heavy Crossbow             | Xbow |   x4   |  30   |  20.0  |  300 |   35  |
+| Composite Bow              |  Bow |   x4   |  40   |   5.0  |  240 |   35  |
++----------------------------------------------------------------------------+
+
+                                 --------------
+---------------------------------| Ego Weapon |--------------------------------
+                                 --------------
+
+Melee weapons: (bonuses to hit and damage are added in when generated.  An
+identified HA (+7, +9) already includes the +5 to hit and damage listed below.)
+
+
+(HA) - Holy Avenger: See Invisible, Sustain stat, Slay Undead, Slay Evil
+                     +5 to Hit, +5 to Dam, +1d4 to STR, +1d4 to AC, 
+                     +10000+500*[STR] to cost.
+
+                     Stat sustained is based on the bonus to strength:
+                     1=STR, 2=INT, 3=WIS, 4=CON
+
+(DF) - Defender:     Feather Fall, Resist Lightning, See Invisible, Free Action
+                     Resist Cold, Resist Acid, Resist Fire, Regeneration
+                     +1d3 to stealth, +3 to hit, +3 to dam, +1d5+5 to AC
+                     +7500+500*[Stealth] to cost
+
+(SA) - Slay Animal:  *2 Damage to animals, +2 to Hit, +2 to Dam, +3000 to cost
+
+(SD) - Slay Dragon:  *4 Damage to dragons, +3 to Hit, +3 to Dam, +4000 to cost
+
+(SE) - Slay Evil:    *2 Damage to evil monsters, +3 to Hit, +3 to Dam
+                     +4000 to cost
+
+(SU) - Slay Undead:  *3 to undead, See invisible, +3 to hit, +3 to dam,
+                     +5000 to cost
+
+(FT) - Flame Tounge  *1.5 damage to monsters vulnerable to fire,
+                     +1 to Hit, +3, to Damage, +2000 to cost
+
+(FB) - Frost Brand   *1.5 damage to monsters vulnerable to cold,
+                     +1 to hit, +1 to damage, +1200 to cost
+
+Ammunition: (cost is per ammo.  Usually comes in packets of ~20)
+
+Slaying:       +5 to Hit, +5 to damage, +20 to cost
+Fire:          +2 to Hit, +4 to Damage, *1.5 dam to monsters vul. to fire
+Slay Evil:     +3 to Hit, +3 to Dam, *2 to evil, +25 to cost
+Slay Animal:   +2 to hit, +2 to dam, *2 to animal, +30 to cost
+Dragon Slaying:+3 to hit, +3 to dam, *4 to dragon, +35 to cost
+
+                                   ----------
+-----------------------------------| Spells |----------------------------------
+                                   ----------
+
+Spell System:
+
+All player characters in Moria except warriors are able to cast some sort of
+spells.  The types of spells are determined by your class.  Mage spells are
+granted to Mages, Rangers, and Thieves, although only mages get all of the
+spells.  Priest spells are granted to Priests and Paladins.
+
+Each spell has four attributes to it:  Level, Mana, Failure, and Experience.
+The Level of the spell is the level the caster needs to be to learn that spell.
+Mana is the number of mana points it takes to attempt to cast the spell.
+Failure is the base failure rate of the spell, and Experience is the number of
+experience points the character receives for casting that spell successfully for
+the first time.
+
+The spells are divided up into eight books, four mage and four priest books.  
+Here is the general table item table for spellbooks.
+
++---------------------------------------------------+
+| Book                        | Type | Cost | Level |
++---------------------------------------------------+
+| [Beginners-Magick]          | MAGE |   25 |   40  |
+| [Beginners Handbook]        | CLER |   25 |   40  |
+| [Magick I]                  | MAGE |  100 |   40  |
+| [Words of Wisdom]           | CLER |  100 |   40  |
+| [Magick II]                 | MAGE |  400 |   40  |
+| [Chants and Blessings]      | CLER |  400 |   40  |
+| [The Mages' Guide to Power] | MAGE |  800 |   40  |
+| [Exorcism and Dispelling]   | CLER |  800 |   40  |
++--------------------------------------------------+
+
+Mana:
+
+Mana is granted depending on your intelligence, wisdom, and level.  Mage spells
+require intelligence to cast successfully, and priest spells require wisdom.  The
+formula for the number of Mana points a character has is:
+
+
+        Level
+      * Mana factor from INT/WIS
+      + 1
+     ---
+        Mana
+
+Level is the number of levels that character has been casting spells.  For
+Priests, Paladins, and Mages, this is the same as their character level because
+they get spells at first level.  Rangers would be level-2 because their first
+spell is at third level, and Rogues would be level-4 for similar reasons.
+
+Note:  A character with a factor of 0 (INT/WIS <8) will have 0 mana points and
+not be able to cast any spells.
+
+Failure:
+
+All spells have at least a small chance of failing.  The formula below will
+give the chance that a spell has of failing.
+
+      + Base failure rate of spell
+      + 3 * spell level
+      - 3 * player level
+      - INT/WIS fail adjust
+      + 5 per mana point, if you don't have enough mana.
+     ---
+      Chance to fail.
+
+Note:  The max failure rate is 95%, the lowest is 5%
+
+
+Mage spells:
+
++-----------------------------------------------------------------------------+
+|              |        MAGE        |       RANGER       |       ROGUE        |
+| Spell        | Lv |Mana|Fail| Exp | Lv |Mana|Fail| Exp | Lv |Mana|Fail| Exp |
++-----------------------------------------------------------------------------+
+|Magic Missile |  1 |  1 | 22 |   1 |  3 |  1 | 30 |   1 | -- | -- | -- | --- |
+|Detect Monster|  1 |  1 | 23 |   1 |  3 |  2 | 35 |   2 |  5 |  1 | 50 |   1 |
+|Phase Door    |  1 |  2 | 24 |   1 |  3 |  2 | 35 |   2 |  7 |  2 | 55 |   1 |
+|Light Area    |  1 |  2 | 26 |   1 |  5 |  3 | 35 |   2 |  9 |  3 | 60 |   2 |
+|Cure Lt. Wnds |  3 |  3 | 25 |   2 |  5 |  3 | 40 |   2 | 11 |  4 | 65 |   2 |
+|Find Tr/Doors |  3 |  3 | 25 |   1 |  5 |  4 | 45 |   3 | 13 |  5 | 70 |   3 |
+|Stinking Cloud|  3 |  3 | 27 |   2 |  7 |  5 | 40 |   6 | -- | -- | -- | --- |
++-----------------------------------------------------------------------------+
+|Confusion     |  3 |  4 | 30 |   1 |  7 |  6 | 40 |   5 | 15 |  6 | 75 |   3 |
+|Lightning Bolt|  5 |  4 | 30 |   6 |  9 |  7 | 40 |   7 | -- | -- | -- | --- |
+|Trap/Door Dest|  5 |  5 | 30 |   8 |  9 |  8 | 45 |  10 | 17 |  7 | 80 |   4 |
+|Sleep I       |  5 |  5 | 30 |   5 | 11 |  8 | 40 |  10 | 19 |  8 | 85 |   5 |
+|Cure Poison   |  5 |  5 | 35 |   6 | 11 |  9 | 45 |  10 | 21 |  9 | 90 |   6 |
+|Teleport Self |  7 |  6 | 35 |   9 | 13 | 10 | 45 |  12 | -- | -- | -- | --- |
+|Remove Curse  |  7 |  6 | 50 |  10 | 13 | 11 | 55 |  13 | 23 | 10 | 95 |   7 |
+|Frost Bolt    |  7 |  6 | 40 |  12 | 15 | 12 | 50 |  15 | -- | -- | -- | --- |
+|Turn Stone/Mud|  9 |  7 | 44 |  19 | 15 | 13 | 50 |  15 | -- | -- | -- | --- |
++-----------------------------------------------------------------------------+
+|Create Food   |  9 |  7 | 45 |  19 | 17 | 17 | 55 |  15 | 25 | 12 | 95 |   9 |
+|Recharge I    |  9 |  7 | 75 |  22 | 17 | 17 | 90 |  17 | 27 | 15 | 99 |  11 |
+|Sleep II      |  9 |  7 | 45 |  19 | 21 | 17 | 55 |  17 | -- | -- | -- | --- |
+|Polymorph Othr| 11 |  7 | 45 |  25 | 21 | 19 | 60 |  18 | -- | -- | -- | --- |
+|Identify      | 11 |  7 | 99 |  19 | 23 | 25 | 95 |  20 | 29 | 18 | 99 |  19 |
+|Sleep III     | 13 |  7 | 50 |  22 | 23 | 20 | 60 |  20 | -- | -- | -- | --- |
+|Fire Bolt     | 15 |  9 | 50 |  25 | 25 | 20 | 60 |  20 | -- | -- | -- | --- |
+|Slow Monster  | 17 |  9 | 50 |  31 | 25 | 21 | 65 |  20 | -- | -- | -- | --- |
++-----------------------------------------------------------------------------+
+|Frost Ball    | 19 | 12 | 55 |  38 | 27 | 21 | 65 |  22 | -- | -- | -- | --- |
+|Recharge II   | 21 | 12 | 90 |  44 | 29 | 23 | 95 |  23 | -- | -- | -- | --- |
+|Teleport Other| 23 | 12 | 60 |  50 | 31 | 25 | 70 |  25 | -- | -- | -- | --- |
+|Haste Self    | 25 | 12 | 65 |  63 | 33 | 25 | 75 |  38 | -- | -- | -- | --- |
+|Fire Ball     | 29 | 18 | 65 |  88 | 35 | 25 | 80 |  50 | -- | -- | -- | --- |
+|Word Destruct.| 33 | 21 | 80 | 125 | 37 | 30 | 95 | 100 | -- | -- | -- | --- |
+|Genocide      | 37 | 25 | 95 | 200 | -- | -- | -- | --- | -- | -- | -- | --- |
++-----------------------------------------------------------------------------+
+
+Spell effects
+[Beginners-Magik]
+Magic Missile:       2d6 damage to target
+Detect Monsters:     Light all non-invisible monster on the screen
+Phase Door:          Teleport 10 squares away
+Light Area:          Permenantly illuminates the room
+Cure Light Wounds:   Heals 4d4 damage.
+Find Traps/Doors:    Lights all traps, doors, and stairs on the screen
+Stinking Cloud:      Poison gas ball doing 9 points of damage.
+
+[Magik I]
+Confusion:           Confuses monster.  Will move/attack randomly
+Lightning Bolt:      4d8 lightning damage to target
+Trap/Door Destuct:   Removes traps and doors adjacent to caster.  Incl. chests
+Sleep I:             Sleeps one monster
+Cure Poison:         Heals poison.
+Teleport self:       Teleports caster randomly on the level.
+Remove Curse:        Allows caster to remove {damned} items
+Frost Bolt:          6d8 cold damage to a target
+Turn Stone to Mud:   Liquidates one wall square.  See wand above.
+
+[Magik II]
+Create Food:         Creates a pint of fine grade mush at your feet.
+Recharge Item I:     Recharge an item.  See below.
+Sleep II:            Sleeps monsters adjacent to caster.
+Polymorph Other:     Randomly polymorphs one monster.
+Identify:            Fully ID's all bonuses, and artifact things on an item
+Sleep III:           Causes all monsters in sight to fall asleep
+Fire Bolt:           9d8 fire damage to a target
+Slow Monster:        Slows one monster down one speed unit
+
+[Mages Guide to Power]
+Frost Ball:          Cold ball doing 48 points of damage at center
+Recharge Item II:    Recharge an item.  See below.
+Teleport Other:      Teleports monster randomly on the level.
+Haste Self:          Speeds you up one speed unit for 1d20+level turns
+Fire Ball:           Fire ball doing 72 points of damage at center
+Word of Destruction: Tactical nuke at ground zero.  Kill all monsters.
+Genocide:            Kills all monsters of a specific letter group.
+
+Recharging items:
+
+The chance that an item will survive recharging, and the number of charges it
+reveives is based on the power of the recharge spell/scroll.
+
+Change to recharge:
+          
+           + origin bonus (Recharge I=20, recharge II or scroll=60)
+           + 50
+           - level of wand/staff
+           - charges in wand/staff
+           / 10
+         --- Chance
+
+An item will be destroyed 1 time in 'Chance' times.
+
+The number of charges added to the wand/staff is:
+
+           + origin bonus (see above)
+           / 2+level of staff/wand
+           + 1
+         --- Max charges
+
+The number of charges added is 2+(1..max)
+
+Priest spells:
+
++---------------------------------------------------------------------+
+|                           |       CLERIC       |       PALADIN      |
+|  Prayer                   | Lv |Mana|Fail| Exp | Lv |Mana|Fail| Exp |
++---------------------------------------------------------------------+
+| Detect Evil               |  1 |  1 | 10 |   1 |  1 |  1 | 30 |   1 |
+| Cure Light Wounds         |  1 |  2 | 15 |   1 |  2 |  2 | 35 |   2 |
+| Bless                     |  1 |  2 | 20 |   1 |  3 |  3 | 35 |   3 |
+| Remove Fear               |  1 |  2 | 25 |   1 |  5 |  3 | 35 |   5 |
+| Call Light                |  3 |  2 | 25 |   1 |  5 |  4 | 35 |   5 |
+| Find Traps                |  3 |  3 | 27 |   2 |  7 |  5 | 40 |   6 |
+| Detect Doors/Stairs       |  3 |  3 | 27 |   2 |  7 |  5 | 40 |   6 |
+| Slow Poison               |  3 |  3 | 28 |   3 |  9 |  7 | 40 |   7 |
++---------------------------------------------------------------------+
+| Blind Creature            |  5 |  4 | 29 |   4 |  9 |  7 | 40 |   8 |
+| Portal                    |  5 |  4 | 30 |   5 |  9 |  8 | 40 |   8 |
+| Cure Medium Wounds        |  5 |  4 | 32 |   5 | 11 |  9 | 40 |  10 |
+| Chant                     |  5 |  5 | 34 |   5 | 11 | 10 | 45 |  10 |
+| Sanctuary                 |  7 |  5 | 36 |   6 | 11 | 10 | 45 |  10 |
+| Create Food               |  7 |  5 | 38 |   7 | 13 | 10 | 45 |  12 |
+| Remove Curse              |  7 |  6 | 38 |   9 | 13 | 11 | 45 |  13 |
+| Resist Heat and Cold      |  7 |  7 | 38 |   9 | 15 | 13 | 45 |  15 |
++---------------------------------------------------------------------+
+| Neutralize Poison         |  9 |  6 | 38 |   9 | 15 | 15 | 50 |  15 |
+| Orb of Draining           |  9 |  7 | 38 |  10 | 17 | 15 | 50 |  17 |
+| Cure Serious Wounds       |  9 |  7 | 40 |  10 | 17 | 15 | 50 |  18 |
+| Sense Invisible           | 11 |  8 | 42 |  10 | 19 | 15 | 50 |  19 |
+| Protection from Evil      | 11 |  8 | 42 |  12 | 19 | 15 | 50 |  19 |
+| Earthquake                | 11 |  9 | 55 |  15 | 21 | 17 | 50 |  20 |
+| Sense Surroundings        | 13 | 10 | 45 |  15 | 23 | 17 | 50 |  20 |
+| Cure Critical Wounds      | 13 | 11 | 45 |  16 | 25 | 20 | 50 |  20 |
+| Turn Undead               | 15 | 12 | 50 |  20 | 27 | 21 | 50 |  22 |
++---------------------------------------------------------------------+
+| Prayer                    | 15 | 14 | 50 |  22 | 29 | 22 | 50 |  24 |
+| Dispel Undead             | 17 | 14 | 55 |  32 | 31 | 24 | 60 |  25 |
+| Heal                      | 21 | 16 | 60 |  38 | 33 | 28 | 60 |  31 |
+| Dispel Evil               | 25 | 20 | 70 |  75 | 35 | 32 | 70 |  38 |
+| Glyph of Warding          | 33 | 24 | 90 | 125 | 37 | 36 | 90 |  50 |
+| Holy Word                 | 39 | 32 | 80 | 200 | 39 | 38 | 90 | 100 |
++---------------------------------------------------------------------+
+
+Prayer effects:
+
+[Beginner's Handbook]
+Detect Evil:           Lights all evil (including invisible) monsters on screen
+Cure Light Wounds:     Heals 3d3 HP
+Bless:                 AC +2, +5 to fight and bow skill for 12+1d12 turns
+Remove Fear:           Cures Fear
+Call Light:            Lights room or corridor
+Find Traps:            Lights all the traps on the screen
+Detect Doors/Stairs:   Lights all the doors and stairs on the screen
+Slow Poison:           Halves the amount of time before poison wears off.
+
+[Words of Wisdom]
+Blind Creature:        Blinds creature.  He will act as if you're not there.
+Portal:                Teleport up to 3*level squares away
+Cure Medium Wounds:    Heals 4d4 HP
+Chant:                 AC+2, +5 to fight and bow skill for 24+1d24 turns
+Sanctuary:             Sleeps all adjacent monsters
+Create Food:           Pint of fine grade mush appears at your feet.
+Remove Curse:          Allows {damned} items to be removed
+Resist Heat and Cold:  1d10+10 turns.  Combines with (RF) and (RC) items
+
+[Chants and Blessings]
+Neutralize Poison:     Cures poison
+Orb of Draining:       Black sphere doing 3d6+level damage.  Double to evil
+Cure Serious Wounds:   Heals 8d4 HP
+Protection from Evil:  Evil creatures cannot attack you.  See scrolls
+Earthquake:            Changes some walls to caverns and vice versa.
+Sense Surroundings:    Magic Mapping
+Cure Critical Wounds:  Heal 16d4 HP
+Turn Undead:           Gives all undead in sight will flee if the
+                       undead is lower level than the caster.  If the undead
+                       is higher level, the undead flees only 1/5 times.
+
+[Exorcisms and Dispelings]
+Prayer:                AC+2, +5 to fight and bow skill for 48+1d48 turns
+Dispel Undead:         1d(3*level) to all undead in sight
+Heal:                  Heals 200 HP
+Dispel Evil:           1d(3*level) damage to all evil
+Glyph of Warding:      Creates glyph that monsters won't cross. 
+Holy Word:             Dispel Evil up to 4*level, Cure Fear, Cure Poison,
+                       Heals 1000 HP, restores all stats, invuln 3 turns
+
+                                ---------------
+--------------------------------| Wizard Mode |--------------------------------
+                                ---------------
+
+Entering Wizard Mode:
+
+Do you really want to play in wizard mode?  Wizard mode is primarily used by
+those who have just made a change in the source code of their copy of the game
+and are testing it out.  Using wizard mode for 'fun' can degrade your
+impression of the game, leading to 1) discontinued playing or 2) an inability
+to play a game without cheating.  In addition, you cannot enter the high score
+file after entering wizard mode.
+
+
+What?  You're still here?
+
+Ok.  To enter wizard mode, type ^W (That's control-W).  This will convert your
+current character to a Wizard.
+
+You can also invoke wizard mode at the command line by doing 'moria -w'.
+
+If you want to resurrect a dead character, type moria -w (save file).  The
+dungeon will be destroyed, and you'll return to the store level, but all of
+your items will be intact.
+
+Wizard commands:
+
++-----------------------------------------------------------------------------+
+| Normal | Rogue | Description                                                |
++-----------------------------------------------------------------------------+
+|   :    |   :   | Magic Mapping                                              |
+|   ^A   |   ^A  | Remove Curse, cure blind, conf, pois, fear, slowness, stat |
+|   ^B   |   ^O  | Generates objects for a level and prints them in a file    |
+|   ^D   |   ^D  | Teleports the character to the specified level (1 lv=50')  |
+|   ^E   |   ^E  | Edit char stats, HP, mana, skills, gold, exp, level, speed |
+|   ^F   |   ^F  | Eliminates all monsters on the screen.                     |
+|   ^G   |   ^G  | Randomly generate treasure around you.                     |
+|   ^H   |   \   | Wizard help.                                               |
+| ^I Tab | ^I Tab| Identify an item.                                          |
+|   ^J   |   +   | Double Experience                                          |
+|   ^L   |   *   | Turns on the global overhead light.  (No darkness anywhere)|
+|   ^T   |   ^T  | Teleport player                                            |
+|   ^U   |   &   | Summon random monster                                      |
+|   ^W   |   ^W  | Enter/exit wizard mode                                     |
+|   @    |   @   | Create wizard item (see below)                             |
++-----------------------------------------------------------------------------+
+
+Wizard Items:
+
+Creation of Wizard items is usually used by real people to test new items
+before inserting them into the wizard file.  For munchkins, this is used to
+create godlike weapons.  You'll probably want the source code handy also.
+
+There are several questions you must answer to create a new item:
+
+Tval:  This is a group number that tells moria what kind of object the item is.
+
++------------------------------------------------+
+| Tval | Group              | Subval | P1 Effect |
++------------------------------------------------+
+|   1  | Miscellaneous      | 14..63 |           |
+|   2  | Chest              | 19..63 |           |
+|  10  | Sling Ammo         |195..255| Ego bonus |
+|  11  | Bolt               |195..255| Ego bonus |
+|  12  | Arrow              |195..255| Ego bonus |
+|  13  | Spike              |  2..63 |           |
+|  15  | Light source       | 36..63 | Turns left|
+|  20  | Bow                | 21..63 | Ego bonus |
+|  21  | Hafted Weapons     | 10..63 | Ego bonus |
+|  22  | Polearm Weapons    | 14..63 | Ego bonus |
+|  23  | Swords             | 25..63 | Ego bonus |
+|  25  | Digging            |  7..63 | Dig bonus |
+|  30  | Boots              |  4..63 | Ego bonus |
+|  31  | Gloves             |  3..63 | Ego bonus |
+|  32  | Cloak              |  2..63 | Ego bonus |
+|  33  | Helm               |  9..63 | Ego bonus |
+|  34  | Shield             |  7..63 | Ego bonus |
+|  35  | Hard Armor         | 13..63 | Ego bonus |
+|  36  | Soft Armor         | 10..63 | Ego bonus |
+|  40  | Amulets            | 10..63 | bonus +/- |
+|  45  | Rings              | 31..63 | bonus +/- |
+|  55  | Staves             | 23..63 |  Charges  |
+|  65  | Wands              | 24..63 |  Charges  |
+|  70  | Scroll 1           |  None  |           |
+|  71  | Scroll 2           |104..191|           |
+|  75  | Potion 1           |  None  |           |
+|  76  | Potion 2           |109..191|           |
+|  77  | Flask              | 70..93 |           |
+|  80  | Food               | 85..89 | Food value|
+|  90  | Magik Book         | 68..93 |           |
+|  91  | Prayer Book        | 68..93 |           |
++------------------------------------------------+
+
+Tchar:  Character that the object will be represented by.
+
+Subval:  Number used to distinguish items within a group.  See the Tval chart
+for the range of numbers in each group that are not already being used by
+an object.
+
+Weight:  Number of tenths of pounds that the object weighs.
+
+Number:  How many in the group.  (14 arrows, 5 food rations, etc)
+
+Damage (dice):  number of dice rolled for base damage (5 if 5d4 damage)
+Damage (side):  number of sides on each die rolled    (4 if 5d4 damage)
+For non-weapons, damage is the damage done by throwing the item at 
+something.
+
++To Hit: Bonus to-hit on the item.
++To Dam: Bonus to-damage on the item.
+
+AC: Base AC the item provides
+
++To AC: Bonus on the AC.
+
+P1: Miscelaneous number.  See the Tval chart for the uses of P1.
+
+Flags (in hex):  Describes the powers an item has.  
+For different types of items, these have different meanings.   Use
+the table that describes the type of item that you are trying to
+create.  To have multiple effects, simply add the flags values together.  
+
++----------------------------------------+----------------+----------------+
+| Value (hex) | Wearable items           | Wand Effects   | Food Effects   |
++----------------------------------------+----------------+----------------+
+| 0x00000001  | +p1 to strength          | Starlight      | Poisoned       |
+| 0x00000002  | +p1 to Intelligence      | 4d8 lght bolt  | Blinded        |
+| 0x00000004  | +p1 to Wisdom            | 6d8 frst bolt  | Fear           |
+| 0x00000008  | +p1 to Dexterity         | 9d8 fire bolt  | Confused       |
+| 0x00000010  | +p1 to Constitution      | stone to mud   | Cure Poison    |
+| 0x00000020  | +p1 to Charisma          | polymorph      | Cure Blindness |
+| 0x00000040  | +p1 to searching         | Heals 4d6 HP   | Cure Fear      |
+| 0x00000080  | Slow digestion           | speed monster  | Cure Confusion |
+| 0x00000100  | +p1 to stealth           | slow monster   | Lose Strength  |
+| 0x00000200  | Aggravate monster        | confuse monst  | Lose Const.    |
+| 0x00000400  | Teleportation            | sleep monster  | Lose Intel.    |
+| 0x00000800  | Regeneration             | drain life     | Lose Wisdom    |
+| 0x00001000  | +p1 to speed             | destruction    | Lose Dexterity |
+| 0x00002000  | *4 damage to dragons     | 2d6 Mag. Misl  | Lose Charisma  |
+| 0x00004000  | *2 damage to animals     | wall building  | Restore Str.   |
+| 0x00008000  | *2 damage to evil        | clone monster  | Restore Con.   |
+| 0x00010000  | *3 damage to undead      | teleport mon.  | Restore Int.   |
+| 0x00020000  | *1.5 to frost vulnerable | disarm         | Restore Wis.   |
+| 0x00040000  | *1.5 to fire vulnerable  | 32 lght ball   | Restore Dex.   |
+| 0x00080000  | Resist Fire              | 48 frst ball   | Restore Chr.   |
+| 0x00100000  | Resist Acid              | 72 fire ball   | Heals 1d6 HP   |
+| 0x00200000  | Resist Cold              | 12 posn ball   | Heals 1d12 HP  |
+| 0x00400000  | Sustain stat in p1       | 60 acid ball   | Heals 1d18 HP  |
+| 0x00800000  | No sleep or paralysis    | random effect  | Heals 3d6 HP   |
+| 0x01000000  | See Invisible            +----------------+ Heals 3d12 HP  |
+| 0x02000000  | Resist Lightning         |                | Lose 1d18 HP   |
+| 0x04000000  | Feather fall             |                | Lose 1d8 HP    |
+| 0x08000000  | Blindness                |                | Lose 2d8 HP    |
+| 0x10000000  | Causes Fear              |                | Lose 3d8 HP    |
+| 0x20000000  | Digging implement        |                +----------------+
+| 0x40000000  | +p1*10' to infravision   |
+| 0x80000000  | Cursed {damned}          |
++----------------------------------------+
+
++-----------------------------------+--------------------+-----------------+
+| Value (hex) | Scroll 1 Effects    | Scroll 2 Effects   | Staff Effects   |
++-----------------------------------+--------------------+-----------------+
+| 0x00000001  | Enchant Weapon-Hit  | *Enchant Weapon*   | Light Area      |
+| 0x00000002  | Enchant Weapon-Dam  | Curse Weapon       | Detect Doors    |
+| 0x00000004  | Enchant Armor       | *Enchant Armor*    | Detect Traps    |
+| 0x00000008  | Identify            | Curse Armor        | Detect Treasure |
+| 0x00000010  | Remove Curse        | Summon Undead      | Detect Objects  |
+| 0x00000020  | Light               | Bless 1d12+6 turns | Teleportation   |
+| 0x00000040  | Summon Monster      | Bless 1d24+12 turns| Earthquake      |
+| 0x00000080  | Phase Door          | Bless 1d48+24 turns| Summon Monsters |
+| 0x00000100  | Teleport            | Word of Recall     +-----------------+
+| 0x00000200  | Level Teleport      | Destruction        | Destruction     |
+| 0x00000400  | Confuse Monster     +--------------------+ Starlight       |
+| 0x00000800  | Magik Mapping       |                    | Speed Monsters  |
+| 0x00001000  | Sleep Monsters      |                    | Slow Monsters   |
+| 0x00002000  | Rune of Protection  |                    | Sleep Monsters  |
+| 0x00004000  | Detect Treasure     |                    | Heal 1d8 HP     |
+| 0x00008000  | Detect Object       |                    | Detect Invisible|
+| 0x00010000  | Detect Traps        |                    | Speed           |
+| 0x00020000  | Detect Doors        |                    | Slow            |
+| 0x00040000  | Mass Genocide       |                    | Mass Polymorph  |
+| 0x00080000  | Detect invisible    |                    | Remove Curse    |
+| 0x00100000  | Aggravate Monst.    |                    | Detect Evil     |
+| 0x00200000  | Trap Creation       |                    | Cure Bl/Ps/Cnf  |
+| 0x00400000  | Trap/Door Destruct. |                    | Dispel Evil     |
+| 0x00800000  | Door Creation       |                    +-----------------+
+| 0x01000000  | Recharge Item       |                    | Darkness        |
+| 0x02000000  | Genocide            |                    +-----------------+
+| 0x04000000  | Darkness            |
+| 0x08000000  | Protect Evil        |
+| 0x10000000  | Create Food         |
+| 0x20000000  | Dispel Undead 60hp  |
+| 0x40000000  +---------------------+ 
+| 0x80000000  |
++-------------+
+
++-----------------------------------+--------------------+-----------------+
+| Value (hex) | Potion 1 Effects    | Potion 2 Effects   | Chest Flaggs    |
++-----------------------------------+--------------------+-----------------+
+| 0x00000001  | Gain Strength       +--------------------+ Locked          |
+| 0x00000002  | Lose Strength       | Lose Experience    +-----------------+ 
+| 0x00000004  | Restore Strength    | Salt Water         |
+| 0x00000008  | Gain Intelligence   | Invulnerability    +-----------------+
+| 0x00000010  | Lose Intelligence   | Heroism            | Lose Strength   |
+| 0x00000020  | Restore Intell.     | Super Heroism      | Poison Needle   |
+| 0x00000040  | Gain Wisdom         | Remove Fear        | Paralysis       |
+| 0x00000080  | Lose Wisdom         | Restore Life Levels| Explode         |
+| 0x00000100  | Restore Wisdom      | Resist Heat        | Summon Monsters |
+| 0x00000200  | Gain Charisma       | Resist Cold        +-----------------+
+| 0x00000400  | Lose Charisma       | Detect Invisible   |
+| 0x00000800  | Restore Charisma    | Slow Poison        |
+| 0x00001000  | Heal 2d7 Hp         | Cure Poison        |
+| 0x00002000  | Heal 4d7 Hp         | Restore Mana       |
+| 0x00004000  | Heal 6d7 Hp         | Infravision        |
+| 0x00008000  | Heal 1000 Hp        +--------------------+
+| 0x00010000  | Gain Constitution   |
+| 0x00020000  | Gain Experience     |
+| 0x00040000  | Sleep               |
+| 0x00080000  | Blindness           |
+| 0x00100000  | Confusion           |
+| 0x00200000  | Poison              |
+| 0x00400000  | Speed               |
+| 0x00800000  | Slow                |
+| 0x01000000  | Gain Dexterity      |
+| 0x02000000  | Restore Dexterity   |
+| 0x04000000  | Restore Constitution|
+| 0x08000000  | Cure Blindness      |
+| 0x10000000  | Cure Confusion      |
+| 0x20000000  | Cure Poison         |
+| 0x40000000  +---------------------+
+| 0x80000000  |
++-------------+
+
++-------------+----------------------------+-------------------------------+
+| Value (hex) | Spells in Mage Book        | Spells in Priest Books        |
++-------------+----------------------------+-------------------------------+
+| 0x00000001  | Magic Missiles             | Detect Evil                   |
+| 0x00000002  | Detect Monsters            | Cure Light Wounds             |
+| 0x00000004  | Phase Door                 | Bless                         |
+| 0x00000008  | Light Area                 | Remove Fear                   |
+| 0x00000010  | Cure Light Wounds          | Call Light                    |
+| 0x00000020  | Find Hidden Traps/Doors    | Find Traps                    |
+| 0x00000040  | Stinking Cloud             | Detect Doors/Stairs           |
+| 0x00000080  | Confusion                  | Slow Poison                   |
+| 0x00000100  | Lightning Bolt             | Blind Creature                |
+| 0x00000200  | Trap/Door Destruction      | Portal                        |
+| 0x00000400  | Sleep I                    | Cure Medium Wounds            |
+| 0x00000800  | Cure Posion                | Chant                         |
+| 0x00001000  | Teleport Self              | Sanctuary                     |
+| 0x00002000  | Remove Curse               | Create Food                   |
+| 0x00004000  | Frost Bolt                 | Remove Curse                  |
+| 0x00008000  | Turn Stone To Mud          | Resist Heat and Cold          | 
+| 0x00010000  | Create food                | Neutralize Poison             |
+| 0x00020000  | Recharge Item I            | Orb of Draining               |
+| 0x00040000  | Sleep II                   | Cure Serious Wounds           |
+| 0x00080000  | Polymorph Other            | Sense Invisible               |
+| 0x00100000  | Identify                   | Protection From Evil          |
+| 0x00200000  | Sleep III                  | Earthquake                    |
+| 0x00400000  | Fire Bolt                  | Sense Surroundings            |
+| 0x00800000  | Slow Monster               | Cure Critical Wounds          |
+| 0x01000000  | Frost Ball                 | Turn Undead                   |
+| 0x02000000  | Recharge Item II           | Prayer                        |
+| 0x04000000  | Teleport Other             | Dispel Undead                 |
+| 0x08000000  | Haste Self                 | Heal                          |
+| 0x10000000  | Fire Ball                  | Dispel Evil                   |
+| 0x20000000  | Word of Destruction        | Glyph of Warding              |
+| 0x40000000  | Genocide                   | Holy Word                     |
+| 0x80000000  +----------------------------+-------------------------------+
++-------------+
+
+Just add up the flags you want and enter it as a hex number.
+
+
+
+Cost:  The base cost in the stores (should you decide to sell it :-)
+
+Level:  Level of the dungeon on which it would be randomly generated.  Wizard
+items will not be randomly generated in the game.  Also affects the difficulty
+of wand and staff use and recharging.
+
+                              -------------------
+------------------------------| Closing Remarks |------------------------------
+                              -------------------
+
+That's the end of the spoilers.  If anybody has any corrections, suggestions, 
+additions, subtractions, or comments, they can direct them to my mailbox:
+     mrmarcel@eos.ncsu.edu (Michael R. Marcelais)
+     mrmarcel%eos.ncsu.edu@ncsuvx.ncsu.edu
