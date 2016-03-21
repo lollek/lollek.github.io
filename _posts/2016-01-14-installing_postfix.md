@@ -18,42 +18,56 @@ Criterias:
    this server's
 
 ## Implementation (Main server):
-1. Login on server as root:
-2. Install postfix through aptitude
-    1. Select type **Internet Site**
-    2. Set System Mail Name to **d4.sysinst.ida.liu.se**
-3. In /etc/postfix/main.cf, add the following lines: <pre>
-    mynetworks = 127.0.0.0/8 130.236.179.88/29 [::ffff:127.0.0.0]/104 [::1]/128
-    masquerade_domains = $mydomain
-    local_header_rewrite_clients = permit_mynetworks
-    sender_canonical_maps = ldap:/etc/postfix/canonical_sender
-    recipient_canonical_maps = ldap:/etc/postfix/canonical_recipent
-  </pre>
-4. Create /etc/postfix/canonical_sender:<pre>
-    search_base = ou=People,dc=d4,dc=sysinst,dc=ida,dc=liu,dc=se
-    server_host = server.d4.sysinst.ida.liu.se
-    bind = no
-    version = 3
-    domain = d4.sysinst.ida.liu.se
-    query_filter = uid=%u
-    result_attribute = mail
-  </pre>
-5. Create /etc/postfix/canonical_recipent: <pre>
-    search_base = ou=People,dc=d4,dc=sysinst,dc=ida,dc=liu,dc=se
-    server_host = server.d4.sysinst.ida.liu.se
-    bind = no
-    version = 3
-    domain = d4.sysinst.ida.liu.se
-    query_filter = mail=%s
-    result_attribute = uid
-  </pre>
-6. Set MX record. Add line to /etc/bind/db.d4.sysinst.ida.liu.se:<pre>
-    @        IN     MX      10 server.d4.sysinst.ida.liu.se.
-  </pre>
-7. Restart the services: <pre>
-    `service postfix restart`
-    `service bind9 restart`
-  </pre>
+- Login on server as root:
+- Install postfix through aptitude
+    - Select type **Internet Site**
+    - Set System Mail Name to **d4.sysinst.ida.liu.se**
+- In /etc/postfix/main.cf, add the following lines:
+
+~~~
+mynetworks = 127.0.0.0/8 130.236.179.88/29 [::ffff:127.0.0.0]/104 [::1]/128
+masquerade_domains = $mydomain
+local_header_rewrite_clients = permit_mynetworks
+sender_canonical_maps = ldap:/etc/postfix/canonical_sender
+recipient_canonical_maps = ldap:/etc/postfix/canonical_recipent
+~~~
+
+- Create /etc/postfix/canonical_sender:
+
+~~~
+search_base = ou=People,dc=d4,dc=sysinst,dc=ida,dc=liu,dc=se
+server_host = server.d4.sysinst.ida.liu.se
+bind = no
+version = 3
+domain = d4.sysinst.ida.liu.se
+query_filter = uid=%u
+result_attribute = mail
+~~~
+
+- Create /etc/postfix/canonical_recipent:
+
+~~~
+search_base = ou=People,dc=d4,dc=sysinst,dc=ida,dc=liu,dc=se
+server_host = server.d4.sysinst.ida.liu.se
+bind = no
+version = 3
+domain = d4.sysinst.ida.liu.se
+query_filter = mail=%s
+result_attribute = uid
+~~~
+
+- Set MX record. Add line to /etc/bind/db.d4.sysinst.ida.liu.se:
+
+~~~
+@        IN     MX      10 server.d4.sysinst.ida.liu.se.
+~~~
+
+- Restart the services:
+
+~~~
+service postfix restart
+service bind9 restart
+~~~
 
 ## Implementation (Satellite Systems/Clients):
 1. Install postfix through aptitude

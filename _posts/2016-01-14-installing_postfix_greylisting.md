@@ -10,23 +10,34 @@ title: Installing Postfix Greylisting
 Add greylisting to postfix through postgrey
 
 ## Implementation:
-1. Login to server as root
-2. Install postgrey through aptitude
-3. Append to /etc/postgrey/whitelist-clients:<pre>
-    d4.sysinst.ida.liu.se
-  </pre>
-4. Restart service: <pre>
-    `service postgrey reload`
-  </pre>
-5. Add to/edit in /etc/postfix/main.cf:<pre>
-    smtpd_recipient_restrictions =
-        permit_mynetworks
-        reject_unauth_destination
-        check_policy_service inet:127.0.0.1:10023
-  </pre>
-6. Restart service:<pre>
-    `service postfix reload`
-  </pre>
+- Login to server as root
+- Install postgrey through aptitude
+- Append to /etc/postgrey/whitelist-clients:
+
+~~~
+d4.sysinst.ida.liu.se
+~~~
+
+- Restart service:
+
+~~~
+service postgrey reload
+~~~
+
+- Add to/edit in /etc/postfix/main.cf:
+
+~~~
+smtpd_recipient_restrictions =
+    permit_mynetworks
+    reject_unauth_destination
+    check_policy_service inet:127.0.0.1:10023
+~~~
+
+- Restart service:
+
+~~~
+service postfix reload
+~~~
 
 ## Verification:
 * Email from any local host should not be greylisted

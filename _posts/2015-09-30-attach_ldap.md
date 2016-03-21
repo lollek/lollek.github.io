@@ -16,9 +16,11 @@ Clients should use server.d4.sysinst.ida.liu.se for LDAP authentication
 4. Set LDAP server search base: dc=d4,dc=sysinst,dc=ida,dc=liu,dc=se
 5. Set LDAP server to use all services
 6. In /etc/nsswitch.conf, replace compat with files
-7. In /etc/pam.d/common-session, add line to end: <pre>
-    session required        pam_mkhomedir.so skel=/etc/skel umask=0022
-  </pre>
+7. In /etc/pam.d/common-session, add line to end:
+
+~~~
+session required        pam_mkhomedir.so skel=/etc/skel umask=0022
+~~~
 
 {% endcapture %}{{ data | markdownify}}
 {% include panel_end.html %}

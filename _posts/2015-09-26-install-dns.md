@@ -27,75 +27,87 @@ It should have the following normal zone:
 
 
 ## Implementation:
-1. Login with the root account
-2. Run aptitude
-3. Update package list
-4. Locate and install bind9 and dnsutils
+- Login with the root account
+- Run aptitude
+- Update package list
+- Locate and install bind9 and dnsutils
 
-5. Copy /etc/bind/named.conf.local to /etc/bind/named.conf.local.change.0009
-6. Add data to /etc/bind/named.conf.local: <pre>
-    zone "d4.sysinst.ida.liu.se" {
-      type master;
-      file "/etc/bind/db.d4.sysinst.ida.liu.se";
-    };
+- Copy /etc/bind/named.conf.local to /etc/bind/named.conf.local.change.0009
+- Add data to /etc/bind/named.conf.local:
 
-    zone "88-29.179.236.130.in-addr.arpa" {
-      type master;
-      file "/etc/bind/db.88-29.179.236.130.in-addr.arpa";
-    };
-</pre>
+~~~
+zone "d4.sysinst.ida.liu.se" {
+  type master;
+  file "/etc/bind/db.d4.sysinst.ida.liu.se";
+};
 
-6. Create /etc/bind/db.d4.sysinst.ida.liu.se with the following data: <pre>
-    $TTL    1H
-    @        IN      SOA     server.d4.sysinst.ida.liu.se.
-    hostmaster.d4.sysinst.ida.liu.se. (
-                         2015092301
-                                 1H
-                                10M
-                                 1D
-                                 1H )
-    ;
-    @        IN      NS      server.d4.sysinst.ida.liu.se.
+zone "88-29.179.236.130.in-addr.arpa" {
+  type master;
+  file "/etc/bind/db.88-29.179.236.130.in-addr.arpa";
+};
+~~~
 
-    gw       IN      A       130.236.179.89
-    server   IN      A       130.236.179.90
-    client-1 IN      A       130.236.179.91
-    client-2 IN      A       130.236.179.92
-</pre>
-7. Create /etc/bind/db.88-29.179.236.130.in-addr.arpa with the following data: <pre>
-    $TTL    1H
-    @       IN      SOA     server.d4.sysinst.ida.liu.se.
-    hostmaster.d4.sysinst.ida.liu.se. (
-                         2015092301
-                                 1H
-                                10M
-                                 1D
-                                 1H)
-    ;
-    @       IN      NS      server.d4.sysinst.ida.liu.se.
-    89      IN      PTR     gw.d4.sysinst.ida.liu.se.
-    90      IN      PTR     server.d4.sysinst.ida.liu.se.
-    91      IN      PTR     client-1.d4.sysinst.ida.liu.se.
-    92      IN      PTR     client-2.d4.sysinst.ida.liu.se.
-</pre>
+- Create /etc/bind/db.d4.sysinst.ida.liu.se with the following data:
 
-8. Move /etc/bind/named.conf.options to /etc/bind/named.conf.options.change.0009
-9. Create /etc/bind/named.conf.options with following data: <pre>
-    acl lan { 127.0.0.1; 130.236.179.88/29; };
+~~~
+$TTL    1H
+@        IN      SOA     server.d4.sysinst.ida.liu.se.
+hostmaster.d4.sysinst.ida.liu.se. (
+                     2015092301
+                             1H
+                            10M
+                             1D
+                             1H )
+;
+@        IN      NS      server.d4.sysinst.ida.liu.se.
 
-    options {
-      directory "/var/cache/bind";
-      auth-nxdomain no;    # conform to RFC1035
-      forwarders { 130.236.178.1; };
-      allow-transfer { none; };
-      allow-query { any; };
-      allow-recursion { lan; };
-      dnssec-validation yes;
-    };
-    include "/etc/bind/bind.keys";
-</pre>
-10. Run `server bind reload`
-11. Send an email to your provider and ask them to add the following to their DNS: <pre>
+gw       IN      A       130.236.179.89
+server   IN      A       130.236.179.90
+client-1 IN      A       130.236.179.91
+client-2 IN      A       130.236.179.92
+~~~
+
+- Create /etc/bind/db.88-29.179.236.130.in-addr.arpa with the following data:
+
+~~~
+$TTL    1H
+@       IN      SOA     server.d4.sysinst.ida.liu.se.
+hostmaster.d4.sysinst.ida.liu.se. (
+                     2015092301
+                             1H
+                            10M
+                             1D
+                             1H)
+;
+@       IN      NS      server.d4.sysinst.ida.liu.se.
+89      IN      PTR     gw.d4.sysinst.ida.liu.se.
+90      IN      PTR     server.d4.sysinst.ida.liu.se.
+91      IN      PTR     client-1.d4.sysinst.ida.liu.se.
+92      IN      PTR     client-2.d4.sysinst.ida.liu.se.
+~~~
+
+- Move /etc/bind/named.conf.options to /etc/bind/named.conf.options.change.0009
+- Create /etc/bind/named.conf.options with following data:
+
+~~~
+acl lan { 127.0.0.1; 130.236.179.88/29; };
+
+options {
+  directory "/var/cache/bind";
+  auth-nxdomain no;    # conform to RFC1035
+  forwarders { 130.236.178.1; };
+  allow-transfer { none; };
+  allow-query { any; };
+  allow-recursion { lan; };
+  dnssec-validation yes;
+};
+include "/etc/bind/bind.keys";
+~~~
+
+- Run `server bind reload`
+- Send an email to your provider and ask them to add the following to their DNS:
+
+~~~
     d4.sysinst.ida.liu.se.            IN  NS      server.d4.sysinst.ida.liu.se.
     server.d4.sysinst.ida.liu.se.     IN  A       130.236.179.90
 
@@ -108,7 +120,7 @@ It should have the following normal zone:
     93.179.236.130.in-addr.arpa.      IN  CNAME   93.88-29.179.236.130.in-addr.arpa.
     94.179.236.130.in-addr.arpa.      IN  CNAME   94.88-29.179.236.130.in-addr.arpa.
     95.179.236.130.in-addr.arpa.      IN  CNAME   95.88-29.179.236.130.in-addr.arpa.
-</pre>
+~~~
 
 ## Verification:
 - Run `named-checkzone d4.sysinst.ida.liu.se /etc/bind/db.d4.sysinst.ida.liu.se` and verify there is an OK

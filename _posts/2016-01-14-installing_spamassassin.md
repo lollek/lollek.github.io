@@ -7,27 +7,37 @@ title: Installing Spamassassin
 
 {% capture data %}
 ## Implementation:
-1. Login on server as root
-2. Install spamassassin through aptitude
-3. In /etc/default/spamassassin:<pre>
-    Set ENABLED=1
-  </pre>
-4. Add/uncomment in /etc/spamassassin/local.cf:<pre>
-    rewrite_header Subject ``*****SPAM*****``
-    report_safe 0
-  </pre>
-6. In /etc/postfix/master.cf:<pre>
-    smtp      inet  n       -       -       -       -       smtpd
-      -o content_filter=spamassassin
+- Login on server as root
+- Install spamassassin through aptitude
+- In /etc/default/spamassassin:
 
-    spamassassin unix -     n       n       -       -       pipe
-      user=debian-spamd argv=/usr/bin/spamc -f -e /usr/sbin/sendmail -oi -f ${sender} ${recipient}
-  </pre>
-5. Restart services<pre>
-    `service spamassassin start`
-    `service postfix reload`
-  </pre>
+~~~
+Set ENABLED=1
+~~~
 
+- Add/uncomment in /etc/spamassassin/local.cf:
+
+~~~
+rewrite_header Subject *****SPAM*****
+report_safe 0
+~~~
+
+- In /etc/postfix/master.cf:
+
+~~~
+smtp      inet  n       -       -       -       -       smtpd
+  -o content_filter=spamassassin
+
+spamassassin unix -     n       n       -       -       pipe
+  user=debian-spamd argv=/usr/bin/spamc -f -e /usr/sbin/sendmail -oi -f ${sender} ${recipient}
+~~~
+
+- Restart services
+
+~~~
+service spamassassin start
+service postfix reload
+~~~
 
 ## Verification:
 Email sent to server with body

@@ -12,12 +12,10 @@ title: Configuring SPF
   The SPF record should reflect this.
 
 ## Implementation:
-1. Add line to /etc/bind/db.d4.sysinst.ida.liu.se:<pre>
-    @        IN     TXT     "v=spf1 mx -all"
-  </pre>
-2. Restart service:<pre>
-    `service bind9 reload`
-  </pre>
+1. Add line to /etc/bind/db.d4.sysinst.ida.liu.se:  
+    ```@        IN     TXT     "v=spf1 mx -all"```  
+2. Restart service:  
+    ```service bind9 reload```  
 
 ## Verification:
 * `dig d4.sysinst.ida.liu.se TXT` should return the above line
